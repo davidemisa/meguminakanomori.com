@@ -76,40 +76,6 @@ h2 {
     -webkit-font-smoothing: antialiased;
 }
 
-h3 {
-    font-size: 1.6em;
-    color: #FFF8F0;
-    line-height: 100%;
-    font-family: 'Raleway', 'Helvetica', sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
-    padding: 3em 0 0 0;
-    margin: 0 auto;
-    text-align: center;
-    -webkit-font-smoothing: antialiased;
-}
-
-h4 {
-    font-size: 1.2em;
-    color: #FFF8F0;
-    font-family: 'Raleway', 'Helvetica', sans-serif;
-    font-weight: normal;
-    line-height: 100%;
-    text-align: center;
-    padding: 0;
-    -webkit-font-smoothing: antialiased;
-}
-
-h5 {
-    font-size: 1em;
-    color: #FFF8F0;
-    line-height: 100%;
-    font-family: 'Lato', 'Helvetica', sans-serif;
-    font-weight: 400;
-    padding: 0 0.3em 0 0.3em;
-    -webkit-font-smoothing: antialiased;
-}
-
 label {
     font-weight: 400;
     font-family: 'Raleway', 'Helvetica', sans-serif;
@@ -119,17 +85,31 @@ label {
     padding: 0 2em 0 0;
 }
 
+@media only screen and (max-width: 450px) {
+
+    h1 {
+        font-size: 2.1em;
+    }
+    
+    h2 {
+        font-size: 1.8em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+
+}
+
 /* ------- 2. UNDER CONSTRUCTION HOME PAGE ------- */
 
 .centered-main {
-    margin: 3% 10% 3% 10%;
-    align-content: center;
+    margin: 1% auto;
     text-align: center;
 }
 
 .main-pic {
-    width: 55%;
-    height: 55%;
+    width: 50%;
     border-radius: 25px;
     margin-bottom: 1%;
 }
