@@ -7,10 +7,11 @@ $(function($){
 												   
 		// Components							
 		slide_links			:	'false',
-		slides 				:  	[			// Slideshow Images
-										{image : 'http://placehold.it/1920x1143'},
-										{image : 'http://placehold.it/1920x1143'},  
-										{image : 'http://placehold.it/1920x1143'}
+		slides 				:  	[		// Slideshow Images
+                                        // TODO aggiungere altre foto
+										{image : 'img/background/inside_piano.jpg'}
+										//{image : 'http://placehold.it/1920x1143'},  
+										//{image : 'http://placehold.it/1920x1143'}
 								]
 	});
 });
