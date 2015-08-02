@@ -80,7 +80,7 @@ input[type="color"]:focus,
 #other-news li{ border-bottom:1px solid #e2e2e2;}
 #other-news li .other-news-img-wrap .date{ background-color:rgba(255, 255, 255, 0.95);}
 #other-news li .other-news-img-wrap .date:after{ border-color: rgba(255, 255, 255, 0.95) transparent transparent transparent;}
-#bottom-theband:before{background-image: url('../img/bottom_theband_white.png');}
+#bottom-biography:before{background-image: url('../img/bottom_theband_white.png');}
 .band-elem:hover p{ background-color:rgba(255,255,255,0.9);}
 .album .album-info h3 span{ color:#424242;}
 .album .album-info li { background-color:#fff;}
@@ -88,13 +88,13 @@ input[type="color"]:focus,
 .album .album-info li span.time{ color:#afafaf;}
 .album .album-info li.darker { background-color:#f2f2f2;}
 #map_canvas:after{	background-image: url('../img/bottom_concerts_white.png');}
-#concerts-info{ background-color:rgba(255,255,255,0.9);}
-#concerts-info .date{ color:#424242;}
+#events-info{ background-color:rgba(255,255,255,0.9);}
+#events-info .date{ color:#424242;}
 #complete-list .close-complete-list{ color:#a2a2a2;}
 #complete-list .completeInfo{ background-color:#fff;}
 #complete-list .completeInfo:nth-child(2n+1){ background-color:#f2f2f2;}
 #complete-list .completeInfo .completeDate{ color:#afafaf;}
-#store{ background-image:url('../img/store_white.png'); border-bottom: 40px solid #e2e2e2;}
+#repertory{ background-image:url('../img/store_white.png'); border-bottom: 40px solid #e2e2e2;}
 .flexslider .slides li h2{ color:#424242;}
 #form-wrap:after{ background-color:#cccccc;}
 #form-wrap:before{	background-color:#969696;}
@@ -111,7 +111,7 @@ div.pp_overlay{background:#fff;}
 @media (-webkit-min-device-pixel-ratio: 1.5), 
 (min-resolution: 144dpi){ 
     #bottom-home:before{ background-image: url('../img/bottom_home_white@2x.png'); }
-	#bottom-theband:before{ background-image: url('../img/bottom_theband_white@2x.png'); }
+	#bottom-biography:before{ background-image: url('../img/bottom_theband_white@2x.png'); }
 	#map_canvas:after{ background-image: url('../img/bottom_concerts_white@2x.png'); }
-	#store{ background-image:url('../img/store_white@2x.png'); }
+	#repertory{ background-image:url('../img/store_white@2x.png'); }
 }

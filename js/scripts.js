@@ -5,7 +5,7 @@
 * Version: 1.0.5
 */
 
-/* global Modernizr:true, google:true, myConcerts:true, myPlaylist:true, RichMarker:true */
+/* global Modernizr:true, google:true, myEvents:true, myPlaylist:true, RichMarker:true */
 
 var Beat = {
 
@@ -398,7 +398,7 @@ var Beat = {
 	googleMap: function() {
 		"use strict";
 		
-		if ( typeof myConcerts === 'undefined' || myConcerts.length === 0){
+		if ( typeof myEvents === 'undefined' || myEvents.length === 0){
 			return false;
 		}
 		
@@ -525,41 +525,41 @@ var Beat = {
 			}
 		}
 			
-		for(var i=0; i < myConcerts.length; i++){
-			myConcerts[i].date = new Date(myConcerts[i].year, myConcerts[i].month, myConcerts[i].day, myConcerts[i].hour, myConcerts[i].minute, 0);
+		for(var i=0; i < myEvents.length; i++){
+			myEvents[i].date = new Date(myEvents[i].year, myEvents[i].month, myEvents[i].day, myEvents[i].hour, myEvents[i].minute, 0);
 		}
 		
 		function sortAsc(a, b) {
 			return new Date(a.date).getTime() - new Date(b.date).getTime();
 		}
 		
-		myConcerts.sort(sortAsc);
+		myEvents.sort(sortAsc);
 		
-		var upcomingConcert = myConcerts[0];
+		var upcomingConcert = myEvents[0];
 		
 		var currentdate = new Date();
 
-		for(i = 0; i < myConcerts.length; i++){
-			var concert = myConcerts[i];
+		for(i = 0; i < myEvents.length; i++){
+			var concert = myEvents[i];
 			
 			if(dates.compare(concert,currentdate) == -1 && hidePastEvents){
-				delete myConcerts[i];
+				delete myEvents[i];
 			}
 			
 			if (dates.compare(concert,currentdate) == 1 ){
-				upcomingConcert = myConcerts[i];
+				upcomingConcert = myEvents[i];
 				break;
 			}
 		}
 		
 		$(".ccounter").ccountdown(upcomingConcert.year,upcomingConcert.month,upcomingConcert.day,upcomingConcert.hour,upcomingConcert.minute);
-		$("#concerts-info .date").html(upcomingConcert.day + " " + monthTxt[upcomingConcert.month - 1] + ", " + upcomingConcert.year);
-		$("#concerts-info .location").html(upcomingConcert.location);
+		$("#events-info .date").html(upcomingConcert.day + " " + monthTxt[upcomingConcert.month - 1] + ", " + upcomingConcert.year);
+		$("#events-info .location").html(upcomingConcert.location);
 		if ( typeof upcomingConcert.buyTicketURL !== 'undefined' && upcomingConcert.buyTicketURL != "" ){
-			$("#concerts-info #buyTicketsBtn").attr('href', upcomingConcert.buyTicketURL);
-			$("#concerts-info #buyTicketsBtn").show();
+			$("#events-info #buyTicketsBtn").attr('href', upcomingConcert.buyTicketURL);
+			$("#events-info #buyTicketsBtn").show();
 		} else {
-			$("#concerts-info #buyTicketsBtn").hide();
+			$("#events-info #buyTicketsBtn").hide();
 		}
 		
 		$tis.myLatlng = new google.maps.LatLng(upcomingConcert.latitude, upcomingConcert.longitude-0.01);
@@ -609,12 +609,12 @@ var Beat = {
 			});
 		};
 		
-		for(i=myConcerts.length-1; i >= 0; i--){
-			if ( myConcerts[i] == undefined ){
+		for(i=myEvents.length-1; i >= 0; i--){
+			if ( myEvents[i] == undefined ){
 				continue;
 			}
 			
-			var concert = myConcerts[i];
+			var concert = myEvents[i];
 			createMarker(concert);
 			$('#complete-list #list').prepend('<div class="completeInfo" data-id="' + i + '"><div class="completeDate">' + concert.day + " " + monthTxt[concert.month - 1] + ", " + concert.year + '</div><div class="completeLocation">' + concert.location + '</div></div>');
 		}
@@ -1209,7 +1209,7 @@ var Beat = {
 		$(".completeInfo").click(function(){
 			var id = parseInt($(this).data('id'), null);
 		
-			$tis.map.setCenter(new google.maps.LatLng(myConcerts[id].latitude, myConcerts[id].longitude-0.01));
+			$tis.map.setCenter(new google.maps.LatLng(myEvents[id].latitude, myEvents[id].longitude-0.01));
 			$tis.map.setZoom(11);
 		});
 

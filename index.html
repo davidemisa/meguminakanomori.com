@@ -36,9 +36,9 @@
 	<!-- Custom CSS -->
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	
-	<!-- Modernizr -->
+	<!-- Lib -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
-	
+
 </head>
 <body>
 	<!-- BEGIN HEADER -->
@@ -51,22 +51,24 @@
 						
 						<nav id="nav"><!-- BEGIN MAIN MENU -->
 							<ul>
-								<li><a href="#theband">The Band</a></li>
-								<li><a href="#concerts">Concerts</a></li>
+								<li><a href="#biography">Biography</a></li>
+								<li><a href="#events">Events</a></li>
 								<li><a href="#gallery">Gallery</a></li>
-								<li><a href="#store">Store</a></li>
-								<li><a href="#contacts">Contact us</a></li>
+								<li><a href="#repertory">Repertory</a></li>
+								<li><a href="#contacts">Contact me</a></li>
 							</ul>
 						</nav><!-- END MAIN MENU -->
-						
-						<ul class="sn-icons"><!-- BEGIN SOCIAL ICONS -->
-							<li><a href=""><i class="icon-facebook-sign"></i></a></li>
-							<li><a href=""><i class="icon-twitter-sign"></i></a></li>
-							<li><a href=""><i class="icon-instagram"></i></a></li>
-							<li><a href=""><i class="icon-google-plus-sign"></i></a></li>
-							<li><a href=""><i class="icon-pinterest-sign"></i></a></li>
-							<li><a href=""><i class="icon-rss-sign"></i></a></li>
-						</ul><!-- END SOCIAL ICONS -->
+                        
+                        <!-- BEGIN SOCIAL ICONS -->
+						<ul class="sn-icons">
+							<li><a href="https://www.facebook.com/megumi.nakanomori.1"><i class="icon-facebook-sign"></i></a></li>
+							<li><a href="https://www.youtube.com/channel/UC86cRQgjiu5rycsQCDc8hFg"><i class="icon-youtube-sign"></i></a></li>
+                            <!-- TODO definire lo stile per le bandiere -->
+							<li><a onclick="switchLanguage('en')"> <img class="language-flag" src="img/icons/english.ico" /></a></li>
+							<li><a onclick="switchLanguage('it')"> <img class="language-flag" src="img/icons/italian.ico" /></a></li>
+							<li><a onclick="switchLanguage('jpn')"><img class="language-flag" src="img/icons/japanese.ico" /></a></li>
+						</ul>
+                        <!-- END SOCIAL ICONS -->
 					</div>
 				</div>
 			</div>
@@ -83,17 +85,16 @@
 					
 					<div id="social-stream">
 						<ul id="social-stream-items">
-							<li>
-								<div class="icon color"><i class="icon-instagram"></i></div>
-								<div class="instagram"></div><!-- This div (with class "instagram") will be automatically popuplated with a single photo from your Instagram feed -->
-							</li>
-							<li>
-								<div class="icon color"><i class="icon-twitter"></i></div>
-								<div class="tweet"></div><!-- This div (with class "tweet") will be automatically popuplated with a single tweet from your last tweets -->
-							</li>
+                            <!-- VIDEO YOUTUBE -->
 							<li class="featured">
 								<div class="icon"><i class="icon-expand"></i></div>
-								<div class="title"><h3><a href="http://www.youtube.com/embed/1iIZeIy7TqM?iframe=true" data-gal="prettyPhoto">Watch the New VideoClip!</a></h3></div>
+								<div class="title"><h3>
+                                    <a href="https://www.youtube.com/embed/HSHfd2fQm-k?iframe=true" data-gal="prettyPhoto" data-translatable>
+                                        Watch the new videoclip! *
+                                        Guarda il nuovo video! *
+                                        最新の演奏録画をどうぞ！
+                                    </a>
+                                </h3></div>
 								<a href="http://www.youtube.com/embed/1iIZeIy7TqM?iframe=true" data-gal="prettyPhoto"><img src="http://placehold.it/350x350" alt="" /></a>
 							</li>
 							<li>
@@ -176,82 +177,6 @@
 									<a href="" class="open-overlay" data-overlay-id="news-overlay">Lorem ipsum dolor sit amet</a>
 									<div class="time">24 September, 2013</div>
 								</div>
-							</li>
-							<li>
-								<div class="icon color"><i class="icon-twitter"></i></div>
-								<div class="tweet"></div><!-- This div (with class "tweet") will be automatically popuplated with a single tweet from your last tweets -->
-							</li>
-							<li>
-								<div class="icon color"><i class="icon-instagram"></i></div>
-								<div class="instagram"></div><!-- This div (with class "instagram") will be automatically popuplated with a single photo from your Instagram feed -->
-							</li>
-							<li>
-								<div class="icon color"><i class="icon-facebook"></i></div>
-								<div class="facebook"></div><!-- This div (with class "facebook") will be automatically popuplated with a single post from your last activity in Facebook -->
-							</li>
-							<li>
-								<div class="icon color"><i class="icon-instagram"></i></div>
-								<div class="instagram"></div><!-- This div (with class "instagram") will be automatically popuplated with a single photo from your Instagram feed -->
-							</li>
-							<li>
-								<div class="icon color"><i class="icon-twitter"></i></div>
-								<div class="tweet"></div><!-- This div (with class "tweet") will be automatically popuplated with a single tweet from your last tweets -->
-							</li>
-							<li>
-								<div class="icon color"><i class="icon-instagram"></i></div>
-								<div class="instagram"></div><!-- This div (with class "instagram") will be automatically popuplated with a single photo from your Instagram feed -->
-							</li>
-							<li>
-								<div class="icon color"><i class="icon-twitter"></i></div>
-								<div class="tweet"></div><!-- This div (with class "tweet") will be automatically popuplated with a single tweet from your last tweets -->
-							</li>
-							<li>
-								<div class="icon color"><i class="icon-file-text-alt"></i></div>
-								<div class="title"><h3 class="color">Last News!</h3></div>
-								<img src="http://placehold.it/350x350" alt="" />
-								<div class="news" 
-									data-news-details='[{
-										"date":"24<br/>Sep",
-										"title":"Lorem ipsum dolor sit amet",
-										"img":"http://placehold.it/673x444",
-										"txt":[
-											{
-												"txt":"Fusce imperdiet metus sit amet lorem pellentesque, et suscipit lectus tempus. Aliquam dui neque, venenatis a convallis eu, sodales vitae justo. Donec nec neque purus. Sed sed nisi vestibulum, mollis ligula vel sem nulla faucibus ante.<br/><br/>Morbi feugiat urna quis nulla sodales molestie ac vitae elit. Morbi risus lectus, volutpat nec sagittis vitae, mollis et nisi. Curabitur vel neque vitae diam dapibus semper a sit amet urna. Nullam cursus velit justo. Nullam euismod, arcu sit amet semper sagittis, sem nulla faucibus ante, vitae adipiscing mi metus faucibus sapien. Nulla dictum eget metus et gravida. Donec vulputate mi ac facilisis fringilla. Proin scelerisque lorem dictum tincidunt iaculis."
-											},
-											{
-												"quote":"Vivamos odio augue, <span>aliquet eget</span> hendrerit nec, tempus sit amet lacus. Nunc suscipit nisl eu elit <span>mollis sit amet</span> fringilla elit eleifend.",
-												"img":"http://placehold.it/281x239"
-											},
-											{
-												"txt":"Fusce imperdiet metus sit amet lorem pellentesque, et suscipit lectus tempus. Aliquam dui neque, venenatis a convallis eu, sodales vitae justo. Donec nec neque purus. Sed sed nisi vestibulum, mollis ligula vel sem nulla faucibus ante.</p><p>Morbi feugiat urna quis nulla sodales molestie ac vitae elit. Morbi risus lectus, volutpat nec sagittis vitae, mollis et nisi. Curabitur vel neque vitae diam dapibus semper a sit amet urna. Nullam cursus velit justo. Nullam euismod, arcu sit amet semper sagittis, sem nulla faucibus ante, vitae adipiscing mi metus faucibus sapien. Nulla dictum eget metus et gravida. Donec vulputate mi ac facilisis fringilla. Proin scelerisque lorem dictum tincidunt iaculis."
-											},
-											{
-												"title":"Watch the best moments from last night concert",
-												"txt":"Example of Vimeo embed video",
-												"vimeo":"http://player.vimeo.com/video/74972181"
-											},
-											{
-												"title":"Watch the best moments from last night concert",
-												"txt":"Example of YouTube embed video",
-												"youtube":"http://www.youtube.com/embed/1iIZeIy7TqM"
-											}]
-								}]'>
-									<button class="btn btn-dark btn-only-icon open-overlay" data-overlay-id="news-overlay"><i class="icon-chevron-right"></i></button>
-									<a href="" class="open-overlay" data-overlay-id="news-overlay">Lorem ipsum dolor sit amet</a>
-									<div class="time">24 September, 2013</div>
-								</div>
-							</li>
-							<li>
-								<div class="icon color"><i class="icon-twitter"></i></div>
-								<div class="tweet"></div><!-- This div (with class "tweet") will be automatically popuplated with a single tweet from your last tweets -->
-							</li>
-							<li>
-								<div class="icon color"><i class="icon-instagram"></i></div>
-								<div class="instagram"></div><!-- This div (with class "instagram") will be automatically popuplated with a single photo from your Instagram feed -->
-							</li>
-							<li>
-								<div class="icon color"><i class="icon-facebook"></i></div>
-								<div class="facebook"></div><!-- This div (with class "facebook") will be automatically popuplated with a single post from your last activity in Facebook -->
 							</li>
 						</ul>
 					</div>
@@ -478,27 +403,50 @@
 	</div>
 	<!-- End News/Blog Page Overlay -->
 	
-	<!-- BEGIN THE BAND SECTION -->
-	<section id="theband">
+	<!-- BEGIN BIOGRAPHY SECTION -->
+	<section id="biography">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-4">
-					<h1 class="section-title">The Band</h1>
+					<h1 class="section-title">Megumi Nakanomori</h1>
 					<p class="section-desc">
-						Pellentesque elementum libero enim, eget gravida nunc laoreet et. Nullam ac enim auctor, fringilla risus at, imperdiet turpis. Mauris ut tristique odio. Aenean diam ipsum, ultricies sed consequat sed, faucibus et tellus. Nam ut sollicitudin lacus. Nulla id imperdiet purus, id tristique erat.
+                        <div data-translatable>
+                            Just a trial for a text. *
+                            
+                            Si è diplomata nel 2007 al Tokyo National University of Fine Arts and Music. Nel 2011 inizia
+                            la sua carriera europea vincendo il primo premio del concorso Beltrami di musica da camera
+                            presso il Conservatorio G. Verdi con il Trio Amadeus. Nel 2012 inizia una fruttuosa
+                            collaborazione con il sassofonista Andrea Mocci che porta alla costituzione del “Duo
+                            Vagues”. Lo stesso anno consegue il I° premio al Concorso Internazionale di Musica da
+                            Camera di Bellagio e il I° premio al Concorso Internazionale di Musica da Camera Città di
+                            Camaiore, Guido Papini. Dal 2013 fa parte dell’Ensemble dell’Accademia del Teatro alla
+                            Scala specializzato nel repertorio del XX secolo, partecipando a vari concerti in Italia e
+                            all'estero. Nel 2014 ha eseguito il Concerto in re minore di J.S.Bach diretto da David
+                            Coleman nello spettacolo della scuola di ballo dell'Accademia sempre al Teatro. Nel 2015
+                            ottiene il I° premio assoluto al concorso internazionale Città di Spinea "Nuovi Talenti". *
+                            
+                            Testo in giapponese.
+                        </div>
 						<br/><br/><br/>
-						<a href="" class="btn btn-dark btn-icon open-overlay" data-overlay-id="theband-overlay"><i class="icon-file-text-alt"></i><span>More About us</span></a>
+						<a href="" class="btn btn-dark btn-icon open-overlay" data-overlay-id="biography-overlay">
+                            <i class="icon-file-text-alt"></i>
+                            <span data-translatable>
+                                More about me *
+                                Leggi di più *
+                                続きを読む
+                            </span>
+                        </a>
 					</p>
 				</div>
 				<img src="http://placehold.it/770x735" alt="" id="bandImage" class="col-sm-8"  />
 			</div>
 		</div>
-		<div id="bottom-theband" class="bg-color2"></div>
+		<div id="bottom-biography" class="bg-color2"></div>
 	</section>
-	<!-- END THE BAND SECTION -->
+	<!-- END BIOGRAPHY SECTION -->
 	
 	<!-- Begin About Band Page Overlay -->
-	<div class="page-overlay" id="theband-overlay"> 
+	<div class="page-overlay" id="biography-overlay">
 		<i class="icon-remove-circle close-overlay"></i>
 		<div class="container">
 			<div class="row">
@@ -581,30 +529,30 @@
 	</div>
 	<!-- End About Band Page Overlay -->
 
-	<!-- BEGIN CONCERTS SECTION -->
-	<section id="concerts">
+	<!-- BEGIN EVENTS SECTION -->
+	<section id="events">
 		<div class="container">
 			<div class="row">
-				<div id="concerts-info" class="col-sm-12">
-					<h1 class="section-title center">Concerts</h1>
+				<div id="events-info" class="col-sm-12">
+					<h1 class="section-title center">Events</h1>
 					
 					<div id="counter-info">
 						<div class="featured">
 							<div class="icon"><i class="icon-calendar"></i></div>
 							<h3>Next Concert</h3>
 						</div>
-						
+
 						<div class="ccounter">
 							<div class="counter"><input class="knob days" data-readOnly="true" data-width="85" data-height="85" data-displayPrevious=true data-fgColor="#3f9f97" data-skin="beat" data-thickness=".15" data-min="0" data-max="365" value="75" /><span>DAYS</span></div>
 							<div class="counter"><input class="knob hour" data-readOnly="true" data-width="85" data-height="85" data-min="0" data-max="24" data-displayPrevious=true data-fgColor="#3f9f97" data-skin="beat" data-thickness=".15" value="75" /><span>HOURS</span></div>
 							<div class="counter"><input class="knob minute" data-readOnly="true" data-width="85" data-height="85" data-min="0" data-max="60" data-displayPrevious=true data-fgColor="#3f9f97" data-skin="beat" data-thickness=".15" value="75" /><span>MIN.</span></div>
 							<div class="counter"><input class="knob second" data-readOnly="true" data-width="85" data-height="85" data-min="0" data-max="60" data-displayPrevious=true data-fgColor="#3f9f97" data-skin="beat" data-thickness=".15" value="75" /><span>SEC.</span></div>
 						</div>
-						
+
 						<div class="date col-sm-12"></div> <!-- This div will be automatic populated with the upcoming concert date -->
 						<div class="location col-sm-12"></div> <!-- This div will be automatic populated with the upcoming concert address -->
 					</div>
-					
+
 					<div class="buttons-area col-sm-12">
 						<a href="#" class="btn btn-default btn-icon" id="buyTicketsBtn"><i class="icon-tags"></i><span>Buy Tickets !</span></a>
 						<a href="" id="seeLocation" class="btn btn-dark btn-icon"><i class="icon-map-marker"></i><span>See Location</span></a><br/>
@@ -621,7 +569,7 @@
 		
 		<div id="map_canvas"></div>
 	</section>
-	<!-- END CONCERTS SECTION -->
+	<!-- END EVENTS SECTION -->
 	
 	<!-- BEGIN GALLERY SECTION -->
 	<section id="gallery">
@@ -705,12 +653,12 @@
 	</section>
 	<!-- END GALLERY SECTION -->
 	
-	<!-- BEGIN STORE SECTION -->
-	<section id="store">
+	<!-- BEGIN REPERTORY SECTION -->
+	<section id="repertory">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
-					<h1 class="section-title center">Beat Store</h1>
+					<h1 class="section-title center">Repertory</h1>
 				</div>
 			</div>
 		</div>
@@ -756,14 +704,14 @@
 			</ul>
 		</div>
 	</section>
-	<!-- END STORE SECTION -->
+	<!-- END REPERTORY SECTION -->
 		
 	<!-- BEGIN CONTACTS SECTION -->
 	<section id="contacts" class="bg-color2">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
-					<h1 class="section-title center">Contact us</h1>
+					<h1 class="section-title center">Contact me</h1>
 					
 					<div id="form-wrap" class="col-sm-5 center">
 						<form id="form-contact" method="post" action="#" class="bg-color1">
@@ -771,7 +719,14 @@
 							<input type="email" placeholder="Email" name="contact_email" id="contact_email" />
 							<input type="text" placeholder="Subject" name="contact_subject" id="contact_subject" />
 							<textarea cols="6" rows="4" placeholder="Message" name="contact_message" id="contact_message"></textarea>
-							<a href="" id="contact_send" class="btn btn-dark btn-icon"><i class="icon-envelope"></i><span>Send</span></a>
+							<a href="" id="contact_send" class="btn btn-dark btn-icon">
+                                <i class="icon-envelope"></i>
+                                <span data-translatable>
+                                    Send *
+                                    Invia *
+                                    送信
+                                </span>
+                            </a>
 						</form>
 					</div>
 				</div>
@@ -782,20 +737,19 @@
 	
 	<!-- BEGIN FOOTER -->
 	<footer id="footer" class="bg-color2">
-		<ul class="sn-icons"><!-- BEGIN SOCIAL ICONS -->
-			<li><a href=""><i class="icon-facebook-sign"></i></a></li>
-			<li><a href=""><i class="icon-twitter-sign"></i></a></li>
-			<li><a href=""><i class="icon-instagram"></i></a></li>
-			<li><a href=""><i class="icon-google-plus-sign"></i></a></li>
-			<li><a href=""><i class="icon-pinterest-sign"></i></a></li>
-			<li><a href=""><i class="icon-rss-sign"></i></a></li>
-		</ul><!-- END SOCIAL ICONS -->
-		<p>Copyright &copy; 2013 <a href="http://www.wiselythemes.com" target="_blank">WiselyThemes</a>. All rights reserved.</p>
+        <ul class="sn-icons">
+            <li><a href="https://www.facebook.com/megumi.nakanomori.1"><i class="icon-facebook-sign"></i></a></li>
+            <li><a href="https://www.youtube.com/channel/UC86cRQgjiu5rycsQCDc8hFg"><i class="icon-youtube-sign"></i></a></li>
+            <li><a onclick="switchLanguage('en')"> <img class="language-flag" src="img/icons/english.ico" /></a></li>
+            <li><a onclick="switchLanguage('it')"> <img class="language-flag" src="img/icons/italian.ico" /></a></li>
+            <li><a onclick="switchLanguage('jpn')"><img class="language-flag" src="img/icons/japanese.ico" /></a></li>
+        </ul>
+		<!--<p>Copyright &copy; 2013 <a href="http://www.wiselythemes.com" target="_blank">WiselyThemes</a>. All rights reserved.</p>-->
 	</footer>
 	<!-- END FOOTER -->
 	
-	<!-- myConcerts and myPlaylist objects -->
-	<script src="js/google_maps_marker/myconcerts.js" type="text/javascript"></script>
+	<!-- myevents and myPlaylist objects -->
+	<script src="js/google_maps_marker/myevents.js" type="text/javascript"></script>
 	<script src="music/myplaylist.js" type="text/javascript"></script>
 	
 	<!-- Libs -->
@@ -816,5 +770,9 @@
 		g.src='//www.google-analytics.com/ga.js';
 		s.parentNode.insertBefore(g,s)}(document,'script'));
 	</script>
+
+    <!-- Multilanguage -->
+    <script src="js/dom-i18n.min.js"></script>
+    <script src="js/switch-language.js"></script>
 </body>
 </html>

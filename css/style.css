@@ -1548,16 +1548,16 @@ fieldset[disabled] .btn-dark2.active {
 
 /* #THE BAND
 ================================================== */
-#theband{
+#biography{
 	padding-bottom:0px;
 }
 
-#theband .container{
+#biography .container{
 	position:relative;
 	z-index:1;
 }
 
-#bottom-theband{
+#bottom-biography{
 	width:100%;
 	height:340px;
 	margin-top:-300px;
@@ -1565,7 +1565,7 @@ fieldset[disabled] .btn-dark2.active {
 	z-index:0;
 }
 
-#bottom-theband:before{
+#bottom-biography:before{
 	content:"";
 	width:100%;
 	height:215px;
@@ -1736,9 +1736,9 @@ fieldset[disabled] .btn-dark2.active {
 
 
 
-/* #Concerts
+/* #Events
 ================================================== */
-#concerts{
+#events{
 	padding-top:0px;
 }
 
@@ -1800,7 +1800,7 @@ fieldset[disabled] .btn-dark2.active {
 	width:200px;
 }
 
-#concerts-info{
+#events-info{
 	position:absolute;
 	top:0;
 	left:5%;
@@ -1823,7 +1823,7 @@ fieldset[disabled] .btn-dark2.active {
 	height:0px;
 }
 
-#concerts-info .featured{
+#events-info .featured{
 	display:inline-block;
 	width:100%;
 	padding-left:67px;
@@ -1836,7 +1836,7 @@ fieldset[disabled] .btn-dark2.active {
 	text-align:left;
 }
 
-#concerts-info .featured:before{
+#events-info .featured:before{
 	content:"";
 	position:absolute;
 	top:0;
@@ -1847,7 +1847,7 @@ fieldset[disabled] .btn-dark2.active {
 	z-index:-1;
 }
 
-#concerts-info .featured .icon{
+#events-info .featured .icon{
 	position:absolute;
 	top:0;
 	left:0;
@@ -1861,7 +1861,7 @@ fieldset[disabled] .btn-dark2.active {
 	z-index:2;
 }
 
-#concerts-info .featured .icon:after{
+#events-info .featured .icon:after{
 	content:"";
 	position:absolute;
 	bottom:-13px;
@@ -1876,7 +1876,7 @@ fieldset[disabled] .btn-dark2.active {
 	_filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
 }
 
-#concerts-info .featured h3{
+#events-info .featured h3{
 	height:57px;
 	line-height:57px;
 	font-weight:400;
@@ -1903,16 +1903,16 @@ fieldset[disabled] .btn-dark2.active {
 	font-size:8pt;
 }
 
-#concerts-info .date{
+#events-info .date{
 	padding-top:25px;
 	color:#fff;
 }
 
-#concerts-info .location{
+#events-info .location{
 	padding-bottom:25px;
 }
 
-#concerts-info .buttons-area{
+#events-info .buttons-area{
 	padding:5px 0 10px;
 	background-color:rgba(100,100,100,0.1);
 	text-align:center;
@@ -1924,21 +1924,21 @@ fieldset[disabled] .btn-dark2.active {
             transition: all 0.3s;
 }
 
-#concerts-info .buttons-area.disabled{
+#events-info .buttons-area.disabled{
 	height:0px;
 	padding:0;
 	margin:0;
 }
 
-#concerts-info .buttons-area .btn{
+#events-info .buttons-area .btn{
 	margin:10px 0;
 }
 
-#concerts-info #seeLocation{
+#events-info #seeLocation{
 	margin-left:5px;
 }
 
-#concerts-info #complete-list-btn{
+#events-info #complete-list-btn{
 	margin-top:15px;
 	padding:6px 50px;
 }
@@ -2112,9 +2112,9 @@ fieldset[disabled] .btn-dark2.active {
 
 
 
-/* #Store
+/* #Repertory
 ================================================== */
-#store{
+#repertory {
 	background-image:url('../img/store.png');
 	background-repeat:no-repeat;
 	background-position:center bottom;
@@ -2413,7 +2413,7 @@ div.beat #pp_full_res .pp_inline,div.dark_square #pp_full_res .pp_inline{color:#
 		margin-top:20px;
 	}
 	
-	#concerts-info{
+	#events-info{
 		position:static;
 		top:auto;
 		left:auto;
@@ -2566,7 +2566,7 @@ div.beat #pp_full_res .pp_inline,div.dark_square #pp_full_res .pp_inline{color:#
 		background-image: url('../img/bottom_home@2x.png');
 	}
 	
-	#bottom-theband:before{
+	#bottom-biography:before{
 		height:430px;
 		background-image: url('../img/bottom_theband@2x.png');
 	}
@@ -2576,7 +2576,7 @@ div.beat #pp_full_res .pp_inline,div.dark_square #pp_full_res .pp_inline{color:#
 		background-image: url('../img/bottom_concerts@2x.png');
 	}
 	
-	#store{
+	#repertory{
 		background-image:url('../img/store@2x.png');
 	}
 }
