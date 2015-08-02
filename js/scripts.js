@@ -404,7 +404,7 @@ var Beat = {
 		
 		var $tis = this;
 		var monthTxt = [],
-			color = "#3f9f97",
+			color = "#f5c7cc",
 			hidePastEvents = false; //If true, the events that took place won't show on the list of concerts
 									//and its marker on the map won't be created
 		
@@ -426,7 +426,7 @@ var Beat = {
 				stylers: [
 					{ hue: color },
 					{ saturation: -50 },
-					{ lightness: -5},
+					{ lightness: -5}
 
 				]
 			},
@@ -435,7 +435,7 @@ var Beat = {
 				elementType: "labels.text.fill",
 				stylers: [
 					{ saturation: 20 },
-					{ lightness: -70},
+					{ lightness: -70}
 				]
 			},
 			{
@@ -444,7 +444,7 @@ var Beat = {
 				stylers: [
 					{ hue: color },
 					{ saturation: 30 },
-					{ lightness: -25},
+					{ lightness: -25}
 				]
 			},
 
@@ -453,14 +453,14 @@ var Beat = {
 				elementType: "geometry",
 				stylers: [
 					{ saturation: 30 },
-					{ lightness: -15 },
+					{ lightness: -15 }
 				]
 			},
 			{
 				featureType: "water",
 				elementType: "geometry",
 				stylers: [
-					{ lightness: 40 },
+					{ lightness: 40 }
 				]
 			},
 			{
@@ -469,7 +469,7 @@ var Beat = {
 				stylers: [
 					{ hue: color },
 					{ saturation: 15 },
-					{ lightness: 20 },
+					{ lightness: 20 }
 
 				]
 			},
@@ -480,7 +480,7 @@ var Beat = {
 				stylers: [
 					{ hue: color },
 					{ saturation: 25 },
-					{ lightness: -40},
+					{ lightness: -40}
 				]
 			},
 			{
@@ -488,7 +488,7 @@ var Beat = {
 				elementType: "geometry.stroke",
 				stylers: [
 					{ saturation: 10 },
-					{ lightness: -20},
+					{ lightness: -20}
 				]
 			},
 			{
@@ -497,7 +497,7 @@ var Beat = {
 				stylers: [
 					{ hue: color },
 					{ saturation: 30 },
-					{ lightness: -30},
+					{ lightness: -30}
 				]
 			}
 		];
@@ -523,7 +523,7 @@ var Beat = {
 					NaN
 				);
 			}
-		}
+		};
 			
 		for(var i=0; i < myEvents.length; i++){
 			myEvents[i].date = new Date(myEvents[i].year, myEvents[i].month, myEvents[i].day, myEvents[i].hour, myEvents[i].minute, 0);
@@ -668,7 +668,7 @@ var Beat = {
 			});
 			
 			$(".gallery-scroller").niceScroll({
-				cursorcolor:'#3f9f97', 
+				cursorcolor:'#e67384',
 				cursorwidth:'20px',
 				background:'#1F2326',
 				cursorborder:'0px solid #1F2326',
