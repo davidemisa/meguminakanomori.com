@@ -18,6 +18,10 @@ $(function() {
 });
 
 function switchLanguage(lang) {
-    i18n.changeLanguage(lang);
     localStorage.setItem("selected-language", lang);
+    translate();
+}
+
+function translate() {
+    i18n.changeLanguage(localStorage.getItem("selected-language"));
 }
