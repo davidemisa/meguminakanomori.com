@@ -15,10 +15,10 @@
 	#Navigation
 	#Home
 	#Page Overlay
-	#The Band
-	#Concerts
+	#Biography
+	#Events
 	#Gallery
-	#Store
+	#Repertory
 	#Contacts
 	#Footer
 	#PrettyPhoto
@@ -1288,7 +1288,7 @@ fieldset[disabled] .btn-dark2.active {
 	top:30px;
 	right:40px;
 	font-size:27pt;
-	color:#313840;
+	color:#e67384;
 	cursor:pointer;
 	z-index:100;
 	-webkit-transform: rotate(0deg);
@@ -1629,6 +1629,7 @@ fieldset[disabled] .btn-dark2.active {
 }
 
 .band-elem p{
+	background-color:rgba(0,0,0,0.7);
 	padding:30px 4% 25px;
 	width:100%;
 	text-align:center;
@@ -1636,10 +1637,6 @@ fieldset[disabled] .btn-dark2.active {
        -moz-transition: all 0.3s;
          -o-transition: all 0.3s;
             transition: all 0.3s;
-}
-
-.band-elem:hover p{
-	background-color:rgba(0,0,0,0.7);
 }
 
 .album{
@@ -1969,7 +1966,7 @@ fieldset[disabled] .btn-dark2.active {
 	top:10px;
 	right:20px;
 	font-size:20pt;
-	color:#313840;
+	color:#e67384;
 	cursor:pointer;
 	z-index:100;
 	-webkit-transform: rotate(0deg);
@@ -2171,6 +2168,12 @@ html[xmlns] .slides {display: block;}
 .flex-control-thumbs img {width: 100%; display: block; opacity: .7; cursor: pointer;}
 .flex-control-thumbs img:hover {opacity: 1;}
 .flex-control-thumbs .flex-active {opacity: 1; cursor: default;}
+
+.composer {
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
 
 
 
