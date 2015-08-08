@@ -574,6 +574,10 @@ fieldset[disabled] .btn-dark2.active {
 	margin:0 3px;
 }
 
+.short-name {
+    display: none !important;
+}
+
 #nav ul > li > a{
 	display:block;
 	text-transform:uppercase;
@@ -2451,8 +2455,19 @@ div.beat #pp_full_res .pp_inline,div.dark_square #pp_full_res .pp_inline{color:#
 	}
 }
 
-@media (max-width: 979px) {
-	.nav-section .sn-icons{
+@media (max-width: 991px) {
+    .long-name {
+        display: none !important;
+    }
+    .short-name {
+        display: inline-block !important;
+    }
+    
+    .nav-section .sn-icons {
+        padding-top: 10px;
+    }
+    
+	.nav-section .sn-icons .sn-icon {
 		display:none;
 	}
 	

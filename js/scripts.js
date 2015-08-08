@@ -204,21 +204,25 @@ var Beat = {
 			select.appendChild(first);
 
 			var nav = document.getElementById('nav');
-			var loadLinks = function(element, hyphen, level) {
+			var loadLinks = function(element, hyphen, level, firstSkipped) {
 
 				var e = element;
 				var children = e.children;
 
-				for(var i = 0; i < e.children.length; ++i) {
+				for(var i = 0; i < e.children.length; ++i) { //skipping first child
 
 					var currentLink = children[i];
 
 					switch(currentLink.nodeName) {
 						case 'A':
-							var option = document.createElement('option');
-							option.innerHTML = (level++ < 1 ? '' : hyphen) + currentLink.innerHTML;
-							option.value = $(currentLink).attr('href');
-							select.appendChild(option);
+                            if(firstSkipped) {
+                                var option = document.createElement('option');
+                                option.innerHTML = (level++ < 1 ? '' : hyphen) + currentLink.innerHTML;
+                                option.value = $(currentLink).attr('href');
+                                select.appendChild(option);
+                            } else {
+                                firstSkipped = true
+                            }
 							break;
 						default:
 							if(currentLink.nodeName === 'UL') {
@@ -226,13 +230,15 @@ var Beat = {
 									hyphen += hyphen;
 								}
 							}
-							loadLinks(currentLink, hyphen, level);
+							firstSkipped = loadLinks(currentLink, hyphen, level, firstSkipped);
 							break;
 					}
 				}
+                
+                return firstSkipped;
 			};
 
-			loadLinks(nav, '- ', 0);
+			loadLinks(nav, '- ', 0, false);
 
 			nav.appendChild(select);
 
