@@ -410,7 +410,7 @@ var Beat = {
 		
 		var $tis = this;
 		var monthTxt = [],
-			color = "#f5c7cc",
+			color = "#f06363",
 			hidePastEvents = false; //If true, the events that took place won't show on the list of concerts
 									//and its marker on the map won't be created
 		
@@ -674,7 +674,7 @@ var Beat = {
 			});
 			
 			$(".gallery-scroller").niceScroll({
-				cursorcolor:'#e67384',
+				cursorcolor:'#f06363',
 				cursorwidth:'20px',
 				background:'#1F2326',
 				cursorborder:'0px solid #1F2326',
