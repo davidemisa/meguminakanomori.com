@@ -620,6 +620,13 @@ fieldset[disabled] .btn-dark2.active {
 	margin-right:10%;
 }
 
+.lang-button {
+    cursor: pointer;
+}
+.lang-button :hover {
+    background-color: #e67384;
+}
+
 
 /* #Home
 ================================================== */
