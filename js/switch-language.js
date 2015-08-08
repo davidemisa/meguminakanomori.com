@@ -15,6 +15,8 @@ $(function() {
         languages: ['en', 'it', 'jpn'],
         currentLanguage: lang
     });
+
+    selectLanguage(lang);
 });
 
 function switchLanguage(lang) {
@@ -23,5 +25,12 @@ function switchLanguage(lang) {
 }
 
 function translate() {
-    i18n.changeLanguage(localStorage.getItem("selected-language"));
+    var lang = localStorage.getItem("selected-language");
+    i18n.changeLanguage(lang);
+    selectLanguage(lang);
+}
+
+function selectLanguage(lang) {
+    $(".lang-flag").removeClass('lang-selected');
+    $(".lang-" + lang).addClass('lang-selected');
 }

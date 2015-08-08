@@ -620,11 +620,14 @@ fieldset[disabled] .btn-dark2.active {
 	margin-right:10%;
 }
 
-.lang-button {
+.lang-flag {
     cursor: pointer;
+    opacity: 0.4;
+    filter: alpha(opacity=40);
 }
-.lang-button :hover {
-    background-color: #e67384;
+.lang-flag:hover, .lang-selected {
+    opacity: 1.0;
+    filter: alpha(opacity=100);
 }
 
 
