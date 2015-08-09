@@ -1,9 +1,9 @@
 var myEvents = [
 	{
-        //TODO verificare se si può prendere in automatico il giorno della settimana e mostrare ore
 		year: 2015,
 		month: 10,
 		day: 16,
+        weekDay: 5,
 		hour: 20,
 		minute: 30,
 		latitude: 39.2197195,
@@ -62,19 +62,109 @@ var myEvents = [
 		buyTicketURL: 'http://www.cagliari2015.eu/eventi/%E2%80%9Cvagues-duo%E2%80%9D-andrea-mocci-megumi-nakanomori-la-marche-dans-le-d%C3%A9sert-concerto'
 	},
     {
-        year: 2015,
-        month: 12,
-        day: 18,
-        hour: 22,
+        year: 2016,
+        month: 5,
+        day: 21,
+        weekDay: 6,
+        hour: 20,
         minute: 30,
-        latitude: 51.509597,
-        longitude: 0.015965,
-        location: '<div data-translatable>' +
-        'The O2 - Peninsula Square, London, UK *' +
-        'qualcosa in italiano *' +
-        'in japanese' +
+        latitude: 44.430242,
+        longitude: 11.3575049,
+        location:
+        '<div data-translatable>' +
+            '<span>' +
+                '<div style="margin-bottom: 10px">' +
+                    '<p style="font-size: 17px">' +
+                        '<b>Piano Recital</b>' +
+                    '</p>' +
+                    'details to be defined</br>' +
+                '</div>' +
+                'Performer: <i>Megumi Nakanomori</i>' +
+            '</span>' +
+            '<span>' +
+                '<div style="margin-bottom: 10px">' +
+                    '<p style="font-size: 17px">' +
+                        '<b>Recital di Pianoforte</b>' +
+                    '</p>' +
+                    'dettagli da definire</br>' +
+                '</div>' +
+                'Musicista: <i>Megumi Nakanomori</i>' +
+            '</span>' +
+            '<span>' +
+                '<div style="margin-bottom: 10px">' +
+                    '<p style="font-size: 17px">' +
+                        '<b>ピアノ リサイタル</b>' +
+                    '</p>' +
+                    '詳細未定</br>' +
+                '</div>' +
+                '出演者：中ノ森めぐみ' +
+            '</span>' +
         '</div>',
-        infoWindow: 'The great concert in Lorem Ipsum<br/>Ticket price: $80<br/><a href="#" target="_blank">Buy tickets here</a>',
-        buyTicketURL: 'http://www.wiselythemes.com/index.php?theme=beat'
+        infoWindow:
+        '<div data-translatable>' +
+            '<span>' +
+                'details to be defined' +
+            '</span>' +
+            '<span>' +
+                'dettagli da definire' +
+            '</span>' +
+            '<span>' +
+                '詳細未定' +
+            '</span>' +
+        '</div>',
+        buyTicketURL: '#'
+    },
+    {
+        year: 2016,
+        month: 5,
+        day: 27,
+        weekDay: 5,
+        hour: 20,
+        minute: 30,
+        latitude: 45.4619517,
+        longitude: 9.0891199,
+        location:
+        '<div data-translatable>' +
+            '<span>' +
+                '<div style="margin-bottom: 10px">' +
+                    '<p style="font-size: 17px">' +
+                        '<b>Piano Recital</b>' +
+                    '</p>' +
+                    'details to be defined</br>' +
+                '</div>' +
+                'Performer: <i>Megumi Nakanomori</i>' +
+            '</span>' +
+            '<span>' +
+                '<div style="margin-bottom: 10px">' +
+                    '<p style="font-size: 17px">' +
+                        '<b>Recital di Pianoforte</b>' +
+                    '</p>' +
+                    'dettagli da definire</br>' +
+                '</div>' +
+                'Musicista: <i>Megumi Nakanomori</i>' +
+            '</span>' +
+            '<span>' +
+                '<div style="margin-bottom: 10px">' +
+                    '<p style="font-size: 17px">' +
+                        '<b>ピアノ リサイタル</b>' +
+                    '</p>' +
+                    '詳細未定</br>' +
+                '</div>' +
+                '出演者：中ノ森めぐみ' +
+            '</span>' +
+        '</div>',
+        infoWindow:
+        '<div data-translatable>' +
+            '<span>' +
+                'details to be defined' +
+            '</span>' +
+            '<span>' +
+                'dettagli da definire' +
+            '</span>' +
+            '<span>' +
+                '詳細未定' +
+            '</span>' +
+        '</div>',
+        buyTicketURL: '#'
     }
 ];

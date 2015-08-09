@@ -16,6 +16,61 @@ var Beat = {
 	scrollPos: 0,
 	sendingMail: false,
 	myLatlng: null,
+    enMonths: [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December"
+    ],
+    itMonths: [
+        "Gennaio",
+        "Febbraio",
+        "Marzo",
+        "Aprile",
+        "Maggio",
+        "Giugno",
+        "Luglio",
+        "Agosto",
+        "Settembre",
+        "Ottobre",
+        "Novembre",
+        "Dicembre"
+    ],
+    enWeekDays: [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+    ],
+    itWeekDays: [
+        "Lunedì",
+        "Martedì",
+        "Mercoledì",
+        "Giovedì",
+        "Venerdì",
+        "Sabato",
+        "Domenica"
+    ],
+    jpnWeekDays: [
+        "（月）",
+        "（火）",
+        "（水）",
+        "（木）",
+        "（金）",
+        "（土）",
+        "（日）"
+    ],
 
 	init: function() {
 		"use strict";
@@ -401,6 +456,16 @@ var Beat = {
 		});
 	},
 	
+	getEventDate: function(event) {
+        var result =
+        '<div data-translatable>' +
+            this.enWeekDays[event.weekDay - 1] + ' ' + event.day + ' ' + this.enMonths[event.month - 1] + ', ' + event.year + ' at ' + event.hour + ':' + event.minute + ' *' +
+            this.itWeekDays[event.weekDay - 1] + ' ' + event.day + ' ' + this.itMonths[event.month - 1] + ' ' + event.year + ' ore ' + event.hour + ':' + event.minute + ' *' +
+            event.year + '年 ' + event.month + '月 ' + event.day + '日' + this.jpnWeekDays[event.weekDay - 1] + event.hour + '：' + event.minute + '開演' +
+        '</div>';
+        return result;
+    },
+    
 	googleMap: function() {
 		"use strict";
 		
@@ -409,23 +474,9 @@ var Beat = {
 		}
 		
 		var $tis = this;
-		var monthTxt = [],
-			color = "#f06363",
+		var color = "#f06363",
 			hidePastEvents = false; //If true, the events that took place won't show on the list of concerts
 									//and its marker on the map won't be created
-		
-		monthTxt[0]="January";
-		monthTxt[1]="February";
-		monthTxt[2]="March";
-		monthTxt[3]="April";
-		monthTxt[4]="May";
-		monthTxt[5]="June";
-		monthTxt[6]="July";
-		monthTxt[7]="August";
-		monthTxt[8]="September";
-		monthTxt[9]="October";
-		monthTxt[10]="November";
-		monthTxt[11]="December";
 		
 		var styles = [
 			{
@@ -559,7 +610,7 @@ var Beat = {
 		}
 		
 		$(".ccounter").ccountdown(upcomingConcert.year,upcomingConcert.month,upcomingConcert.day,upcomingConcert.hour,upcomingConcert.minute);
-		$("#events-info .date").html(upcomingConcert.day + " " + monthTxt[upcomingConcert.month - 1] + ", " + upcomingConcert.year);
+        $("#events-info .date").html($tis.getEventDate(upcomingConcert));
 		$("#events-info .location").html(upcomingConcert.location);
 		if ( typeof upcomingConcert.buyTicketURL !== 'undefined' && upcomingConcert.buyTicketURL != "" ){
 			$("#events-info #buyTicketsBtn").attr('href', upcomingConcert.buyTicketURL);
@@ -585,14 +636,16 @@ var Beat = {
 		$tis.map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
 		$tis.map.mapTypes.set('map_style', styledMap);
 		$tis.map.setMapTypeId('map_style');
-		
+
+        google.maps.event.addListenerOnce($tis.map, 'idle', function(){
+            translate();
+        });
+        
 		var createMarker = function(obj){
 			var lat = obj.latitude, 
 				lng = obj.longitude,
 				year = obj.year,
-				month = monthTxt[obj.month - 1].slice(0,3),
 				day = obj.day,
-				//location = obj.location,
 				info = obj.infoWindow;
 			
 			var infowindow = new google.maps.InfoWindow({
@@ -604,10 +657,24 @@ var Beat = {
 				map: $tis.map,
 				anchorPoint: new google.maps.Point(29,-68),
 				shadow: 'none',
-				content: '<div class="marker"><div class="day">' + day +' </div>' +
-						'<div class="month">' + month +' </div>' +
-						'<div class="year">' + year +' </div>' +
-						'</div>'
+				content: 
+                '<div class="marker" data-translatable>' +
+                    '<span>' +
+                        '<div class="day">' + day +' </div>' +
+                        '<div class="month">' + $tis.enMonths[obj.month - 1].slice(0,3) +' </div>' +
+                        '<div class="year">' + year +' </div>' +
+                    '</span>' +
+                    '<span>' +
+                        '<div class="day">' + day +' </div>' +
+                        '<div class="month">' + $tis.itMonths[obj.month - 1].slice(0,3) +' </div>' +
+                        '<div class="year">' + year +' </div>' +
+                    '</span>' +
+                    '<span>' +
+                        '<div class="day">' + year +' </div>' +
+                        '<div class="month">' + obj.month +' / ' + obj.day +' </div>' +
+                        '<div class="year">' + $tis.jpnWeekDays[obj.weekDay - 1] +' </div>' +
+                    '</span>' +
+                '</div>'
 			});
 
 			google.maps.event.addListener(marker, 'click', function() {
@@ -616,14 +683,23 @@ var Beat = {
 			});
 		};
 		
-		for(i=myEvents.length-1; i >= 0; i--){
+		for(i = myEvents.length-1; i >= 0; i--){
 			if ( myEvents[i] == undefined ){
 				continue;
 			}
 			
-			var concert = myEvents[i];
-			createMarker(concert);
-			$('#complete-list #list').prepend('<div class="completeInfo" data-id="' + i + '"><div class="completeDate">' + concert.day + " " + monthTxt[concert.month - 1] + ", " + concert.year + '</div><div class="completeLocation">' + concert.location + '</div></div>');
+			var event = myEvents[i];
+			createMarker(event);
+			$('#complete-list #list').prepend(
+                '<div class="completeInfo" data-id="' + i + '">' +
+                    '<div class="completeDate">' +
+                        $tis.getEventDate(event) +
+                    '</div>' +
+                    '<div class="completeLocation">' +
+                        event.location +
+                    '</div>' +
+                '</div>'
+            );
 		}
 	},
 	

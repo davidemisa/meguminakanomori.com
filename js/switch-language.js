@@ -6,17 +6,17 @@ var i18n;
 
 $(function() {
     var lang = localStorage.getItem("selected-language");
-    if(!lang) {
+    if (!lang) {
         lang = 'en'
     }
-    
+
     i18n = window.domI18n({
         separator: ' *',
         languages: ['en', 'it', 'jpn'],
         currentLanguage: lang
     });
 
-    selectLanguage(lang);
+    switchLanguage(lang);
 });
 
 function switchLanguage(lang) {
@@ -34,3 +34,5 @@ function selectLanguage(lang) {
     $(".lang-flag").removeClass('lang-selected');
     $(".lang-" + lang).addClass('lang-selected');
 }
+
+init();
