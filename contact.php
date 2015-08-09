@@ -1,6 +1,6 @@
 <?php
 
-$to = 'youremail@yourdomain.com'; // Replace with your email address
+$to = 'merupeko@gmail.com';
 
 // No need to edit below this line
 if($to) {

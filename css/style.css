@@ -170,7 +170,7 @@ input[type="color"],
   height: 40px;
   padding: 4px 2%;
   line-height: 40px;
-  color: #f06363;
+  color: #c4c4c4;
   margin-bottom: 10px;
   vertical-align: middle;
   -webkit-border-radius: 4px;
@@ -2242,7 +2242,12 @@ html[xmlns] .slides {display: block;}
             transform: rotate(-4deg);
 }
 
-
+.email-address {
+    display: inline-block;
+    vertical-align: text-top;
+    padding: 12px 25px 0 0;
+    font-family: serif;
+}
 
 /* #Footer
 ================================================== */

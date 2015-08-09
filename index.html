@@ -47,6 +47,7 @@
     <link id="events-section-content" rel="import" href="html/events-section.html">
     <link id="gallery-section-content" rel="import" href="html/gallery-section.html">
     <link id="repertory-section-content" rel="import" href="html/repertory-section.html">
+    <link id="contact-section-content" rel="import" href="html/contact-section.html">
 
     <script>
         function importHtml(id, selector) {
@@ -73,7 +74,7 @@
 								<li><a href="#events">Events</a></li>
 								<li><a href="#gallery">Gallery</a></li>
 								<li><a href="#repertory">Repertory</a></li>
-								<li><a href="#contacts">Contact me</a></li>
+								<li><a href="#contacts">Contact</a></li>
 							</ul>
 						</nav><!-- END MAIN MENU -->
 
@@ -100,36 +101,8 @@
     <script> importHtml("events-section-content", "#events");</script>
     <script> importHtml("gallery-section-content", "#gallery");</script>
     <script> importHtml("repertory-section-content", "#repertory");</script>
+    <script> importHtml("contact-section-content", "#contacts");</script>
 
-	<!-- BEGIN CONTACTS SECTION -->
-	<section id="contacts" class="bg-color2">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-12">
-					<h1 class="section-title center">Contact me</h1>
-					
-					<div id="form-wrap" class="col-sm-5 center">
-						<form id="form-contact" method="post" action="#" class="bg-color1">
-							<input type="text" placeholder="Name" name="contact_name" id="contact_name" />
-							<input type="email" placeholder="Email" name="contact_email" id="contact_email" />
-							<input type="text" placeholder="Subject" name="contact_subject" id="contact_subject" />
-							<textarea cols="6" rows="4" placeholder="Message" name="contact_message" id="contact_message"></textarea>
-							<a href="" id="contact_send" class="btn btn-dark btn-icon">
-                                <i class="icon-envelope"></i>
-                                <span data-translatable>
-                                    Send *
-                                    Invia *
-                                    送信
-                                </span>
-                            </a>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>	
-	<!-- END CONTACTS SECTION -->
-	
 	<!-- BEGIN FOOTER -->
 	<footer id="footer" class="bg-color2">
         <ul class="sn-icons">
