@@ -1,12 +1,12 @@
 var myEvents = [
 	{
 		year: 2015,
-		month: 12,
-		day: 20,
-		hour: 22,
+		month: 10,
+		day: 16,
+		hour: 20,
 		minute: 30,
-		latitude: 51.509597,
-		longitude: 0.015965,
+		latitude: 39.2197195,
+		longitude: 9.1157212,
 		location: '<div data-translatable>' +
         'The O2 - Peninsula Square, London, UK *' +
         'qualcosa in italiano *' +

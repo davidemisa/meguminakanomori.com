@@ -129,7 +129,7 @@ var Beat = {
 		/**
 		 * Contact form submit
 		 */
-		$tis.contactForm();
+		//$tis.contactForm();
 		
 		/**
 		 * Capture buttons click event
@@ -1200,7 +1200,7 @@ var Beat = {
 			e.preventDefault();
 			
 			$tis.map.setCenter($tis.myLatlng);
-			$tis.map.setZoom(11);
+			$tis.map.setZoom(14);
 		});
 		
 		// Capture 'Complete List' Button click event.
