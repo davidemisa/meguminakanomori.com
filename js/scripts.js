@@ -611,7 +611,8 @@ var Beat = {
 			});
 
 			google.maps.event.addListener(marker, 'click', function() {
-				infowindow.open($tis.map,marker);
+				infowindow.open($tis.map, marker);
+                translate();
 			});
 		};
 		
