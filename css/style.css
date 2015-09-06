@@ -84,7 +84,7 @@ html {
 body {
 	padding: 0;
 	height: 100%;
-	color: #848484;
+	color: #a4a4a4;
 	overflow: hidden;
 	line-height: 20px;
 	background-color:#2c3136;
@@ -1142,7 +1142,7 @@ fieldset[disabled] .btn-dark2.active {
 			border-radius: 3px;
     margin: 1px;
     width: 60%;
-    background: #848484 repeat-x 0 0 scroll;
+    background: #a4a4a4 repeat-x 0 0 scroll;
 }
 
 .ttw-music-player .unused-controls {
@@ -1732,7 +1732,7 @@ fieldset[disabled] .btn-dark2.active {
 }
 
 .album .album-info li span{
-	color:#848484;
+	color:#a4a4a4;
 }
 
 .album .album-info li span.time{
@@ -2131,7 +2131,8 @@ fieldset[disabled] .btn-dark2.active {
 /* #Repertory
 ================================================== */
 #repertory {
-	background-image:url('../img/store.png');
+	/*background-image:url('../img/store.png');*/
+    background-color: #15171B;
 	background-repeat:no-repeat;
 	background-position:center bottom;
 	border-bottom: 40px solid #15171B;
@@ -2614,9 +2615,9 @@ div.beat #pp_full_res .pp_inline,div.dark_square #pp_full_res .pp_inline{color:#
 		background-image: url('../img/bottom_concerts@2x.png');
 	}
 	
-	#repertory{
-		background-image:url('../img/store@2x.png');
-	}
+	/*#repertory{*/
+		/*background-image:url('../img/store@2x.png');*/
+	/*}*/
 }
 
 
