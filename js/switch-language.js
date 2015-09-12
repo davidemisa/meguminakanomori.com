@@ -34,5 +34,3 @@ function selectLanguage(lang) {
     $(".lang-flag").removeClass('lang-selected');
     $(".lang-" + lang).addClass('lang-selected');
 }
-
-init();

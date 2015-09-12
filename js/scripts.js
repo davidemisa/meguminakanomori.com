@@ -773,8 +773,8 @@ var Beat = {
 	getLatestTweets: function() {
 		"use strict";
 		
-		var username = 'Envato', //replace with your own Twitter username
-			bandName = 'Beat Band';	//replace with your Band Name
+		var username = 'MNakanomori', //replace with your own Twitter username
+			bandName = 'Megumi';	//replace with your Band Name
 			
 		$('.tweet').html('<div class="spinner"><div class="rect1"></div><div class="rect2"></div><div class="rect3"></div><div class="rect4"></div><div class="rect5"></div></div>');
 		
