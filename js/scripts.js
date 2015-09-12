@@ -184,7 +184,7 @@ var Beat = {
 		/**
 		 * Contact form submit
 		 */
-		//$tis.contactForm();
+		$tis.contactForm();
 		
 		/**
 		 * Capture buttons click event
@@ -1150,123 +1150,115 @@ var Beat = {
 		(function(){(jQuery.browser=jQuery.browser||{}).mobile=(/android|webos|iphone|ipad|ipod|blackberry/i.test(navigator.userAgent.toLowerCase()));})(navigator.userAgent||navigator.vendor||window.opera);
 	},
 
-    // HTTP post is not used now...
-	//contactForm: function() {
-	//	"use strict";
-	//	var $tis = this;
-	//	
-	//	$("#contact_send").click(function(e){
-	//		e.preventDefault();
-    //
-	//		var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-	//			name = $('#contact_name').val(),
-	//			email = $('#contact_email').val(),
-	//			subject = $('#contact_subject').val(),
-	//			message = $('#contact_message').val(),
-	//			mailObj = {
-     //               to: "morridavide@gmail.com"
-     //           },
-	//			error = false;
-	//		
-	//		if(name === ""){
-	//			$('#contact_name').addClass('invalid');
-	//			error = true;
-	//		}else{
-	//			$('#contact_name').removeClass('invalid');
-	//			mailObj.message = "\n" + name;
-	//		}
-    //
-	//		if(email === ""){
-	//			$('#contact_email').addClass('invalid');
-	//			error = true;
-	//		}else if(re.test(email) === false){
-	//			$('#contact_email').addClass('invalid');
-	//			error = true;
-	//		}else{
-	//			$('#contact_email').removeClass('invalid');
-     //           mailObj.from = email;
-	//		}
-    //
-	//		if(subject === ""){
-	//			$('#contact_subject').addClass('invalid');
-	//			error = true;
-	//		}else{
-	//			$('#contact_subject').removeClass('invalid');
-     //           mailObj.subject = subject;
-	//		}
-	//		
-	//		if(message === ""){
-	//			$('#contact_message').addClass('invalid');
-	//			error = true;
-	//		}else{
-	//			$('#contact_message').removeClass('invalid');
-     //           mailObj.message =  message + mailObj.message;
-	//		}
-	//		
-	//		var showError = function(){
-	//			var iClass = $('#contact_send i').attr("class");
-	//			
-	//			$('#contact_send i').removeClass(iClass).addClass('icon-remove').delay(1500).queue(function(next){
-	//				$(this).removeClass('icon-remove').addClass(iClass);
-	//				next();
-	//			});
-	//			$('#contact_send').addClass('btn-danger').delay(1500).queue(function(next){
-	//				$(this).removeClass('btn-danger');
-	//				next();
-	//			});
-	//		};
-	//		
-	//		if(!error && !$tis.sendingMail) {
-	//			$tis.sendingMail = true;
-	//			$('#contact_send i').addClass('icon-cog icon-spin');
-	//			$('#contact_send').addClass('disabled');
-    //
-     //           $.ajax({
-	//				type: 'POST',
-	//				url: 'url',
-	//				data: {
-     //                   parameters: mailObj
-     //               },
-     //               headers: {
-     //                   "Authorization": "Basic " + btoa("user:password")
-     //               },
-	//				success: function(msg, textStatus, jqXHR){
-	//					$('#contact_send i').removeClass('icon-cog icon-spin');
-	//					$('#contact_send').removeClass('disabled');
-	//					
-	//					if (msg === 'ok'){
-	//						var iClass = $('#contact_send i').attr("class");
-	//			
-	//						$('#contact_send i').removeClass(iClass).addClass('icon-ok').delay(1500).queue(function(next){
-	//							$(this).removeClass('icon-ok').addClass(iClass);
-	//							next();
-	//						});
-	//						$('#contact_send').addClass('btn-success').delay(1500).queue(function(next){
-	//							$(this).removeClass('btn-success');
-	//							next();
-	//						});
-	//						$('#form-contact')[0].reset();
-	//					} else {
-	//						showError();
-	//					}
-	//					
-	//					$tis.sendingMail = false;
-	//				},
-	//				error: function(jqXHR, textStatus, errorThrown){
-	//					$('#contact_send i').removeClass('icon-cog icon-spin');
-	//					$('#contact_send').removeClass('disabled');
-	//					
-	//					showError();
-	//					$tis.sendingMail = false;
-	//				}
-	//			});
-	//		} else{
-	//			showError();
-	//		}
-    //
-	//		return false;
-	//	});
-	//},
+    contactForm: function() {
+        "use strict";
+        var $tis = this;
+
+        $("#contact_send").click(function(e){
+            e.preventDefault();
+
+            var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                name = $('#contact_name').val(),
+                email = $('#contact_email').val(),
+                subject = $('#contact_subject').val(),
+                message = $('#contact_message').val(),
+                html = "",
+                error = false;
+
+            if(name === ""){
+                $('#contact_name').addClass('invalid');
+                error = true;
+            }else{
+                $('#contact_name').removeClass('invalid');
+                html = "name=" + name;
+            }
+
+            if(email === ""){
+                $('#contact_email').addClass('invalid');
+                error = true;
+            }else if(re.test(email) === false){
+                $('#contact_email').addClass('invalid');
+                error = true;
+            }else{
+                $('#contact_email').removeClass('invalid');
+                html += "&email="+ email;
+            }
+
+            if(subject === ""){
+                $('#contact_subject').addClass('invalid');
+                error = true;
+            }else{
+                $('#contact_subject').removeClass('invalid');
+                html += "&subject=" + subject;
+            }
+
+            if(message === ""){
+                $('#contact_message').addClass('invalid');
+                error = true;
+            }else{
+                $('#contact_message').removeClass('invalid');
+                html += "&message="+ message;
+            }
+
+            var showError = function(){
+                var iClass = $('#contact_send i').attr("class");
+
+                $('#contact_send i').removeClass(iClass).addClass('icon-remove').delay(1500).queue(function(next){
+                    $(this).removeClass('icon-remove').addClass(iClass);
+                    next();
+                });
+                $('#contact_send').addClass('btn-danger').delay(1500).queue(function(next){
+                    $(this).removeClass('btn-danger');
+                    next();
+                });
+            };
+
+            if(!error && !$tis.sendingMail) {
+                $tis.sendingMail = true;
+                $('#contact_send i').addClass('icon-cog icon-spin');
+                $('#contact_send').addClass('disabled');
+
+                $.ajax({
+                    type: 'POST',
+                    url: 'contact.php',
+                    data: html,
+                    success: function(msg){
+                        $('#contact_send i').removeClass('icon-cog icon-spin');
+                        $('#contact_send').removeClass('disabled');
+
+                        if (msg === 'ok'){
+                            var iClass = $('#contact_send i').attr("class");
+
+                            $('#contact_send i').removeClass(iClass).addClass('icon-ok').delay(1500).queue(function(next){
+                                $(this).removeClass('icon-ok').addClass(iClass);
+                                next();
+                            });
+                            $('#contact_send').addClass('btn-success').delay(1500).queue(function(next){
+                                $(this).removeClass('btn-success');
+                                next();
+                            });
+                            $('#form-contact')[0].reset();
+                        }else{
+                            showError();
+                        }
+
+                        $tis.sendingMail = false;
+                    },
+                    error: function(){
+                        $('#contact_send i').removeClass('icon-cog icon-spin');
+                        $('#contact_send').removeClass('disabled');
+
+                        showError();
+                        $tis.sendingMail = false;
+                    }
+                });
+            } else{
+                showError();
+            }
+
+            return false;
+        });
+    },
 	
 	buttons: function(){
 		"use strict";

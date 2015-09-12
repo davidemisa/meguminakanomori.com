@@ -1,6 +1,6 @@
 <?php
 
-$to = 'merupeko@gmail.com';
+$to = 'mnakanomori@gmail.com';
 
 // No need to edit below this line
 if($to) {
