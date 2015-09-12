@@ -8,10 +8,9 @@ $(function($){
 		// Components							
 		slide_links			:	'false',
 		slides 				:  	[		// Slideshow Images
-										{image : 'img/background/piano_keyboard.jpg'},
-										{image : 'img/background/inside_piano.jpg'},
-                                        // TODO migliorare questa
-										{image : 'img/background/music_score.jpg'}
+										{image : 'img/background/piano_keyboard.jpg'}
+                                        //{image : 'img/background/inside_piano_black.jpg'},
+										//{image : 'img/background/inside_piano_color.jpg'}
 										//{image : 'http://placehold.it/1920x1143'}
 								]
 	});
