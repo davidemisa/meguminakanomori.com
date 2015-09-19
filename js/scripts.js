@@ -1055,6 +1055,7 @@ var Beat = {
 			$('html, body').animate({scrollTop: $tis.scrollPos}, 0);
 
 			page.removeClass('moveFromBottom');
+            $("#other-news").empty();
             translate()
 		});
 	},
