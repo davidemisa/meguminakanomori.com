@@ -1000,7 +1000,7 @@ var Beat = {
 		$(".open-overlay").click(function(e){
 			e.preventDefault();
 			
-			var newsDetails = $(this).parent().data('news-details');
+			var newsDetails = $(this).parent().data('news-details') || $(this).next().data('news-details');
 			if ( newsDetails !== undefined ){
 				$tis.populateNews(newsDetails);
 			}
@@ -1041,31 +1041,33 @@ var Beat = {
 			page.on("mouseenter mouseleave", function(){
 				$("html").getNiceScroll().resize();
 			});
-			
+            translate()
 		});
-		
+
 		$(".close-overlay").click(function(){
 			var page = $('.page-overlay');
-			
+
 			page.css({position:'fixed'});
-			
+
 			$("#header, section, #footer, .nicescroll-rails").show();
 			$("#music-player .tracklist").getNiceScroll().show();
-			
+
 			$('html, body').animate({scrollTop: $tis.scrollPos}, 0);
-			
+
 			page.removeClass('moveFromBottom');
+            translate()
 		});
 	},
 	
-	populateNews: function(newsDetails){
+	populateNews: function(newsDetailsString){
 		"use strict";
 		var $tis = this;
-		
+		var newsDetails = JSON.parse(newsDetailsString);
+
 		$('#news-img-wrap .date').html(newsDetails[0].date);
 		$('#news-img-wrap .title h3').html(newsDetails[0].title);
 		$('#news-img-wrap img').remove();
-		$('#news-img-wrap').append('<img src="' + newsDetails[0].img + '" alt="" />');				
+		$('#news-img-wrap').append('<img src="' + newsDetails[0].imgLarge + '" alt="" />');
 		
 		$('#news-txt').html("");
 	
@@ -1084,11 +1086,11 @@ var Beat = {
 					if ( value !== undefined ){
 						switch (key) {
 							case 'title':
-								$('#news-txt').append('<h3>' + value + '</h3>');
+								$('#news-txt').append('<h3 data-translatable data-no-cache>' + value + '</h3>');
 								break;
 								 
 							case 'txt':
-								$('#news-txt').append('<p>' + value + '</p>');
+								$('#news-txt').append('<p style="margin-top: 20px" data-translatable data-no-cache>' + value + '</p>');
 								break;
 								 
 							case 'img':
@@ -1101,9 +1103,9 @@ var Beat = {
 								 
 							case 'quote':
 								if(aux.hasOwnProperty('img')){
-									$('#news-txt').append('<span class="quote half">' + value + '</span>');
+									$('#news-txt').append('<span class="quote half" data-translatable data-no-cache>' + value + '</span>');
 								} else {
-									$('#news-txt').append('<span class="quote">' + value + '</span>');
+									$('#news-txt').append('<span class="quote" data-translatable data-no-cache>' + value + '</span>');
 								}
 								break;
 								 

@@ -5,29 +5,50 @@
 var i18n;
 
 $(function() {
-    var lang = localStorage.getItem("selected-language");
-    if (!lang) {
-        lang = 'en'
-    }
+    var lang = retrieveLanguage();
+    initI18n(lang);
+    translateLang(lang);
+});
 
+function switchLanguage(lang) {
+    localStorage.setItem("selected-language", lang);
+    translateLang(lang);
+}
+
+function initI18n(lang) {
     i18n = window.domI18n({
         separator: ' *',
         languages: ['en', 'it', 'jpn'],
         currentLanguage: lang
     });
+}
 
-    switchLanguage(lang);
-});
+function resetLanguage() {
+    var lang = retrieveLanguage();
+    resetLang(lang);
+}
 
-function switchLanguage(lang) {
-    localStorage.setItem("selected-language", lang);
-    translate();
+function resetLang(lang) {
+    i18n.clearCachedElements();
+    translateLang(lang)
 }
 
 function translate() {
-    var lang = localStorage.getItem("selected-language");
+    var lang = retrieveLanguage();
+    translateLang(lang);
+}
+
+function translateLang(lang) {
     i18n.changeLanguage(lang);
     selectLanguage(lang);
+}
+
+function retrieveLanguage() {
+    var lang = localStorage.getItem("selected-language");
+    if (!lang) {
+        lang = 'en'
+    }
+    return lang
 }
 
 function selectLanguage(lang) {
