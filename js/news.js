@@ -2,7 +2,8 @@
  * Created by misa on 19/09/15.
  */
 
-var news = [
+var orderedNews,
+    news = [
     {
         "orderedDate": 20150918,
         "homeDate": "18 September, 2015 *18 Settembre 2015 *２０１５年９月１８日",
@@ -22,6 +23,9 @@ var news = [
         "imgSmall": "http://placehold.it/146x146",
         "imgMedium": "http://placehold.it/350x350",
         "imgLarge": "http://placehold.it/673x444",
+        "intro": "Recording in Pescara *" +
+                 "Incisione a Pescara *" +
+                 "レコーディングin Pescara",
         "txt":[
             {
                 "txt": "Dal 20 sono a Pescara per la registrazione del primo CD di Duo Vagues! *" +
@@ -57,6 +61,9 @@ var news = [
         "imgSmall": "http://placehold.it/146x146",
         "imgMedium": "http://placehold.it/350x350",
         "imgLarge": "http://placehold.it/673x444",
+        "intro": "Recording in Pescara *" +
+                 "Incisione a Pescara *" +
+                 "レコーディングin Pescara",
         "txt":[
             {
                 "txt":"Fusce imperdiet metus sit amet lorem pellentesque, et suscipit lectus tempus. Aliquam dui neque, venenatis a convallis eu, sodales vitae justo. Donec nec neque purus. Sed sed nisi vestibulum, mollis ligula vel sem nulla faucibus ante.<br/><br/>Morbi feugiat urna quis nulla sodales molestie ac vitae elit. Morbi risus lectus, volutpat nec sagittis vitae, mollis et nisi. Curabitur vel neque vitae diam dapibus semper a sit amet urna. Nullam cursus velit justo. Nullam euismod, arcu sit amet semper sagittis, sem nulla faucibus ante, vitae adipiscing mi metus faucibus sapien. Nulla dictum eget metus et gravida. Donec vulputate mi ac facilisis fringilla. Proin scelerisque lorem dictum tincidunt iaculis."
@@ -83,7 +90,8 @@ var news = [
 ];
 
 $(function() {
-    var orderedNews = sortNews();
+    orderedNews = sortNews();
+
     $(".news-item").each(function(index, element){
         var news = orderedNews[index];
         $(element).children(".news-img").html("<img src='" + news.imgMedium + "' alt='' />");
@@ -99,4 +107,24 @@ function sortNews() {
 
 function compareDates(a, b) {
     return -(a.orderedDate - b.orderedDate);
+}
+
+function populateOtherNews(mainNewsId) {
+    orderedNews.forEach(function(element, index, array){
+        if(element.orderedDate !== mainNewsId) {
+
+            var otherNews = "<li data-news-details='" + JSON.stringify([element]) + "'>" +
+                                "<div class=\"other-news-img-wrap\">" +
+                                    "<div class=\"date\" data-translatable data-no-cache>" + element.date + "</div>" +
+                                    "<img src=\"" + element.imgSmall + "\" alt=\"\" />" +
+                                "</div>" +
+                                "<div class=\"other-news-details\">" +
+                                    "<h4 data-translatable data-no-cache>" + element.title + "</h4>" +
+                                    "<p data-translatable data-no-cache>" + element.intro + "</p>" +
+                                "</div>" +
+                            "</li>";
+
+            $("#other-news").append(otherNews);
+        }
+    });
 }

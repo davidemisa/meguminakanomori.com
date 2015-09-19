@@ -1121,7 +1121,10 @@ var Beat = {
 				}
 			}
 		}
-		$tis.resizeVideos();
+
+        populateOtherNews(newsDetails[0].orderedDate);
+
+        $tis.resizeVideos();
 		$(".page-overlay .loading, .page-overlay .progress").delay(1000).hide(100);
 	},
 	
