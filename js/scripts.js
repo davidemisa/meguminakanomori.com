@@ -233,11 +233,12 @@ var Beat = {
 			
 		$("section").waypoint(function(direction) {
 			var tis = $(this);
-			
 			if (direction === "up"){ tis = tis.prev(); }
-			
 			$("#nav a").removeClass("active");
-			$('nav a[href="#' + tis.attr("id") + '"]').addClass("active");
+            var id = tis.attr("id");
+            if(id) {
+                $('nav a[href="#' + id.split("-")[0] + '"]').addClass("active");
+            }
 		}, { offset: '50%' });
 	},
 	
@@ -1000,7 +1001,7 @@ var Beat = {
 		$(".open-overlay").click(function(e){
 			e.preventDefault();
 			
-			var newsDetails = $(this).parent().data('news-details');
+			var newsDetails = $(this).parent().data('news-details') || $(this).next().data('news-details');
 			if ( newsDetails !== undefined ){
 				$tis.populateNews(newsDetails);
 			}
@@ -1041,31 +1042,70 @@ var Beat = {
 			page.on("mouseenter mouseleave", function(){
 				$("html").getNiceScroll().resize();
 			});
-			
 		});
-		
+
 		$(".close-overlay").click(function(){
 			var page = $('.page-overlay');
-			
+
 			page.css({position:'fixed'});
-			
+
 			$("#header, section, #footer, .nicescroll-rails").show();
 			$("#music-player .tracklist").getNiceScroll().show();
-			
+
 			$('html, body').animate({scrollTop: $tis.scrollPos}, 0);
-			
+
 			page.removeClass('moveFromBottom');
 		});
 	},
-	
-	populateNews: function(newsDetails){
+
+    populateOtherNews: function(mainNewsId) {
+        var $tis = this;
+        $("#other-news").empty();
+        var otherCounter = 0;
+        orderedNews.forEach(function(element, index, array){
+            if(element.orderedDate !== mainNewsId) {
+                var otherNews = "<li " + (otherCounter > 2 ? "class=\"disabled\"" : "") + " data-news-details='" + JSON.stringify([element]) + "'>" +
+                                    "<div class=\"other-news-img-wrap\">" +
+                                        "<div class=\"date\" data-translatable data-no-cache>" + element.date + "</div>" +
+                                        "<img src=\"" + element.imgSmall + "\" alt=\"\" />" +
+                                    "</div>" +
+                                    "<div class=\"other-news-details\">" +
+                                        "<h4 data-translatable data-no-cache>" + element.title + "</h4>" +
+                                        "<p data-translatable data-no-cache>" + element.intro + "</p>" +
+                                    "</div>" +
+                                "</li>";
+
+                $("#other-news").append(otherNews);
+                otherCounter++;
+            }
+        });
+
+        if(otherCounter > 2) {
+            $("#load-more-btn").show();
+        } else {
+            $("#load-more-btn").hide();
+        }
+
+        // Capture Other News element click event.
+        $("#other-news li").click(function(){
+            $(".page-overlay .progress").css({top: $(window).scrollTop() + $(window).height()/2 + 'px'});
+            $(".page-overlay .loading, .page-overlay .progress").show(100);
+            var newsDetails = $(this).data('news-details');
+            if ( newsDetails !== undefined ){
+                $tis.populateNews(newsDetails);
+            }
+        });
+    },
+
+	populateNews: function(newsDetailsString) {
 		"use strict";
 		var $tis = this;
-		
+		var newsDetails = typeof newsDetailsString === "string" ? JSON.parse(newsDetailsString) : newsDetailsString;
+
 		$('#news-img-wrap .date').html(newsDetails[0].date);
 		$('#news-img-wrap .title h3').html(newsDetails[0].title);
 		$('#news-img-wrap img').remove();
-		$('#news-img-wrap').append('<img src="' + newsDetails[0].img + '" alt="" />');				
+		$('#news-img-wrap').append('<img src="' + newsDetails[0].imgLarge + '" alt="" />');
 		
 		$('#news-txt').html("");
 	
@@ -1084,11 +1124,11 @@ var Beat = {
 					if ( value !== undefined ){
 						switch (key) {
 							case 'title':
-								$('#news-txt').append('<h3>' + value + '</h3>');
+								$('#news-txt').append('<h3 data-translatable data-no-cache>' + value + '</h3>');
 								break;
 								 
 							case 'txt':
-								$('#news-txt').append('<p>' + value + '</p>');
+								$('#news-txt').append('<p style="margin-top: 20px" data-translatable data-no-cache>' + value + '</p>');
 								break;
 								 
 							case 'img':
@@ -1101,9 +1141,9 @@ var Beat = {
 								 
 							case 'quote':
 								if(aux.hasOwnProperty('img')){
-									$('#news-txt').append('<span class="quote half">' + value + '</span>');
+									$('#news-txt').append('<span class="quote half" data-translatable data-no-cache>' + value + '</span>');
 								} else {
-									$('#news-txt').append('<span class="quote">' + value + '</span>');
+									$('#news-txt').append('<span class="quote" data-translatable data-no-cache>' + value + '</span>');
 								}
 								break;
 								 
@@ -1119,7 +1159,10 @@ var Beat = {
 				}
 			}
 		}
-		$tis.resizeVideos();
+
+        $tis.populateOtherNews(newsDetails[0].orderedDate);
+        translate();
+        $tis.resizeVideos();
 		$(".page-overlay .loading, .page-overlay .progress").delay(1000).hide(100);
 	},
 	
@@ -1301,16 +1344,6 @@ var Beat = {
 				$('#other-news li').removeClass("disabled");
 			}, 200);
 			$(this).hide(300);
-		});
-		
-		// Capture Other News 'Load More' Button click event.
-		$("#other-news li").click(function(){
-			$(".page-overlay .progress").css({top: $(window).scrollTop() + $(window).height()/2 + 'px'});
-			$(".page-overlay .loading, .page-overlay .progress").show(100);
-			var newsDetails = $(this).data('news-details');
-			if ( newsDetails !== undefined ){
-				$tis.populateNews(newsDetails);
-			}
 		});
 	}
 };

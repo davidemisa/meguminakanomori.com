@@ -958,7 +958,7 @@ fieldset[disabled] .btn-dark2.active {
 }
 
 #social-stream-items > li .news .time{
-	color:#33383c;
+	color:#747474;
 }
 
 #social-stream-items > li .news a,
@@ -1482,7 +1482,7 @@ fieldset[disabled] .btn-dark2.active {
 
 #other-news{
 	list-style:none;
-	padding:0 0 20px;
+	padding:0 0 0 0;
 }
 
 #other-news li{
