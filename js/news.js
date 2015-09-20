@@ -5,7 +5,7 @@
 var orderedNews,
     news = [
     {
-        "orderedDate": 20150918,
+        "id": 20150918,
         "homeDate": "18 September, 2015 *18 Settembre 2015 *２０１５年９月１８日",
         "date":
                 "<span>" +
@@ -60,7 +60,7 @@ var orderedNews,
         ]
     },
     {
-        "orderedDate": 20150919,
+        "id": 20150919,
         "homeDate": "19 September, 2015 *19 Settembre 2015 *２０１５年９月１９日",
         "date":
                 "<span>" +
@@ -90,7 +90,7 @@ var orderedNews,
         ]
     },
     {
-        "orderedDate": 20150917,
+        "id": 20150917,
         "homeDate": "17 September, 2015 *17 Settembre 2015 *２０１５年９月１７日",
         "date":
                 "<span>" +
@@ -144,5 +144,5 @@ function sortNews() {
 }
 
 function compareDates(a, b) {
-    return -(a.orderedDate - b.orderedDate);
+    return -(a.id - b.id);
 }
