@@ -84,12 +84,47 @@ var orderedNews,
         "txt":[
             {
                 "txt": "There will be a masterclass of the Duo Vagues on 17 and 18 October in Alghero. Two years ago I was the accompanist at the masterclass for saxophonists in Sanluri. This time we open the doors to groups of chamber music! *" +
-                       "Si svolgerà un masterclass del Duo Vagues il 17 e 18 ottobre ad Alghero. Due anni fa sono stata l'accompagnatrice del masterclass per saxofonisti a Sanluri. Questa volta apriamo le porte anche ai gruppi di musica da camera! *" +
+                       "Si svolgerà un masterclass del Duo Vagues il 17 e 18 ottobre ad Alghero. Due anni fa sono stata l’accompagnatrice del masterclass per saxofonisti a Sanluri. Questa volta apriamo le porte anche ai gruppi di musica da camera! *" +
                        "10月17、18日にサルデーニャ島のアルゲーロ市にてDuo Vaguesのマスタークラスを開講することになりました。２年前には、サルデーニャ島の南、サンルーリ市で行われたサックスのマスタークラスで伴奏を務めましたが、今回は対象者を室内楽まで広げて募集しています！"
             }
         ]
+    },
+    {
+        "orderedDate": 20150917,
+        "homeDate": "17 September, 2015 *17 Settembre 2015 *２０１５年９月１７日",
+        "date":
+                "<span>" +
+                    "17<br/>Sep" +
+                "</span>" +
+                "<span>" +
+                    "17<br/>Set" +
+                "</span>" +
+                "<span>" +
+                    "17日<br/>9月" +
+                "</span>",
+        "title": "Coop Music Awards *" +
+                 "Coop Music Awards *" +
+                 "Coop Music Awards",
+        "imgSmall": "img/news/20150917/competition_small.png",
+        "imgMedium": "img/news/20150917/competition_medium.png",
+        "imgLarge": "img/news/20150917/competition_large.png",
+        "intro": "I will be at the International Singing Competition “Premio Antonio Bertolini” as official accompanist. *" +
+                 "Sarò al concorso internazionale di canto “Premio Antonio Bertolini” come accompagnatrice ufficiale. *" +
+                 "声楽コンクール「アントニオ・ベルトリーニ」の公式伴奏者を務めることになりました。",
+        "txt":[
+            {
+                "txt":  "<span>" +
+                            "I will be at the International Singing Competition <a href=\"http://premioantoniobertolini.altervista.org/\">“Premio Antonio Bertolini”</a> as official accompanist. It will take place in Milan (<a href=\"http://www.spazioteatro89.org/\">Spazio Teatro 89</a> and Auditorium Giorgio Gaber del Grattacielo Pirelli) from 8 to 10 October." +
+                        "</span>" +
+                        "<span>" +
+                            "Sarò al concorso internazionale di canto <a href=\"http://premioantoniobertolini.altervista.org/\">“Premio Antonio Bertolini”</a> come accompagnatrice ufficiale. Si svolgerà a Milano (<a href=\"http://www.spazioteatro89.org/\">Spazio Teatro 89</a> e Auditorium Giorgio Gaber del Grattacielo Pirelli) dall’8 al 10 ottobre." +
+                        "</span>" +
+                        "<span>" +
+                            "声楽コンクール<a href=\"http://premioantoniobertolini.altervista.org/\">「アントニオ・ベルトリーニ」</a>の公式伴奏者を務めることになりました。コンクール会場はミラノの<a href=\"http://www.spazioteatro89.org/\">Spazio Teatro 89</a> と Auditorium Giorgio Gaber del Grattacielo Pirelliで、10月8日から3日間開催されます。" +
+                        "</span>"
+            }
+        ]
     }
-    //    TODO articolo 3 17 Sett.
 ];
 
 $(function() {
@@ -110,24 +145,4 @@ function sortNews() {
 
 function compareDates(a, b) {
     return -(a.orderedDate - b.orderedDate);
-}
-
-function populateOtherNews(mainNewsId) {
-    orderedNews.forEach(function(element, index, array){
-        if(element.orderedDate !== mainNewsId) {
-
-            var otherNews = "<li data-news-details='" + JSON.stringify([element]) + "'>" +
-                                "<div class=\"other-news-img-wrap\">" +
-                                    "<div class=\"date\" data-translatable data-no-cache>" + element.date + "</div>" +
-                                    "<img src=\"" + element.imgSmall + "\" alt=\"\" />" +
-                                "</div>" +
-                                "<div class=\"other-news-details\">" +
-                                    "<h4 data-translatable data-no-cache>" + element.title + "</h4>" +
-                                    "<p data-translatable data-no-cache>" + element.intro + "</p>" +
-                                "</div>" +
-                            "</li>";
-
-            $("#other-news").append(otherNews);
-        }
-    });
 }

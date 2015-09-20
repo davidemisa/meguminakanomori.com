@@ -233,11 +233,12 @@ var Beat = {
 			
 		$("section").waypoint(function(direction) {
 			var tis = $(this);
-			
 			if (direction === "up"){ tis = tis.prev(); }
-			
 			$("#nav a").removeClass("active");
-			$('nav a[href="#' + tis.attr("id") + '"]').addClass("active");
+            var id = tis.attr("id");
+            if(id) {
+                $('nav a[href="#' + id.split("-")[0] + '"]').addClass("active");
+            }
 		}, { offset: '50%' });
 	},
 	
@@ -1041,7 +1042,6 @@ var Beat = {
 			page.on("mouseenter mouseleave", function(){
 				$("html").getNiceScroll().resize();
 			});
-            translate()
 		});
 
 		$(".close-overlay").click(function(){
@@ -1055,15 +1055,52 @@ var Beat = {
 			$('html, body').animate({scrollTop: $tis.scrollPos}, 0);
 
 			page.removeClass('moveFromBottom');
-            $("#other-news").empty();
-            translate()
 		});
 	},
-	
-	populateNews: function(newsDetailsString){
+
+    populateOtherNews: function(mainNewsId) {
+        var $tis = this;
+        $("#other-news").empty();
+        var otherCounter = 0;
+        orderedNews.forEach(function(element, index, array){
+            if(element.orderedDate !== mainNewsId) {
+                var otherNews = "<li " + (otherCounter > 2 ? "class=\"disabled\"" : "") + " data-news-details='" + JSON.stringify([element]) + "'>" +
+                                    "<div class=\"other-news-img-wrap\">" +
+                                        "<div class=\"date\" data-translatable data-no-cache>" + element.date + "</div>" +
+                                        "<img src=\"" + element.imgSmall + "\" alt=\"\" />" +
+                                    "</div>" +
+                                    "<div class=\"other-news-details\">" +
+                                        "<h4 data-translatable data-no-cache>" + element.title + "</h4>" +
+                                        "<p data-translatable data-no-cache>" + element.intro + "</p>" +
+                                    "</div>" +
+                                "</li>";
+
+                $("#other-news").append(otherNews);
+                otherCounter++;
+            }
+        });
+
+        if(otherCounter > 2) {
+            $("#load-more-btn").show();
+        } else {
+            $("#load-more-btn").hide();
+        }
+
+        // Capture Other News element click event.
+        $("#other-news li").click(function(){
+            $(".page-overlay .progress").css({top: $(window).scrollTop() + $(window).height()/2 + 'px'});
+            $(".page-overlay .loading, .page-overlay .progress").show(100);
+            var newsDetails = $(this).data('news-details');
+            if ( newsDetails !== undefined ){
+                $tis.populateNews(newsDetails);
+            }
+        });
+    },
+
+	populateNews: function(newsDetailsString) {
 		"use strict";
 		var $tis = this;
-		var newsDetails = JSON.parse(newsDetailsString);
+		var newsDetails = typeof newsDetailsString === "string" ? JSON.parse(newsDetailsString) : newsDetailsString;
 
 		$('#news-img-wrap .date').html(newsDetails[0].date);
 		$('#news-img-wrap .title h3').html(newsDetails[0].title);
@@ -1123,8 +1160,8 @@ var Beat = {
 			}
 		}
 
-        populateOtherNews(newsDetails[0].orderedDate);
-
+        $tis.populateOtherNews(newsDetails[0].orderedDate);
+        translate();
         $tis.resizeVideos();
 		$(".page-overlay .loading, .page-overlay .progress").delay(1000).hide(100);
 	},
@@ -1307,16 +1344,6 @@ var Beat = {
 				$('#other-news li').removeClass("disabled");
 			}, 200);
 			$(this).hide(300);
-		});
-		
-		// Capture Other News 'Load More' Button click event.
-		$("#other-news li").click(function(){
-			$(".page-overlay .progress").css({top: $(window).scrollTop() + $(window).height()/2 + 'px'});
-			$(".page-overlay .loading, .page-overlay .progress").show(100);
-			var newsDetails = $(this).data('news-details');
-			if ( newsDetails !== undefined ){
-				$tis.populateNews(newsDetails);
-			}
 		});
 	}
 };
