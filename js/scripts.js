@@ -996,15 +996,17 @@ var Beat = {
 
     openItemsOverlay: function(element) {
         var $tis = this;
-        var newsDetails = element.parent().data('news-details') || element.data('news-details') || element.next().data('news-details');
-        if ( newsDetails !== undefined ){
-            $tis.populateOverlayItems(newsDetails, "#news-overlay");
-        }
-        var collaborationDetails = element.parent().data('collaboration-details') || element.data('collaboration-details') || element.next().data('collaboration-details');
-        if ( collaborationDetails !== undefined ){
-            $tis.populateOverlayItems(collaborationDetails, "#collaborations-overlay");
-        }
+		$tis.openItemOverlay(element, 'news-details', '#news-overlay');
+		$tis.openItemOverlay(element, 'collaboration-details', '#collaborations-overlay');
     },
+
+	openItemOverlay: function(element, detailData, overlayId) {
+		var $tis = this;
+		var details = element.parent().data(detailData) || element.data(detailData) || element.next().data(detailData);
+		if ( details !== undefined && details !== null ){
+			$tis.populateOverlayItems(details, overlayId);
+		}
+	},
 
 	overlayButtons: function() {
 		"use strict";
