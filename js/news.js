@@ -124,6 +124,87 @@ var orderedNews,
                         "</span>"
             }
         ]
+    },
+    {
+        "orderedDate": 20151016,
+        "homeDate": "16 October, 2015 *16 Ottobre 2015 *２０１５年１０月１６日",
+        "date":
+            "<span>" +
+                "16<br/>Oct" +
+            "</span>" +
+            "<span>" +
+                "16<br/>Ott" +
+            "</span>" +
+            "<span>" +
+                "16日<br/>10月" +
+            "</span>",
+        "title": "Duo Vagues in Sardinia *" +
+                 "Duo Vagues in Sardegna *" +
+                 "デュオ・ヴァーグ in サルデーニャ",
+        "imgSmall": "img/news/20151016/sardinia_concert_small.jpg",
+        "imgMedium": "img/news/20151016/sardinia_concert_medium.jpg",
+        "imgLarge": "img/news/20151016/sardinia_concert_large.jpg",
+        "intro": "古い小道が情緒を醸し出す、カリアリのお城周辺地域のサロンで、デュオ・ヴァーグのリサイタルを行いました。 *" +
+                 "Si è svolto il recital del Duo Vagues in un salone a Cagliari, nella zona di castello dove le stradine belle ci portano nell’epoca antica. *" +
+                 "古い小道が情緒を醸し出す、カリアリのお城周辺地域のサロンで、デュオ・ヴァーグのリサイタルを行いました。",
+        "txt":[
+            {
+                "txt":  "<span>" +
+                            "１０月１６日、古い小道が情緒を醸し出す、カリアリのお城周辺地域のサロンで、デュオ・ヴァーグのリサイタルを行いました。<a href=\"http://www.cagliari2015.eu/eventi/“vagues-duo”-andrea-mocci-megumi-nakanomori-la-marche-dans-le-désert-concerto\">イベントのページはここをクリック</a>" +
+                        "</span>" +
+                        "<span>" +
+                            "Il 16 ottobre si è svolto il recital del Duo Vagues in un salone a Cagliari, nella zona di castello dove le stradine belle ci portano nell’epoca antica. <a href=\"http://www.cagliari2015.eu/eventi/“vagues-duo”-andrea-mocci-megumi-nakanomori-la-marche-dans-le-désert-concerto\">Qui l'articolo dell'evento.</a>" +
+                        "</span>" +
+                        "<span>" +
+                            "１０月１６日、古い小道が情緒を醸し出す、カリアリのお城周辺地域のサロンで、デュオ・ヴァーグのリサイタルを行いました。<a href=\"http://www.cagliari2015.eu/eventi/“vagues-duo”-andrea-mocci-megumi-nakanomori-la-marche-dans-le-désert-concerto\">イベントのページはここをクリック</a>" +
+                        "</span>"
+            },
+            {
+                "txt":  "サックス奏者アンドレア・モッチ（国立カリアリ音楽院講師）とデュオを結成したのは２０１２年春ですから、もう３年以上一緒に演奏していることになります。今回のプログラムは、既に私たちのレパートリーであるミヨーのスカラムーシュ、クレストンのソナタ、シューロフのホット・ソナタに、新しくドビュッシーのラプソディを加え、アンコールにはジョリヴェの小品アンプロンロチュ・ファンタジーを演奏しました。ミヨー、ジョリヴェ、クレストンは来春発売予定のCDにも収録されています。 *" +
+                        "Il duo con saxofonista Andrea Mocci (insegnante del conservatorio di Cagliari) si è costruito in primavera del 2012, ormai suoniamo insieme da più di tre anni. Questa volta nel programma abbiamo aggiunto un nuovo pezzo Rapsodie di Debussy al nostro repertorio Scaramouche di Milhaud, Sonata di Creston, Hot Sonata di Schulhoff e abbiamo eseguito Fantasie-Impromptu di Jolivet per bis. Milhaud, Jolivet e Creston sono inseriti al nostro primo CD che saranno messi in vendita questa primavera. *" +
+                        "サックス奏者アンドレア・モッチ（国立カリアリ音楽院講師）とデュオを結成したのは２０１２年春ですから、もう３年以上一緒に演奏していることになります。今回のプログラムは、既に私たちのレパートリーであるミヨーのスカラムーシュ、クレストンのソナタ、シューロフのホット・ソナタに、新しくドビュッシーのラプソディを加え、アンコールにはジョリヴェの小品アンプロンロチュ・ファンタジーを演奏しました。ミヨー、ジョリヴェ、クレストンは来春発売予定のCDにも収録されています。"
+            },
+            {
+                "img":  "img/news/20151016/room.jpg"
+            },
+            {
+                "txt":  "アンティークな装飾と暗めの照明で雰囲気抜群の部屋。聴き手との距離が近く、反応がダイレクトに感じられるのは、サロンコンサートの醍醐味です。 *" +
+                        "Il salone è molto bello, profumo dei periodi antichi... È molto particolare il concerto al salone, essendo vicino al palco c’è uno scambio di sentimenti molto diretto tra gli esecutori e il pubblico. *" +
+                        "アンティークな装飾と暗めの照明で雰囲気抜群の部屋。聴き手との距離が近く、反応がダイレクトに感じられるのは、サロンコンサートの醍醐味です。"
+            },
+            {
+                "img":  "img/news/20151016/seaport.jpg"
+            },
+            {
+                "txt":  "演奏会翌日は早朝に出発し、車で３時間サルデーニャを縦断。アルゲーロの音楽学校で２日間のサックス・マスタークラスを行いました。私は生徒さんの伴奏をしながら、サックスという楽器のメカニック・テクニックを学ぶいい機会になりました。 *" +
+                        "Il giorno dopo siamo partiti la mattina presto, abbiamo attraversato la Sardegna da nord a sud, per tre ore di viaggio con la macchina. Ad Alghero abbiamo tenuto la masterclass di saxofono. È stata un’occasione utile anche per me per approfondire la consapevolezza sulla meccanica e la tecnica di saxofono. *" +
+                        "演奏会翌日は早朝に出発し、車で３時間サルデーニャを縦断。アルゲーロの音楽学校で２日間のサックス・マスタークラスを行いました。私は生徒さんの伴奏をしながら、サックスという楽器のメカニック・テクニックを学ぶいい機会になりました。"
+            },
+            {
+                "img":  "img/news/20151016/scalinata.jpg"
+            },
+            {
+                "img":  "img/news/20151016/piano_room.jpg"
+            },
+            {
+                "txt":  "ファンタジー溢れるイタリアとは言え、この音楽学校内の、ここまでやるか！な装飾には驚きました。なんとも楽しい空間です。 *" +
+                        "L’interno di questa scuola è incredibile, pieno di fantasia! *" +
+                        "ファンタジー溢れるイタリアとは言え、この音楽学校内の、ここまでやるか！な装飾には驚きました。なんとも楽しい空間です。"
+            },
+            {
+                "txt":  "最終日には、生徒さんたちのミニコンサートで私達デュオも一曲披露させていただきました。 *" +
+                        "L’ultimo giorno della masterclass al saggio degli allievi abbiamo eseguito un pezzo anche come duo. *" +
+                        "最終日には、生徒さんたちのミニコンサートで私達デュオも一曲披露させていただきました。"
+            },
+            {
+                "img":  "img/news/20151016/duo_vagues.jpg"
+            },
+            {
+                "txt":  "４日間、毎食美味しい料理をいただき、のんびりした空気の中で音楽を楽しみ、リフレッシュしてミラノへ戻ってきました。サルデーニャ島に滞在したのは３度目ですが、私にとってはパラダイス、すっかり島のファンです！ *" +
+                        "Ho passato quattro giorni di cucina meravigliosa e aria tranquilla, godendo della musica più del solito. Per me la Sardegna è un’isola paradiso; era già la terza volta ma mi innamoro sempre di più! *" +
+                        "４日間、毎食美味しい料理をいただき、のんびりした空気の中で音楽を楽しみ、リフレッシュしてミラノへ戻ってきました。サルデーニャ島に滞在したのは３度目ですが、私にとってはパラダイス、すっかり島のファンです！"
+            }
+        ]
     }
 ];
 
