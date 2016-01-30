@@ -153,7 +153,7 @@ var orderedNews,
                             "１０月１６日、古い小道が情緒を醸し出す、カリアリのお城周辺地域のサロンで、デュオ・ヴァーグのリサイタルを行いました。<a href=\"http://www.cagliari2015.eu/eventi/“vagues-duo”-andrea-mocci-megumi-nakanomori-la-marche-dans-le-désert-concerto\">イベントのページはここをクリック</a>" +
                         "</span>" +
                         "<span>" +
-                            "Il 16 ottobre si è svolto il recital del Duo Vagues in un salone a Cagliari, nella zona di castello dove le stradine belle ci portano nell’epoca antica. <a href=\"http://www.cagliari2015.eu/eventi/“vagues-duo”-andrea-mocci-megumi-nakanomori-la-marche-dans-le-désert-concerto\">Qui l'articolo dell'evento.</a>" +
+                            "Il 16 ottobre si è svolto il recital del Duo Vagues in un salone a Cagliari, nella zona di castello dove le stradine belle ci portano nell’epoca antica. <a href=\"http://www.cagliari2015.eu/eventi/“vagues-duo”-andrea-mocci-megumi-nakanomori-la-marche-dans-le-désert-concerto\">Qui l’articolo dell’evento.</a>" +
                         "</span>" +
                         "<span>" +
                             "１０月１６日、古い小道が情緒を醸し出す、カリアリのお城周辺地域のサロンで、デュオ・ヴァーグのリサイタルを行いました。<a href=\"http://www.cagliari2015.eu/eventi/“vagues-duo”-andrea-mocci-megumi-nakanomori-la-marche-dans-le-désert-concerto\">イベントのページはここをクリック</a>" +
@@ -203,6 +203,39 @@ var orderedNews,
                 "txt":  "４日間、毎食美味しい料理をいただき、のんびりした空気の中で音楽を楽しみ、リフレッシュしてミラノへ戻ってきました。サルデーニャ島に滞在したのは３度目ですが、私にとってはパラダイス、すっかり島のファンです！ *" +
                         "Ho passato quattro giorni di cucina meravigliosa e aria tranquilla, godendo della musica più del solito. Per me la Sardegna è un’isola paradiso; era già la terza volta ma mi innamoro sempre di più! *" +
                         "４日間、毎食美味しい料理をいただき、のんびりした空気の中で音楽を楽しみ、リフレッシュしてミラノへ戻ってきました。サルデーニャ島に滞在したのは３度目ですが、私にとってはパラダイス、すっかり島のファンです！"
+            }
+        ]
+    },
+    {
+        "orderedDate": 20160129,
+        "homeDate": "29 January, 2016 *29 Gennaio 2016 *２０１６年１月２９日",
+        "date":
+            "<span>" +
+                "29<br/>Jan" +
+            "</span>" +
+            "<span>" +
+                "29<br/>Gen" +
+            "</span>" +
+            "<span>" +
+                "29日<br/>1月" +
+            "</span>",
+        "title": "つじ村ふみ惠 ソプラノリサイタル *" +
+                 "Fumie Tsujimura Soprano recital *" +
+                 "つじ村ふみ惠 ソプラノリサイタル",
+        "imgSmall": "img/news/20160129/pamphlet_front_small.jpg",
+        "imgMedium": "img/news/20160129/pamphlet_front_medium.jpg",
+        "imgLarge": "img/news/20160129/pamphlet_front_large.jpg",
+        "intro": "友人からの紹介で、名古屋出身のソプラノ歌手つじ村ふみ惠さんのリサイタルの伴奏を務めさせていただくことになりました。 *" +
+                 "Tramite un’amica ho avuto questa occasione di accompagnare il soprano Fumie Tsujimura, di Nagoya, al suo recital. *" +
+                 "友人からの紹介で、名古屋出身のソプラノ歌手つじ村ふみ惠さんのリサイタルの伴奏を務めさせていただくことになりました。",
+        "txt":[
+            {
+                "txt": "友人からの紹介で、名古屋出身のソプラノ歌手つじ村ふみ惠さんのリサイタルの伴奏を務めさせていただくことになりました。メールのやり取りをするうちに、ちょうど同時期に渡伊していたことが分かり、御縁を感じています。名古屋で演奏の機会いただいたのは初めてなのでワクワク。プログラムは、ベッリーニ、ドニゼッティ、ロッシーニ、そしてピアノソロ2曲も含めてイタリア一色です！沢山の方のご来場、お待ちしています。 *" +
+                       "Tramite un’amica ho avuto questa occasione di accompagnare il soprano Fumie Tsujimura, di Nagoya, al suo recital. Contattandoci via mail abbiamo scoperto che ci siamo trasferite in Italia lo stesso periodo. È bello conoscere una collega così e non vedo l’ora di suonare a Nagoya visto che è la prima esperienza per me! Il programma sarà composto dalla musica di Bellini, Donizetti e Rossini. Suonerò anche due pezzi per pianoforte, sempre di musica italiana. Spero di vedervi in tanti, venite tutti a Nagoya! *" +
+                       "友人からの紹介で、名古屋出身のソプラノ歌手つじ村ふみ惠さんのリサイタルの伴奏を務めさせていただくことになりました。メールのやり取りをするうちに、ちょうど同時期に渡伊していたことが分かり、御縁を感じています。名古屋で演奏の機会いただいたのは初めてなのでワクワク。プログラムは、ベッリーニ、ドニゼッティ、ロッシーニ、そしてピアノソロ2曲も含めてイタリア一色です！沢山の方のご来場、お待ちしています。"
+            },
+            {
+                "img":"img/news/20160129/pamphlet_back.jpg"
             }
         ]
     }
