@@ -462,7 +462,7 @@ var Beat = {
         '<div data-translatable>' +
             this.enWeekDays[event.weekDay - 1] + ' ' + event.day + ' ' + this.enMonths[event.month - 1] + ', ' + event.year + ' at ' + event.hour + ':' + event.minute + ' *' +
             this.itWeekDays[event.weekDay - 1] + ' ' + event.day + ' ' + this.itMonths[event.month - 1] + ' ' + event.year + ' ore ' + event.hour + ':' + event.minute + ' *' +
-            event.year + '年 ' + event.month + '月 ' + event.day + '日' + this.jpnWeekDays[event.weekDay - 1] + event.hour + '：' + event.minute + '開演' +
+            event.year + '年 ' + event.month + '月 ' + event.day + '日' + this.jpnWeekDays[event.weekDay - 1] + event.hour + '：' + event.minute + ' 開演' +
         '</div>';
         return result;
     },
