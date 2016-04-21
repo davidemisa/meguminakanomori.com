@@ -400,6 +400,62 @@ var myEvents = [
         '</div>',
         buyTicketURL: '#'
     },
+    {   // concerto opera Roppongi 29/Mag/2016
+        year: 2016,
+        month: 5,
+        day: 29,
+        weekDay: 7,
+        hour: 13,
+        minute: 25,
+        latitude: 35.6586001,
+        longitude: 139.7322178,
+        location:
+            '<div data-translatable>' +
+                '<span>' +
+                    '<div style="margin-bottom: 10px">' +
+                        '<p style="font-size: 17px">' +
+                            '<b>150° Anniversary of relationship between Italy and Japan<br/>' +
+                            '"Italia, amore mio!"</b>' +
+                        '</p>' +
+                        'Arie, duet</br>' +
+                    '</div>' +
+                    'Performers: <i>Opera Vera</i> (<i>Mai Nishida (Sop.)</i>, <i>Paolo Andrea Di Pietro (Bs.)</i>), <i>Megumi Nakanomori (Pf)</i>' +
+                '</span>' +
+                '<span>' +
+                    '<div style="margin-bottom: 10px">' +
+                        '<p style="font-size: 17px">' +
+                            '<b>150° Anniversario delle relazioni tra Italia e Giappone<br/>' +
+                            '"Italia, amore mio!"</b>' +
+                        '</p>' +
+                        'Arie, duetti</br>' +
+                    '</div>' +
+                    'Musicisti: <i>Opera Vera</i> (<i>Mai Nishida (Sop.)</i>, <i>Paolo Andrea Di Pietro (Bs.)</i>), <i>Megumi Nakanomori (Pf)</i>' +
+                '</span>' +
+                '<span>' +
+                    '<div style="margin-bottom: 10px">' +
+                        '<p style="font-size: 17px">' +
+                            '<b>日伊国交150周年記念イベント<br/>' +
+                            '"Italia, amore mio!"</b>' +
+                        '</p>' +
+                        'アリア、二重唱</br>' +
+                    '</div>' +
+                    '出演者：オペラヴェーラ(西田真以 sp, パオロアンドレア・ディピエトロ bs)、中ノ森めぐみ（pf）' +
+                '</span>' +
+            '</div>',
+        infoWindow:
+            '<div data-translatable>' +
+                '<span>' +
+                    'Roppongi Hills Arena 1F Piazza Italia' +
+                '</span>' +
+                '<span>' +
+                    'Roppongi Hills Arena 1F Piazza Italia' +
+                '</span>' +
+                '<span>' +
+                    '六本木ヒルズ アリーナ 1F Piazza Italia' +
+                '</span>' +
+            '</div>',
+        buyTicketURL: 'https://italia-amore-mio.com/program/'
+    },
     {   // concerto duo Tottori 31/Lug/2016
         year: 2016,
         month: 7,
