@@ -237,38 +237,64 @@ var orderedNews,
         ]
     },
     {
-        orderedDate: 20160402,
-        homeDate: "2 April, 2016 *2 Aprile 2016 *２０１６年４月２日",
+        orderedDate: 20160731,
+        homeDate: "31 July, 2016 *31 Luglio 2016 *２０１６年７月３１日",
         date:
             "<span>" +
-                "2<br/>Apr" +
+                "31<br/>Jul" +
             "</span>" +
             "<span>" +
-                "2<br/>Apr" +
+                "31<br/>Lug" +
             "</span>" +
             "<span>" +
-                "2日<br/>4月" +
+                "31日<br/>7月" +
             "</span>",
-        title: "つじ村ふみ恵帰国記念ソプラノリサイタル終了 *" +
-               "つじ村ふみ恵帰国記念ソプラノリサイタル終了 *" +
-               "つじ村ふみ恵帰国記念ソプラノリサイタル終了",
-        imgSmall: "img/news/20160129/pamphlet_front_small.jpg",
-        imgMedium: "img/news/20160129/pamphlet_front_medium.jpg",
-        imgLarge: "img/news/20160129/pamphlet_front_large.jpg",
-        intro: "友人からの紹介で、名古屋出身のソプラノ歌手つじ村ふみ惠さんのリサイタルの伴奏を務めさせていただくことになりました。 *" +
-                 "Tramite un’amica ho avuto questa occasione di accompagnare il soprano Fumie Tsujimura, di Nagoya, al suo recital. *" +
-                 "友人からの紹介で、名古屋出身のソプラノ歌手つじ村ふみ惠さんのリサイタルの伴奏を務めさせていただくことになりました。",
+        title: "Concert UTAU *" +
+                "Concerto UTAU *" +
+                "コンサート　咏　UTAU",
+        imgSmall: "img/news/20160731/pamphlet_front_small.jpg",
+        imgMedium: "img/news/20160731/pamphlet_front_medium.jpg",
+        imgLarge: "img/news/20160731/pamphlet_front_large.jpg",
+        intro: "",
         txt:[
             {
-                txt: "友人からの紹介で、名古屋出身のソプラノ歌手つじ村ふみ惠さんのリサイタルの伴奏を務めさせていただくことになりました。メールのやり取りをするうちに、ちょうど同時期に渡伊していたことが分かり、御縁を感じています。名古屋で演奏の機会いただいたのは初めてなのでワクワク。プログラムは、ベッリーニ、ドニゼッティ、ロッシーニ、そしてピアノソロ2曲も含めてイタリア一色です！沢山の方のご来場、お待ちしています。 *" +
-                       "Tramite un’amica ho avuto questa occasione di accompagnare il soprano Fumie Tsujimura, di Nagoya, al suo recital. Contattandoci via mail abbiamo scoperto che ci siamo trasferite in Italia lo stesso periodo. È bello conoscere una collega così e non vedo l’ora di suonare a Nagoya visto che è la prima esperienza per me! Il programma sarà composto dalla musica di Bellini, Donizetti e Rossini. Suonerò anche due pezzi per pianoforte, sempre di musica italiana. Spero di vedervi in tanti, venite tutti a Nagoya! *" +
-                       "友人からの紹介で、名古屋出身のソプラノ歌手つじ村ふみ惠さんのリサイタルの伴奏を務めさせていただくことになりました。メールのやり取りをするうちに、ちょうど同時期に渡伊していたことが分かり、御縁を感じています。名古屋で演奏の機会いただいたのは初めてなのでワクワク。プログラムは、ベッリーニ、ドニゼッティ、ロッシーニ、そしてピアノソロ2曲も含めてイタリア一色です！沢山の方のご来場、お待ちしています。"
-            },
-            {
-                img:"img/news/20160129/pamphlet_back.jpg"
+                img:"img/news/20160731/pamphlet_back.jpg"
             }
         ]
     }
+    // {
+    //     orderedDate: 20160402,
+    //     homeDate: "2 April, 2016 *2 Aprile 2016 *２０１６年４月２日",
+    //     date:
+    //         "<span>" +
+    //             "2<br/>Apr" +
+    //         "</span>" +
+    //         "<span>" +
+    //             "2<br/>Apr" +
+    //         "</span>" +
+    //         "<span>" +
+    //             "2日<br/>4月" +
+    //         "</span>",
+    //     title: "つじ村ふみ恵帰国記念ソプラノリサイタル終了 *" +
+    //            "つじ村ふみ恵帰国記念ソプラノリサイタル終了 *" +
+    //            "つじ村ふみ恵帰国記念ソプラノリサイタル終了",
+    //     imgSmall: "img/news/20160129/pamphlet_front_small.jpg",
+    //     imgMedium: "img/news/20160129/pamphlet_front_medium.jpg",
+    //     imgLarge: "img/news/20160129/pamphlet_front_large.jpg",
+    //     intro: "友人からの紹介で、名古屋出身のソプラノ歌手つじ村ふみ惠さんのリサイタルの伴奏を務めさせていただくことになりました。 *" +
+    //              "Tramite un’amica ho avuto questa occasione di accompagnare il soprano Fumie Tsujimura, di Nagoya, al suo recital. *" +
+    //              "友人からの紹介で、名古屋出身のソプラノ歌手つじ村ふみ惠さんのリサイタルの伴奏を務めさせていただくことになりました。",
+    //     txt:[
+    //         {
+    //             txt: "友人からの紹介で、名古屋出身のソプラノ歌手つじ村ふみ惠さんのリサイタルの伴奏を務めさせていただくことになりました。メールのやり取りをするうちに、ちょうど同時期に渡伊していたことが分かり、御縁を感じています。名古屋で演奏の機会いただいたのは初めてなのでワクワク。プログラムは、ベッリーニ、ドニゼッティ、ロッシーニ、そしてピアノソロ2曲も含めてイタリア一色です！沢山の方のご来場、お待ちしています。 *" +
+    //                    "Tramite un’amica ho avuto questa occasione di accompagnare il soprano Fumie Tsujimura, di Nagoya, al suo recital. Contattandoci via mail abbiamo scoperto che ci siamo trasferite in Italia lo stesso periodo. È bello conoscere una collega così e non vedo l’ora di suonare a Nagoya visto che è la prima esperienza per me! Il programma sarà composto dalla musica di Bellini, Donizetti e Rossini. Suonerò anche due pezzi per pianoforte, sempre di musica italiana. Spero di vedervi in tanti, venite tutti a Nagoya! *" +
+    //                    "友人からの紹介で、名古屋出身のソプラノ歌手つじ村ふみ惠さんのリサイタルの伴奏を務めさせていただくことになりました。メールのやり取りをするうちに、ちょうど同時期に渡伊していたことが分かり、御縁を感じています。名古屋で演奏の機会いただいたのは初めてなのでワクワク。プログラムは、ベッリーニ、ドニゼッティ、ロッシーニ、そしてピアノソロ2曲も含めてイタリア一色です！沢山の方のご来場、お待ちしています。"
+    //         },
+    //         {
+    //             img:"img/news/20160129/pamphlet_back.jpg"
+    //         }
+    //     ]
+    // }
 ];
 
 $(function() {
