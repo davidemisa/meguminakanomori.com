@@ -1,19 +1,7 @@
-//TODO need to remove unnecessary attribute date
 var orderedNews,
     news = [
     {
         orderedDate: 20150918,
-        homeDate: "18 September, 2015 *18 Settembre 2015 *２０１５年９月１８日",
-        date:
-                "<span>" +
-                    "18<br/>Sep" +
-                "</span>" +
-                "<span>" +
-                    "18<br/>Set" +
-                "</span>" +
-                "<span>" +
-                    "18日<br/>9月" +
-                "</span>",
         title: "Recording in Pescara *" +
                  "Incisione a Pescara *" +
                  "レコーディングin Pescara",
@@ -58,17 +46,6 @@ var orderedNews,
     },
     {
         orderedDate: 20150919,
-        homeDate: "19 September, 2015 *19 Settembre 2015 *２０１５年９月１９日",
-        date:
-            "<span>" +
-                "19<br/>Sep" +
-            "</span>" +
-            "<span>" +
-                "19<br/>Set" +
-            "</span>" +
-            "<span>" +
-                "19日<br/>9月" +
-            "</span>",
         title: "Masterclass in Saxophone and Chamber Music *" +
                "Masterclass in Saxofono e Musica da Camera *" +
                "サクソフォンと室内楽の為のマスタークラス",
@@ -88,17 +65,6 @@ var orderedNews,
     },
     {
         orderedDate: 20150917,
-        homeDate: "17 September, 2015 *17 Settembre 2015 *２０１５年９月１７日",
-        date:
-                "<span>" +
-                    "17<br/>Sep" +
-                "</span>" +
-                "<span>" +
-                    "17<br/>Set" +
-                "</span>" +
-                "<span>" +
-                    "17日<br/>9月" +
-                "</span>",
         title: "Coop Music Awards *" +
                  "Coop Music Awards *" +
                  "Coop Music Awards",
@@ -124,17 +90,6 @@ var orderedNews,
     },
     {
         orderedDate: 20151016,
-        homeDate: "16 October, 2015 *16 Ottobre 2015 *２０１５年１０月１６日",
-        date:
-            "<span>" +
-                "16<br/>Oct" +
-            "</span>" +
-            "<span>" +
-                "16<br/>Ott" +
-            "</span>" +
-            "<span>" +
-                "16日<br/>10月" +
-            "</span>",
         title: "Duo Vagues in Sardinia *" +
                  "Duo Vagues in Sardegna *" +
                  "デュオ・ヴァーグ in サルデーニャ",
@@ -205,17 +160,6 @@ var orderedNews,
     },
     {
         orderedDate: 20160129,
-        homeDate: "29 January, 2016 *29 Gennaio 2016 *２０１６年１月２９日",
-        date:
-            "<span>" +
-                "29<br/>Jan" +
-            "</span>" +
-            "<span>" +
-                "29<br/>Gen" +
-            "</span>" +
-            "<span>" +
-                "29日<br/>1月" +
-            "</span>",
         title: "つじ村ふみ惠 ソプラノリサイタル *" +
                  "Fumie Tsujimura Soprano recital *" +
                  "つじ村ふみ惠 ソプラノリサイタル",
@@ -237,71 +181,111 @@ var orderedNews,
         ]
     },
     {
+        orderedDate: 20160324,
+        title: "Armenian Music Festival in Japan *" +
+                "Armenian Music Festival in Japan *" +
+                "アルメニア音楽祭 in Japan",
+        imgSmall: "img/news/20160324/pamphlet_square.jpg",
+        imgMedium: "img/news/20160324/pamphlet_square.jpg",
+        imgLarge: "img/news/20160324/pamphlet.jpg"
+    },
+    {
+        orderedDate: 20160707,
+        title: "Classic Night vol. 2",
+        imgSmall: "img/news/20160707/pamphlet_square.jpg",
+        imgMedium: "img/news/20160707/pamphlet_square.jpg",
+        imgLarge: "img/news/20160707/pamphlet.png"
+    },
+    {
         orderedDate: 20160731,
-        homeDate: "31 July, 2016 *31 Luglio 2016 *２０１６年７月３１日",
-        date:
-            "<span>" +
-                "31<br/>Jul" +
-            "</span>" +
-            "<span>" +
-                "31<br/>Lug" +
-            "</span>" +
-            "<span>" +
-                "31日<br/>7月" +
-            "</span>",
         title: "Concert UTAU *" +
                 "Concerto UTAU *" +
                 "コンサート　咏　UTAU",
         imgSmall: "img/news/20160731/pamphlet_front_small.jpg",
         imgMedium: "img/news/20160731/pamphlet_front_medium.jpg",
         imgLarge: "img/news/20160731/pamphlet_front_large.jpg",
-        intro: "",
         txt:[
             {
                 img:"img/news/20160731/pamphlet_back.jpg"
             }
         ]
+    },
+    {
+        orderedDate: 20160827,
+        title: "Salon Concert *" +
+                "Salon Concert *" +
+                "昼下がりサロンコンサート",
+        imgSmall: "img/news/20160827/pamphlet_square.jpg",
+        imgMedium: "img/news/20160827/pamphlet_square.jpg",
+        imgLarge: "img/news/20160827/pamphlet.jpg"
+    },
+    {
+        orderedDate: 20161117,
+        title: "Piano Recital Megumi Nakanomori *" +
+                "Recital di Pianoforte Megumi Nakanomori *" +
+                "中ノ森めぐみピアノリサイクル",
+        imgSmall: "img/news/20161117/pamphlet_square.jpg",
+        imgMedium: "img/news/20161117/pamphlet_square.jpg",
+        imgLarge: "img/news/20161117/pamphlet.jpg"
     }
-    // {
-    //     orderedDate: 20160402,
-    //     homeDate: "2 April, 2016 *2 Aprile 2016 *２０１６年４月２日",
-    //     date:
-    //         "<span>" +
-    //             "2<br/>Apr" +
-    //         "</span>" +
-    //         "<span>" +
-    //             "2<br/>Apr" +
-    //         "</span>" +
-    //         "<span>" +
-    //             "2日<br/>4月" +
-    //         "</span>",
-    //     title: "つじ村ふみ恵帰国記念ソプラノリサイタル終了 *" +
-    //            "つじ村ふみ恵帰国記念ソプラノリサイタル終了 *" +
-    //            "つじ村ふみ恵帰国記念ソプラノリサイタル終了",
-    //     imgSmall: "img/news/20160129/pamphlet_front_small.jpg",
-    //     imgMedium: "img/news/20160129/pamphlet_front_medium.jpg",
-    //     imgLarge: "img/news/20160129/pamphlet_front_large.jpg",
-    //     intro: "友人からの紹介で、名古屋出身のソプラノ歌手つじ村ふみ惠さんのリサイタルの伴奏を務めさせていただくことになりました。 *" +
-    //              "Tramite un’amica ho avuto questa occasione di accompagnare il soprano Fumie Tsujimura, di Nagoya, al suo recital. *" +
-    //              "友人からの紹介で、名古屋出身のソプラノ歌手つじ村ふみ惠さんのリサイタルの伴奏を務めさせていただくことになりました。",
-    //     txt:[
-    //         {
-    //             txt: "友人からの紹介で、名古屋出身のソプラノ歌手つじ村ふみ惠さんのリサイタルの伴奏を務めさせていただくことになりました。メールのやり取りをするうちに、ちょうど同時期に渡伊していたことが分かり、御縁を感じています。名古屋で演奏の機会いただいたのは初めてなのでワクワク。プログラムは、ベッリーニ、ドニゼッティ、ロッシーニ、そしてピアノソロ2曲も含めてイタリア一色です！沢山の方のご来場、お待ちしています。 *" +
-    //                    "Tramite un’amica ho avuto questa occasione di accompagnare il soprano Fumie Tsujimura, di Nagoya, al suo recital. Contattandoci via mail abbiamo scoperto che ci siamo trasferite in Italia lo stesso periodo. È bello conoscere una collega così e non vedo l’ora di suonare a Nagoya visto che è la prima esperienza per me! Il programma sarà composto dalla musica di Bellini, Donizetti e Rossini. Suonerò anche due pezzi per pianoforte, sempre di musica italiana. Spero di vedervi in tanti, venite tutti a Nagoya! *" +
-    //                    "友人からの紹介で、名古屋出身のソプラノ歌手つじ村ふみ惠さんのリサイタルの伴奏を務めさせていただくことになりました。メールのやり取りをするうちに、ちょうど同時期に渡伊していたことが分かり、御縁を感じています。名古屋で演奏の機会いただいたのは初めてなのでワクワク。プログラムは、ベッリーニ、ドニゼッティ、ロッシーニ、そしてピアノソロ2曲も含めてイタリア一色です！沢山の方のご来場、お待ちしています。"
-    //         },
-    //         {
-    //             img:"img/news/20160129/pamphlet_back.jpg"
-    //         }
-    //     ]
-    // }
 ];
+
+var months = {
+    "1": {
+        longEng: "January",
+        longIta: "Gennaio"
+    },
+    "2": {
+        longEng: "February",
+        longIta: "Febbraio"
+    },
+    "3": {
+        longEng: "March",
+        longIta: "Marzo"
+    },
+    "4": {
+        longEng: "April",
+        longIta: "Aprile"
+    },
+    "5": {
+        longEng: "May",
+        longIta: "Maggio"
+    },
+    "6": {
+        longEng: "June",
+        longIta: "Giugno"
+    },
+    "7": {
+        longEng: "July",
+        longIta: "Luglio"
+    },
+    "8": {
+        longEng: "August",
+        longIta: "Agosto"
+    },
+    "9": {
+        longEng: "September",
+        longIta: "Settembre"
+    },
+    "10": {
+        longEng: "October",
+        longIta: "Ottobre"
+    },
+    "11": {
+        longEng: "November",
+        longIta: "Novembre"
+    },
+    "12": {
+        longEng: "December",
+        longIta: "Dicembre"
+    }
+};
 
 $(function() {
     orderedNews = sortNews();
 
     $(".news-item").each(function(index, element){
-        var news = orderedNews[index];
+        var news = normalizeInfo(orderedNews[index]);
         $(element).children(".news-img").html("<img src='" + news.imgMedium + "' alt='' />");
         $(element).children(".news").data("news-details", JSON.stringify([news]));
         $(element).children(".news").children(".news-title").html(news.title);
@@ -315,4 +299,27 @@ function sortNews() {
 
 function compareDates(a, b) {
     return -(a.orderedDate - b.orderedDate);
+}
+
+function normalizeInfo(news) {
+    var yearNum = parseInt((news.orderedDate + "").substring(0, 4));
+    var monthNum = parseInt((news.orderedDate + "").substring(4, 6));
+    var dayNum = parseInt((news.orderedDate + "").substring(6, 8));
+    var month = months[monthNum];
+
+    news.homeDate = dayNum + " " + month.longEng + ", " + yearNum + " *" +
+                    dayNum + " " + month.longIta + " " + yearNum + " *" +
+                    yearNum + "年" + monthNum + "月" + dayNum + "日";
+    news.date = "<span>" +
+                    dayNum + "<br/>" + month.longEng.substring(0, 3) +
+                "</span>" +
+                "<span>" +
+                    dayNum + "<br/>" + month.longIta.substring(0, 3) +
+                "</span>" +
+                "<span>" +
+                    dayNum + "日<br/>" + monthNum + "月" +
+                "</span>";
+    news.txt = news.txt ? news.txt : [];
+    news.intro = news.intro ? news.intro : "";
+    return news;
 }
