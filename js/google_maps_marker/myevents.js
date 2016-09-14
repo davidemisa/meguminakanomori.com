@@ -713,5 +713,179 @@ var myEvents = [
                 '</span>' +
             '</div>',
         buyTicketURL: '#events'
+    },
+    {   // salon concert 27/Ago/2016
+        year: 2016,
+        month: 8,
+        day: 27,
+        weekDay: 6,
+        hour: 14,
+        minute: '00',
+        latitude: 35.642383,
+        longitude: 139.748233,
+        location:
+            '<div data-translatable>' +
+                '<span>' +
+                    '<div style="margin-bottom: 10px">' +
+                        '<p style="font-size: 17px">' +
+                            '<b>Salon Concert</b>' +
+                        '</p>' +
+                        'at Minato Platinum music hall</br>' +
+                        'Sonatine (Sancan), Barcarolle (Chopin) etc.</br>' +
+                    '</div>' +
+                    'Performers: <i>Yoshimi Nanaumi (Fl)</i>, <i>Megumi Nakanomori (pf)</i>' +
+                '</span>' +
+                '<span>' +
+                    '<div style="margin-bottom: 10px">' +
+                        '<p style="font-size: 17px">' +
+                            '<b>Salon Concert</b>' +
+                        '</p>' +
+                        'presso Minato Platinum music hall</br>' +
+                        'Sonatine (Sancan), Barcarolle (Chopin) etc.</br>' +
+                    '</div>' +
+                    'Musicisti: <i>Yoshimi Nanaumi (Fl)</i>, <i>Megumi Nakanomori (pf)</i>' +
+                '</span>' +
+                '<span>' +
+                    '<div style="margin-bottom: 10px">' +
+                        '<p style="font-size: 17px">' +
+                            '<b>昼下がりサロンコンサート</b>' +
+                        '</p>' +
+                        '会場：港プラチナム音楽ホール（東京都港区）</br>' +
+                        'ソナチネ（サンカン）、舟歌（ショパン）、他</br>' +
+                    '</div>' +
+                    '出演者：七海良美（フルート）、中ノ森めぐみ（ピアノ）' +
+                '</span>' +
+            '</div>',
+        infoWindow:
+            '<div data-translatable>' +
+                '<span>' +
+                    'Tickets: 3,500yen (presale 3,000yen)</br>' +
+                    'organized by Minato music office' +
+                '</span>' +
+                '<span>' +
+                    'Biglietti: 3,500yen (prevendita 3,000yen)</br>' +
+                    'organizzato da Minato music office' +
+                '</span>' +
+                '<span>' +
+                    'チケット：当日3,500円（前売り3,000円）</br>' +
+                    '主催：港音楽事務所' +
+                '</span>' +
+            '</div>',
+        buyTicketURL: '#events'
+    },
+    {   // lunch time concert 13/Set/2016
+        year: 2016,
+        month: 9,
+        day: 13,
+        weekDay: 2,
+        hour: 12,
+        minute: '05',
+        latitude: 35.691540,
+        longitude: 139.694260,
+        location:
+            '<div data-translatable>' +
+                '<span>' +
+                    '<div style="margin-bottom: 10px">' +
+                        '<p style="font-size: 17px">' +
+                            '<b>Shinjuku Matsui Building Lunch Time Concert</b>' +
+                        '</p>' +
+                        'at Shinjuku Mitsui Building (Tokyo)</br>' +
+                        'vol. 423 Japanese and italian songs, Mozart\'s opera</br>' +
+                    '</div>' +
+                    'Performers: <i>Mai Nishida (Sop.)</i>, <i>Paolo Andrea Di Pietro (Bs.)</i>, <i>Megumi Nakanomori (pf)</i>' +
+                '</span>' +
+                '<span>' +
+                    '<div style="margin-bottom: 10px">' +
+                        '<p style="font-size: 17px">' +
+                            '<b>Shinjuku Matsui Building Lunch Time Concert</b>' +
+                        '</p>' +
+                        'presso Shinjuku Mitsui Building (Tokyo)</br>' +
+                        'vol. 423 Canzoni giapponesi e italiane, opera di Mozart</br>' +
+                    '</div>' +
+                    'Musicisti: <i>Mai Nishida (Sop.)</i>, <i>Paolo Andrea Di Pietro (Bs.)</i>, <i>Megumi Nakanomori (pf)</i>' +
+                '</span>' +
+                '<span>' +
+                    '<div style="margin-bottom: 10px">' +
+                        '<p style="font-size: 17px">' +
+                            '<b>新宿三井ビルディング・ランチタイムコンサート</b>' +
+                        '</p>' +
+                        '会場：新宿三井ビルディング　ＬＢ階エントランス（東京都新宿区）</br>' +
+                        '第423回日伊歌曲とモーツァルトの愉快なオペラ</br>' +
+                    '</div>' +
+                    '出演者：西田 真以（ソプラノ）、パオロアンドレア・ディピエトロ（バス）、中ノ森 めぐみ（ピアノ）' +
+                '</span>' +
+            '</div>',
+        infoWindow:
+            '<div data-translatable>' +
+                '<span>' +
+                    'free entrance</br>' +
+                    'organized by Mitsui fudosan' +
+                '</span>' +
+                '<span>' +
+                    'ingresso libero</br>' +
+                    'organizzato da Mitsui fudosan' +
+                '</span>' +
+                '<span>' +
+                    '観覧無料</br>' +
+                    '主催：三井不動産' +
+                '</span>' +
+            '</div>',
+        buyTicketURL: '#events'
+    },
+    {   // fiera italiana 3/Nov/2016
+        year: 2016,
+        month: 11,
+        day: 3,
+        weekDay: 4,
+        hour: 16,
+        minute: '00',
+        latitude: 35.672328,
+        longitude: 139.758912,
+        location:
+            '<div data-translatable>' +
+                '<span>' +
+                    '<div style="margin-bottom: 10px">' +
+                        '<p style="font-size: 17px">' +
+                            '<b>日伊国交１５０周年記念イタリアフェア</b>' +
+                        '</p>' +
+                        'at Imperial Hotel (Tokyo)</br>' +
+                        'Arias from italian operas, piano solo</br>' +
+                    '</div>' +
+                    'Performers: <i>Hiroko Nohara (Soprano)</i>, <i>Megumi Nakanomori (Piano)</i>' +
+                '</span>' +
+                '<span>' +
+                    '<div style="margin-bottom: 10px">' +
+                        '<p style="font-size: 17px">' +
+                            '<b>日伊国交１５０周年記念イタリアフェア</b>' +
+                        '</p>' +
+                        'presso Imperial Hotel (Tokyo)</br>' +
+                        'Arie dalle opere italiane, piano solo</br>' +
+                    '</div>' +
+                    'Musicisti: <i>Hiroko Nohara (Soprano)</i>, <i>Megumi Nakanomori (Piano)</i>' +
+                '</span>' +
+                '<span>' +
+                    '<div style="margin-bottom: 10px">' +
+                        '<p style="font-size: 17px">' +
+                            '<b>日伊国交１５０周年記念イタリアフェア</b>' +
+                        '</p>' +
+                        '会場：帝国ホテル　エントランス（東京都千代田区）</br>' +
+                        'イタリアオペラのアリア、ピアノソロ</br>' +
+                    '</div>' +
+                    '出演者：野原広子（ソプラノ）、中ノ森めぐみ（ピアノ）' +
+                '</span>' +
+            '</div>',
+        infoWindow:
+            '<div data-translatable>' +
+                '<span>' +
+                    'details to be defined' +
+                '</span>' +
+                '<span>' +
+                    'dettagli da definire' +
+                '</span>' +
+                '<span>' +
+                    '詳細未定' +
+                '</span>' +
+            '</div>',
+        buyTicketURL: '#events'
     }
 ];

@@ -586,15 +586,13 @@ var Beat = {
 		for(var i=0; i < myEvents.length; i++){
 			myEvents[i].date = new Date(myEvents[i].year, myEvents[i].month, myEvents[i].day, myEvents[i].hour, myEvents[i].minute, 0);
 		}
-		
-		function sortAsc(a, b) {
-			return new Date(a.date).getTime() - new Date(b.date).getTime();
-		}
-		
-		myEvents.sort(sortAsc);
+
+		myEvents.sort(function (a, b) {
+			return a.date - b.date;
+		});
 		
 		var upcomingConcert = myEvents[0];
-		
+
 		var currentdate = new Date();
 
 		for(i = 0; i < myEvents.length; i++){
@@ -1309,6 +1307,7 @@ var Beat = {
 		
 		// Capture 'See Location' Button click event.
 		$("#seeLocation").click(function(e){
+			console.log("see location");
 			e.preventDefault();
 			
 			$tis.map.setCenter($tis.myLatlng);
@@ -1317,13 +1316,14 @@ var Beat = {
 		
 		// Capture 'Complete List' Button click event.
 		$("#complete-list-btn").click(function(){
-			$('#complete-list').animate({opacity:1, height:'350px'}, 300).addClass('enabled');
+			console.log("click");
+			$('#complete-list').animate({opacity:1}, 300).addClass('enabled');
 			$('#counter-info, .buttons-area').toggleClass('disabled');
 		});
 		
 		// Capture 'Close Complete List' click event.
 		$(".close-complete-list").click(function(){
-			$('#complete-list').animate({opacity:0, height:'0px'}, 300, function(){
+			$('#complete-list').animate({opacity:0}, 300, function(){
 				$(this).removeClass('enabled');
 			});
 			$('#counter-info, .buttons-area').toggleClass('disabled');

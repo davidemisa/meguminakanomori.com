@@ -1995,7 +1995,7 @@ fieldset[disabled] .btn-dark2.active {
 #complete-list.enabled{
 	visibility:visible;
 	display:inline-block;
-	height:300px;
+	height:550px;
 }
 
 #complete-list .close-complete-list{
@@ -2629,7 +2629,7 @@ div.beat #pp_full_res .pp_inline,div.dark_square #pp_full_res .pp_inline{color:#
 	}
 	
 	#map_canvas:after{
-		height:228px;
+		height:154px;
 		background-image: url('../img/bottom_concerts@2x.png');
 	}
 	
