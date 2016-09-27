@@ -223,10 +223,15 @@ var orderedNews,
         orderedDate: 20161117,
         title: "Piano Recital Megumi Nakanomori *" +
                 "Recital di Pianoforte Megumi Nakanomori *" +
-                "中ノ森めぐみピアノリサイクル",
+                "中ノ森めぐみピアノリサイタル",
         imgSmall: "img/news/20161117/pamphlet_square.jpg",
         imgMedium: "img/news/20161117/pamphlet_square.jpg",
-        imgLarge: "img/news/20161117/pamphlet.jpg"
+        imgLarge: "img/news/20161117/pamphlet.jpg",
+        txt:[
+            {
+                img:"img/news/20161117/pamphlet_back.jpg"
+            }
+        ]
     }
 ];
 
