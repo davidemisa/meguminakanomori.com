@@ -230,8 +230,29 @@ var orderedNews,
         txt:[
             {
                 img:"img/news/20161117/pamphlet_back.jpg"
+            },
+            {
+                img:"img/news/20161117/kiji_1.jpg"
+            },
+            {
+                img:"img/news/20161117/kiji_2.jpg"
+            },
+            {
+                img:"img/news/20161117/program_1.jpg"
+            },
+            {
+                img:"img/news/20161117/program_2.jpg"
             }
         ]
+    },
+    {
+        orderedDate: 20160913,
+        title: "Japanese and italian songs, Mozart's opera *" +
+                "Canzoni giapponesi e italiane, opere di Mozart *" +
+                "日伊歌曲とモーツァルトの愉快なオペラ",
+        imgSmall: "img/news/20160913/pamphlet_square.jpg",
+        imgMedium: "img/news/20160913/pamphlet_square.jpg",
+        imgLarge: "img/news/20160913/pamphlet.jpg"
     }
 ];
 
