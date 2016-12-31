@@ -1,3 +1,5 @@
+//TODO better to create a reusable template
+
 var myEvents = [
 	{   // concerto duo vagues Cagliari 16/Ott/2015
 		year: 2015,
@@ -884,6 +886,242 @@ var myEvents = [
                 '</span>' +
                 '<span>' +
                     '詳細未定' +
+                '</span>' +
+            '</div>',
+        buyTicketURL: '#events'
+    },
+    {   // concerto duo con violino 26/Mar/2017
+        year: 2017,
+        month: 3,
+        day: 26,
+        weekDay: 7,
+        hour: 14,
+        minute: '00',
+        latitude: 37.411410,
+        longitude: 140.390545,
+        location:
+            '<div data-translatable>' +
+                '<span>' +
+                    '<div style="margin-bottom: 10px">' +
+                        '<p style="font-size: 17px">' +
+                            '<b>Duo Concert</b>' +
+                        '</p>' +
+                        'at Amidaji Temple (Fukushima)' +
+                    '</div>' +
+                    'Performers: <i>Natsuko Hosokawa (Violin)</i>, <i>Megumi Nakanomori (Piano)</i></br>' +
+                    'Organized by Classic Live for 1,000,000 people' +
+                '</span>' +
+                '<span>' +
+                    '<div style="margin-bottom: 10px">' +
+                        '<p style="font-size: 17px">' +
+                            '<b>Concerto Duo</b>' +
+                        '</p>' +
+                        'presso Tempio Amidaji (Fukushima)' +
+                    '</div>' +
+                    'Musicisti: <i>Natsuko Hosokawa (Violino)</i>, <i>Megumi Nakanomori (Piano)</i></br>' +
+                    'Organizzato da Classic Live for 1,000,000 people' +
+                '</span>' +
+                '<span>' +
+                    '<div style="margin-bottom: 10px">' +
+                        '<p style="font-size: 17px">' +
+                            '<b>デュオコンサート</b>' +
+                        '</p>' +
+                        '会場：阿弥陀寺（福島県）' +
+                    '</div>' +
+                    '出演者：細川奈津子（ヴァイオリン）中ノ森めぐみ（ピアノ）</br>' +
+                    '主催：100万人のクラシックライブ' +
+                '</span>' +
+            '</div>',
+        infoWindow:
+            '<div data-translatable>' +
+                '<span>' +
+                    'Tickets: 1,000 yen' +
+                '</span>' +
+                '<span>' +
+                    'Biglietti: 1,000 yen' +
+                '</span>' +
+                '<span>' +
+                    'チケット：1,000円' +
+                '</span>' +
+            '</div>',
+        buyTicketURL: 'http://1m-cl.com/'
+    },
+    {   // concerto Amore 1/Apr/2017
+        year: 2017,
+        month: 4,
+        day: 1,
+        weekDay: 6,
+        hour: 18,
+        minute: 30,
+        latitude: 31.577624,
+        longitude: 130.549265,
+        location:
+            '<div data-translatable>' +
+                '<span>' +
+                    '<div style="margin-bottom: 10px">' +
+                        '<p style="font-size: 17px">' +
+                            '<b>Tenor&Bass Duo Concert ”AMORE!”</b>' +
+                        '</p>' +
+                        'at Sun Ere Kagoshima (Kagoshima)</br>' +
+                        'Italian and japanese songs, italian operas</br>' +
+                    '</div>' +
+                    'Performers: <i>Tsukasa Ide (Ten.)</i>, <i>Masashi Tomosugi (Bs.)</i>, <i>Megumi Nakanomori (Piano)</i>' +
+                '</span>' +
+                '<span>' +
+                    '<div style="margin-bottom: 10px">' +
+                        '<p style="font-size: 17px">' +
+                            '<b>Tenore & Basso Duo Concerto ”AMORE!”</b>' +
+                        '</p>' +
+                        'presso Sun Ere Kagoshima (Kagoshima)</br>' +
+                        'Canzoni italiane e giapponesi, opere italiane</br>' +
+                    '</div>' +
+                    'Musicisti: <i>Tsukasa Ide (Ten.)</i>, <i>Masashi Tomosugi (Bs.)</i>, <i>Megumi Nakanomori (Piano)</i>' +
+                '</span>' +
+                '<span>' +
+                    '<div style="margin-bottom: 10px">' +
+                        '<p style="font-size: 17px">' +
+                            '<b>テノール・バス デュオコンサート”AMORE!”</b>' +
+                        '</p>' +
+                        '会場：サンエールかごしま（鹿児島県）</br>' +
+                        'イタリア歌曲、日本歌曲、イタリアオペラからアリア、デュエットなど</br>' +
+                    '</div>' +
+                    '出演者：井出司（テノール）友杉誠志（バス）中ノ森めぐみ（ピアノ）' +
+                '</span>' +
+            '</div>',
+        infoWindow:
+            '<div data-translatable>' +
+                '<span>' +
+                    'Tickets: 2,500 yen (presale 2,000 yen), students 1,000 yen, kids under 3 years old free entrance</br>' +
+                    'Info: traumerei2017@yahoo.co.jp' +
+                '</span>' +
+                '<span>' +
+                    'Biglietti: 2,500 yen (prevendita 2,000 yen), studenti 1,000 yen, fino a 3 anni gratis</br>' +
+                    'Info: traumerei2017@yahoo.co.jp' +
+                '</span>' +
+                '<span>' +
+                    'チケット：当日2,500円（前売り2,000円）学生券1,000円 未就学児無料</br>' +
+                    'お問い合わせ：traumerei2017@yahoo.co.jp</br>' +
+                    'チケット取扱店：十字屋クロス 09-9239-8585' +
+                '</span>' +
+            '</div>',
+        buyTicketURL: '#events'
+    },
+    {   // concerto Amore 9/Apr/2017
+        year: 2017,
+        month: 4,
+        day: 9,
+        weekDay: 7,
+        hour: 18,
+        minute: 30,
+        latitude: 36.276200,
+        longitude: 138.461742,
+        location:
+            '<div data-translatable>' +
+                '<span>' +
+                    '<div style="margin-bottom: 10px">' +
+                        '<p style="font-size: 17px">' +
+                            '<b>Tenor&Bass Duo Concert ”AMORE!”</b>' +
+                        '</p>' +
+                        'at Sakudaira Koryu Center (Nagano)</br>' +
+                        'Italian and japanese songs, italian operas</br>' +
+                    '</div>' +
+                    'Performers: <i>Tsukasa Ide (Ten.)</i>, <i>Masashi Tomosugi (Bs.)</i>, <i>Megumi Nakanomori (Piano)</i>' +
+                '</span>' +
+                '<span>' +
+                    '<div style="margin-bottom: 10px">' +
+                        '<p style="font-size: 17px">' +
+                            '<b>Tenore & Basso Duo Concerto ”AMORE!”</b>' +
+                        '</p>' +
+                        'presso Sakudaira Koryu Center (Nagano)</br>' +
+                        'Canzoni italiane e giapponesi, opere italiane</br>' +
+                    '</div>' +
+                    'Musicisti: <i>Tsukasa Ide (Ten.)</i>, <i>Masashi Tomosugi (Bs.)</i>, <i>Megumi Nakanomori (Piano)</i>' +
+                '</span>' +
+                '<span>' +
+                    '<div style="margin-bottom: 10px">' +
+                        '<p style="font-size: 17px">' +
+                            '<b>テノール・バス デュオコンサート”AMORE!”</b>' +
+                        '</p>' +
+                        '会場：佐久平交流センター（長野県）</br>' +
+                        'イタリア歌曲、日本歌曲、イタリアオペラからアリア、デュエットなど</br>' +
+                    '</div>' +
+                    '出演者：井出司（テノール）友杉誠志（バス）中ノ森めぐみ（ピアノ）' +
+                '</span>' +
+            '</div>',
+        infoWindow:
+            '<div data-translatable>' +
+                '<span>' +
+                    'Tickets: 2,500 yen (presale 2,000 yen), students 1,000 yen, kids under 3 years old free entrance</br>' +
+                    'Info: traumerei2017@yahoo.co.jp' +
+                '</span>' +
+                '<span>' +
+                    'Biglietti: 2,500 yen (prevendita 2,000 yen), studenti 1,000 yen, fino a 3 anni gratis</br>' +
+                    'Info: traumerei2017@yahoo.co.jp' +
+                '</span>' +
+                '<span>' +
+                    'チケット：当日2,500円（前売り2,000円）学生券1,000円 未就学児無料</br>' +
+                    'お問い合わせ：traumerei2017@yahoo.co.jp</br>' +
+                    'チケット取扱店：ヒオキ楽器 02-6768-7704, 池田楽器 02-6762-0046 ' +
+                '</span>' +
+            '</div>',
+        buyTicketURL: '#events'
+    },
+    {   // concerto Amore 12/Apr/2017
+        year: 2017,
+        month: 4,
+        day: 12,
+        weekDay: 3,
+        hour: 18,
+        minute: 30,
+        latitude: 35.600795,
+        longitude: 139.507830,
+        location:
+            '<div data-translatable>' +
+                '<span>' +
+                    '<div style="margin-bottom: 10px">' +
+                        '<p style="font-size: 17px">' +
+                            '<b>Tenor&Bass Duo Concert ”AMORE!”</b>' +
+                        '</p>' +
+                        'at Yuri Hall of Showa University of Music (Kanagawa)</br>' +
+                        'Italian and japanese songs, italian operas</br>' +
+                    '</div>' +
+                    'Performers: <i>Tsukasa Ide (Ten.)</i>, <i>Masashi Tomosugi (Bs.)</i>, <i>Megumi Nakanomori (Piano)</i>' +
+                '</span>' +
+                '<span>' +
+                    '<div style="margin-bottom: 10px">' +
+                        '<p style="font-size: 17px">' +
+                            '<b>Tenore & Basso Duo Concerto ”AMORE!”</b>' +
+                        '</p>' +
+                        'presso Teatro Giglio dell\'Università di Musica Showa (Kanagawa)</br>' +
+                        'Canzoni italiane e giapponesi, opere italiane</br>' +
+                    '</div>' +
+                    'Musicisti: <i>Tsukasa Ide (Ten.)</i>, <i>Masashi Tomosugi (Bs.)</i>, <i>Megumi Nakanomori (Piano)</i>' +
+                '</span>' +
+                '<span>' +
+                    '<div style="margin-bottom: 10px">' +
+                        '<p style="font-size: 17px">' +
+                            '<b>テノール・バス デュオコンサート”AMORE!”</b>' +
+                        '</p>' +
+                        '会場：昭和音楽大学内ユリホール （神奈川県）</br>' +
+                        'イタリア歌曲、日本歌曲、イタリアオペラからアリア、デュエットなど</br>' +
+                    '</div>' +
+                    '出演者：井出司（テノール）友杉誠志（バス）中ノ森めぐみ（ピアノ）' +
+                '</span>' +
+            '</div>',
+        infoWindow:
+            '<div data-translatable>' +
+                '<span>' +
+                    'Tickets: 2,500 yen (presale 2,000 yen), students 1,000 yen, kids under 3 years old free entrance</br>' +
+                    'Info: traumerei2017@yahoo.co.jp' +
+                '</span>' +
+                '<span>' +
+                    'Biglietti: 2,500 yen (prevendita 2,000 yen), studenti 1,000 yen, fino a 3 anni gratis</br>' +
+                    'Info: traumerei2017@yahoo.co.jp' +
+                '</span>' +
+                '<span>' +
+                    'チケット：当日2,500円（前売り2,000円）学生券1,000円 未就学児無料</br>' +
+                    'お問い合わせ：traumerei2017@yahoo.co.jp</br>' +
+                    'チケット取扱店：昭和音楽大学チケットセンター' +
                 '</span>' +
             '</div>',
         buyTicketURL: '#events'

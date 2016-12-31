@@ -220,6 +220,15 @@ var orderedNews,
         imgLarge: "img/news/20160827/pamphlet.jpg"
     },
     {
+        orderedDate: 20160913,
+        title: "Japanese and italian songs, Mozart's opera *" +
+                "Canzoni giapponesi e italiane, opere di Mozart *" +
+                "日伊歌曲とモーツァルトの愉快なオペラ",
+        imgSmall: "img/news/20160913/pamphlet_square.jpg",
+        imgMedium: "img/news/20160913/pamphlet_square.jpg",
+        imgLarge: "img/news/20160913/pamphlet.jpg"
+    },
+    {
         orderedDate: 20161117,
         title: "Piano Recital Megumi Nakanomori *" +
                 "Recital di Pianoforte Megumi Nakanomori *" +
@@ -246,13 +255,27 @@ var orderedNews,
         ]
     },
     {
-        orderedDate: 20160913,
-        title: "Japanese and italian songs, Mozart's opera *" +
-                "Canzoni giapponesi e italiane, opere di Mozart *" +
-                "日伊歌曲とモーツァルトの愉快なオペラ",
-        imgSmall: "img/news/20160913/pamphlet_square.jpg",
-        imgMedium: "img/news/20160913/pamphlet_square.jpg",
-        imgLarge: "img/news/20160913/pamphlet.jpg"
+        orderedDate: 20161103,
+        title: "Opening anniversary of Tokyo Imperial Hotel *" +
+                "Anniversario apertura del Tokyo Imperial Hotel *" +
+                "帝国ホテル開業記念日",
+        imgSmall: "img/news/20161103/picture_square.jpg",
+        imgMedium: "img/news/20161103/picture_square.jpg",
+        imgLarge: "img/news/20161103/article.jpg"
+    },
+    {
+        orderedDate: 20170401,
+        title: "Tenor & Bariton Duo concerts *" +
+                "Concerti Duo Tenore & Baritono *" +
+                "バリトン&テノール デュオコンサート",
+        imgSmall: "img/news/20170401/pamphlet_square.jpg",
+        imgMedium: "img/news/20170401/pamphlet_square.jpg",
+        imgLarge: "img/news/20170401/pamphlet.jpg",
+        txt:[
+            {
+                img:"img/news/20170401/pamphlet_back.jpg"
+            }
+        ]
     }
 ];
 
