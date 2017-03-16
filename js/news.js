@@ -264,6 +264,15 @@ var orderedNews,
         imgLarge: "img/news/20161103/article.jpg"
     },
     {
+        orderedDate: 20170326,
+        title: "Temple concert *" +
+        "Concerto al tempio *" +
+        "阿弥陀寺コンサート",
+        imgSmall: "img/news/20170326/pamphlet_square.jpg",
+        imgMedium: "img/news/20170326/pamphlet_square.jpg",
+        imgLarge: "img/news/20170326/pamphlet.png"
+    },
+    {
         orderedDate: 20170401,
         title: "Tenor & Bariton Duo concerts *" +
                 "Concerti Duo Tenore & Baritono *" +
