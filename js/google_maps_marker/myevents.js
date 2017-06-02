@@ -1125,5 +1125,226 @@ var myEvents = [
                 '</span>' +
             '</div>',
         buyTicketURL: '#events'
+    },
+    {   // concerto Nino cafe 22/Apr/2017
+        year: 2017,
+        month: 4,
+        day: 22,
+        weekDay: 6,
+        hour: 19,
+        minute: '00',
+        latitude: 35.667948,
+        longitude: 139.727006,
+        location:
+            '<div data-translatable>' +
+                '<span>' +
+                    '<div style="margin-bottom: 10px">' +
+                        '<p style="font-size: 17px">' +
+                            '<b>Ferrari Happy Hour</b>' +
+                        '</p>' +
+                        'at Nino Caffè (Tokyo)</br>' +
+                    '</div>' +
+                    'Performers: <i>Paolo Andrea Di Pietro (Bass)</i>, <i>Megumi Nakanomori (Piano)</i>' +
+                '</span>' +
+                '<span>' +
+                    '<div style="margin-bottom: 10px">' +
+                        '<p style="font-size: 17px">' +
+                            '<b>Ferrari Happy Hour</b>' +
+                        '</p>' +
+                        'presso Nino Caffè (Tokyo)</br>' +
+                    '</div>' +
+                    'Musicisti: <i>Paolo Andrea Di Pietro (Basso)</i>, <i>Megumi Nakanomori (Piano)</i>' +
+                '</span>' +
+                '<span>' +
+                    '<div style="margin-bottom: 10px">' +
+                        '<p style="font-size: 17px">' +
+                            '<b>Ferrari Happy Hour</b>' +
+                        '</p>' +
+                        '会場：Nino Caffè（東京）</br>' +
+                    '</div>' +
+                    '出演者：パオロアンドレア・ディ・ピエトロ （バス）中ノ森めぐみ（ピアノ）' +
+                '</span>' +
+            '</div>',
+        infoWindow:
+            '<div data-translatable>' +
+                '<span>' +
+                    'Tickets: free entrance</br>' +
+                '</span>' +
+                '<span>' +
+                    'Biglietti: entrata libera</br>' +
+                '</span>' +
+                '<span>' +
+                    'チケット：入場無料</br>' +
+                '</span>' +
+            '</div>',
+        buyTicketURL: '#events'
+    },
+    {   // concerto tempio 30/Lug/2017
+        year: 2017,
+        month: 7,
+        day: 30,
+        weekDay: 7,
+        hour: 11,
+        minute: '00',
+        latitude: 35.572474,
+        longitude: 139.667672,
+        location:
+            '<div data-translatable>' +
+                '<span>' +
+                    '<div style="margin-bottom: 10px">' +
+                        '<p style="font-size: 17px">' +
+                            '<b>Duo concert</b>' +
+                        '</p>' +
+                        'at Temple Shingyo-ji (Kanagawa)</br>' +
+                        'organized by Classic Live for 1,000,000 people' +
+                    '</div>' +
+                    'Performers: <i>Natsuko Hosokawa (Violin)</i>, <i>Megumi Nakanomori (Piano)</i>' +
+                '</span>' +
+                '<span>' +
+                    '<div style="margin-bottom: 10px">' +
+                        '<p style="font-size: 17px">' +
+                            '<b>Concerto duo</b>' +
+                        '</p>' +
+                        'presso Tempio Shingyo-ji (Kanagawa)</br>' +
+                        'organizzato da Classic Live for 1,000,000 people' +
+                    '</div>' +
+                    'Musicisti: <i>Natsuko Hosokawa (Violino)</i>, <i>Megumi Nakanomori (Piano)</i>' +
+                '</span>' +
+                '<span>' +
+                    '<div style="margin-bottom: 10px">' +
+                        '<p style="font-size: 17px">' +
+                            '<b>デュオコンサート</b>' +
+                        '</p>' +
+                        '会場：本門佛立宗 信行寺 （神奈川県）</br>' +
+                        '主催 100万人のクラシックライブ' +
+                    '</div>' +
+                    '出演者：細川奈津子 （ヴァイオリン） 中ノ森めぐみ（ピアノ）' +
+                '</span>' +
+            '</div>',
+        infoWindow:
+            '<div data-translatable>' +
+                '<span>' +
+                    'details to be defined' +
+                '</span>' +
+                '<span>' +
+                    'dettagli da definire' +
+                '</span>' +
+                '<span>' +
+                    '詳細未定' +
+                '</span>' +
+            '</div>',
+        buyTicketURL: 'http://1m-cl.com/'
+    },
+    {   // concerto yasugi 24/Set/2017
+        year: 2017,
+        month: 9,
+        day: 24,
+        weekDay: 7,
+        hour: 14,
+        minute: '00',
+        latitude: 35.431327,
+        longitude: 133.250700,
+        location:
+            '<div data-translatable>' +
+                '<span>' +
+                    '<div style="margin-bottom: 10px">' +
+                        '<p style="font-size: 17px">' +
+                            '<b>Opening concert Yasugi General Culture Hall</b>' +
+                        '</p>' +
+                        'at ARTEPIA  Yasugi General Culture Hall（Shimane）</br>' +
+                        'Mozart, Beethoven, Chopin, Respighi, Liszt' +
+                    '</div>' +
+                    'Performers: <i>Megumi Nakanomori (Piano)</i>' +
+                '</span>' +
+                '<span>' +
+                    '<div style="margin-bottom: 10px">' +
+                        '<p style="font-size: 17px">' +
+                            '<b>Concerto inaugurazione Yasugi General Culture Hall </b>' +
+                        '</p>' +
+                        'presso ARTEPIA  Yasugi General Culture Hall（Shimane）</br>' +
+                        'Musica di Mozart, Beethoven, Chopin, Respighi, Liszt' +
+                    '</div>' +
+                    'Musicisti: <i>Megumi Nakanomori (Piano)</i>' +
+                '</span>' +
+                '<span>' +
+                    '<div style="margin-bottom: 10px">' +
+                        '<p style="font-size: 17px">' +
+                            '<b>中ノ森めぐみコンサート スタインウェイピアノ開き</b>' +
+                        '</p>' +
+                        '会場：安来市総合文化ホール アルテピア 小ホール（島根県）</br>' +
+                        '月光ソナタ（ベートーヴェン）、小犬のワルツ（ショパン）、愛の夢（リスト）他' +
+                    '</div>' +
+                    '出演者：中ノ森めぐみ（ピアノ）' +
+                '</span>' +
+            '</div>',
+        infoWindow:
+            '<div data-translatable>' +
+                '<span>' +
+                    'Tickets: 2,000yen (presale 1,500yen)</br>' +
+                    'Info 0854-21-0101 (ARTEPIA)' +
+                '</span>' +
+                '<span>' +
+                    'Biglietti: 2,000yen (prevendita 1,500yen)</br>' +
+                    'Info 0854-21-0101 (ARTEPIA)' +
+                '</span>' +
+                '<br>' +
+                    'チケット：当日2,000円（前売り1,500円</br>' +
+                    'お問い合わせ 0854-21-0101（アルテピア）' +
+                '</span>' +
+            '</div>',
+        buyTicketURL: 'http://artepia.jp/'
+    },
+    {   // concerto natale 24/Dic/2017
+        year: 2017,
+        month: 12,
+        day: 24,
+        weekDay: 7,
+        hour: 19,
+        minute: '00',
+        latitude: 35.425717,
+        longitude: 133.328473,
+        location:
+            '<div data-translatable>' +
+                '<span>' +
+                    '<div style="margin-bottom: 10px">' +
+                        '<p style="font-size: 17px">' +
+                            '<b>Christmas diner concert</b>' +
+                        '</p>' +
+                        'at ANA HOTEL YONAGO (Tottori)</br>' +
+                    '</div>' +
+                    'Performers: <i>Chie Sadayama (Sop.)</i>, <i>Toshiaki Murakami (Ten.)</i>, <i>Megumi Nakanomori (Piano)</i>' +
+                '</span>' +
+                '<span>' +
+                    '<div style="margin-bottom: 10px">' +
+                        '<p style="font-size: 17px">' +
+                            '<b>Concerto di Natale</b>' +
+                        '</p>' +
+                        'presso ANA HOTEL YONAGO (Tottori)</br>' +
+                    '</div>' +
+                    'Musicisti: <i>Chie Sadayama (Sop.)</i>, <i>Toshiaki Murakami (Ten.)</i>, <i>Megumi Nakanomori (Piano)</i>' +
+                '</span>' +
+                '<span>' +
+                    '<div style="margin-bottom: 10px">' +
+                        '<p style="font-size: 17px">' +
+                            '<b>クリスマス・ディナーコンサート（仮）</b>' +
+                        '</p>' +
+                        '会場：米子全日空ホテル（鳥取県）</br>' +
+                    '</div>' +
+                    '出演者：佐田山千恵（ソプラノ）村上敏明（テノール）中ノ森めぐみ（ピアノ）' +
+                '</span>' +
+            '</div>',
+        infoWindow:
+            '<div data-translatable>' +
+                '<span>' +
+                    'details to be defined' +
+                '</span>' +
+                '<span>' +
+                    'dettagli da definire' +
+                '</span>' +
+                '<span>' +
+                    '詳細未定' +
+                '</span>' +
+            '</div>',
+        buyTicketURL: '#events'
     }
 ];

@@ -268,9 +268,17 @@ var orderedNews,
         title: "Temple concert *" +
         "Concerto al tempio *" +
         "阿弥陀寺コンサート",
-        imgSmall: "img/news/20170326/pamphlet_square.jpg",
-        imgMedium: "img/news/20170326/pamphlet_square.jpg",
-        imgLarge: "img/news/20170326/pamphlet.png"
+        imgSmall: "img/news/20170326/photo_square.jpg",
+        imgMedium: "img/news/20170326/photo_square.jpg",
+        imgLarge: "img/news/20170326/pamphlet.png",
+        txt:[
+            {
+                img:"img/news/20170326/photo.jpg"
+            },
+            {
+                img:"img/news/20170326/photo_2.jpg"
+            }
+        ]
     },
     {
         orderedDate: 20170401,
