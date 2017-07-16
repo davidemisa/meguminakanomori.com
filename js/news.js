@@ -293,6 +293,20 @@ var orderedNews,
                 img:"img/news/20170401/pamphlet_back.jpg"
             }
         ]
+    },
+    {
+        orderedDate: 20170701,
+        title: "Opening concert *" +
+                "Concerto d'inaugurazione *" +
+                "スタインウェイピアノ開き",
+        imgSmall: "img/news/20170701/pamphlet_square.jpg",
+        imgMedium: "img/news/20170701/pamphlet_square.jpg",
+        imgLarge: "img/news/20170701/pamphlet.jpg",
+        txt:[
+            {
+                img:"img/news/20170701/pamphlet_back.jpg"
+            }
+        ]
     }
 ];
 
