@@ -1346,5 +1346,58 @@ var myEvents = [
                 '</span>' +
             '</div>',
         buyTicketURL: '#events'
+    },
+    {   // concerto terme 26/Nov/2017
+        year: 2017,
+        month: 11,
+        day: 26,
+        weekDay: 7,
+        hour: 16,
+        minute: 30,
+        latitude: 37.067673,
+        longitude: 139.923160,
+        location:
+            '<div data-translatable>' +
+                '<span>' +
+                    '<div style="margin-bottom: 10px">' +
+                        '<p style="font-size: 17px">' +
+                            '<b>Mai Nishida Recital</b>' +
+                        '</p>' +
+                        'at Itamuro Daikokuya (Tochigi)</br>' +
+                    '</div>' +
+                    'Performers: <i>Mai Nishida (Soprano)</i>, <i>Megumi Nakanomori (Piano)</i>' +
+                '</span>' +
+                '<span>' +
+                    '<div style="margin-bottom: 10px">' +
+                        '<p style="font-size: 17px">' +
+                            '<b>Recital di Mai Nishida</b>' +
+                        '</p>' +
+                        'presso Itamuro Daikokuya (Tochigi)</br>' +
+                    '</div>' +
+                    'Musicisti: <i>Mai Nishida (Soprano)</i>, <i>Megumi Nakanomori (Piano)</i>' +
+                '</span>' +
+                '<span>' +
+                    '<div style="margin-bottom: 10px">' +
+                        '<p style="font-size: 17px">' +
+                            '<b>音を楽しむ会</b>' +
+                        '</p>' +
+                        '会場：板室温泉　大黒屋（栃木県）</br>' +
+                    '</div>' +
+                    '出演者：西田真以 （ソプラノ） 中ノ森めぐみ（ピアノ）' +
+                '</span>' +
+            '</div>',
+        infoWindow:
+            '<div data-translatable>' +
+                '<span>' +
+                    'Tickets: free entrance</br>' +
+                '</span>' +
+                '<span>' +
+                    'Biglietti: entrata libera</br>' +
+                '</span>' +
+                '<span>' +
+                    'チケット：入場無料</br>' +
+                '</span>' +
+            '</div>',
+        buyTicketURL: 'http://www.itamuro-daikokuya.com'
     }
 ];
