@@ -221,7 +221,7 @@ var orderedNews,
     },
     {
         orderedDate: 20160913,
-        title: "Japanese and italian songs, Mozart's opera *" +
+        title: "Japanese and italian songs, Mozart‘s opera *" +
                 "Canzoni giapponesi e italiane, opere di Mozart *" +
                 "日伊歌曲とモーツァルトの愉快なオペラ",
         imgSmall: "img/news/20160913/pamphlet_square.jpg",
@@ -297,7 +297,7 @@ var orderedNews,
     {
         orderedDate: 20170701,
         title: "Opening concert *" +
-                "Concerto d'inaugurazione *" +
+                "Concerto d‘inaugurazione *" +
                 "スタインウェイピアノ開き",
         imgSmall: "img/news/20170701/pamphlet_square.jpg",
         imgMedium: "img/news/20170701/pamphlet_square.jpg",
@@ -307,6 +307,15 @@ var orderedNews,
                 img:"img/news/20170701/pamphlet_back.jpg"
             }
         ]
+    },
+    {
+        orderedDate: 20170723,
+        title: "Temple concert *" +
+                "Concerto al tempio *" +
+                "本堂で聴くクラシック",
+        imgSmall: "img/news/20170723/pamphlet_square.jpg",
+        imgMedium: "img/news/20170723/pamphlet_square.jpg",
+        imgLarge: "img/news/20170723/pamphlet.jpg"
     }
 ];
 
