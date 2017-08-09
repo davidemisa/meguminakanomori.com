@@ -138,9 +138,9 @@ var Beat = {
 		
 		/**
 		 * Get Instagram feed
+		 * $tis.getInstagram();
 		 */
-		$tis.getInstagram();
-		
+
 		/**
 		 * Create PrettyPhoto links
 		 */

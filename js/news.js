@@ -316,6 +316,15 @@ var orderedNews,
         imgSmall: "img/news/20170723/pamphlet_square.jpg",
         imgMedium: "img/news/20170723/pamphlet_square.jpg",
         imgLarge: "img/news/20170723/pamphlet.jpg"
+    },
+    {
+        orderedDate: 20170809,
+        title: "Italian opera concert *" +
+                "Concerto di opera italiana *" +
+                "イタリアオペラコンサート",
+        imgSmall: "img/news/20170809/pamphlet_square.jpg",
+        imgMedium: "img/news/20170809/pamphlet_square.jpg",
+        imgLarge: "img/news/20170809/pamphlet.jpg"
     }
 ];
 
@@ -370,20 +379,21 @@ var months = {
     }
 };
 
-$(function() {
-    orderedNews = sortNews();
+function fillNews(index, element) {
+    var news = orderedNews[index];
+    $(element).children(".news-img").html("<img src='" + news.imgMedium + "' alt='' />");
+    $(element).children(".news").data("news-details", JSON.stringify([news]));
+    $(element).children(".news").children(".news-title").html(news.title);
+    $(element).children(".news").children(".news-date").html(news.homeDate);
+}
 
-    $(".news-item").each(function(index, element){
-        var news = normalizeInfo(orderedNews[index]);
-        $(element).children(".news-img").html("<img src='" + news.imgMedium + "' alt='' />");
-        $(element).children(".news").data("news-details", JSON.stringify([news]));
-        $(element).children(".news").children(".news-title").html(news.title);
-        $(element).children(".news").children(".news-date").html(news.homeDate);
-    });
+$(function() {
+    orderedNews = sortAndNormalizeNews();
+    $(".news-item").each(fillNews);
 });
 
-function sortNews() {
-    return news.sort(compareDates)
+function sortAndNormalizeNews() {
+    return news.sort(compareDates).map(function (news) { return normalizeInfo(news) });
 }
 
 function compareDates(a, b) {

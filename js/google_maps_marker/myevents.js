@@ -1399,5 +1399,111 @@ var myEvents = [
                 '</span>' +
             '</div>',
         buyTicketURL: 'http://www.itamuro-daikokuya.com'
+    },
+    {   // concerto sakura hall 30/Set/2017
+        year: 2017,
+        month: 9,
+        day: 30,
+        weekDay: 6,
+        hour: 14,
+        minute: '00',
+        latitude: 35.655218,
+        longitude: 139.722290,
+        location:
+            '<div data-translatable>' +
+                '<span>' +
+                    '<div style="margin-bottom: 10px">' +
+                        '<p style="font-size: 17px">' +
+                            '<b>Classic concert</b>' +
+                        '</p>' +
+                        'at Sakura hall (Tokyo)</br>' +
+                    '</div>' +
+                    'Performers: <i>Natsuko Hosokawa (Violin)</i>, <i>Megumi Nakanomori (Piano)</i>' +
+                '</span>' +
+                '<span>' +
+                    '<div style="margin-bottom: 10px">' +
+                        '<p style="font-size: 17px">' +
+                            '<b>Classic concert</b>' +
+                        '</p>' +
+                        'presso Sakura hall (Tokyo)</br>' +
+                    '</div>' +
+                    'Musicisti: <i>Natsuko Hosokawa (Violino)</i>, <i>Megumi Nakanomori (Piano)</i>' +
+                '</span>' +
+                '<span>' +
+                    '<div style="margin-bottom: 10px">' +
+                        '<p style="font-size: 17px">' +
+                            '<b>100万人のクラシックライブ</b>' +
+                        '</p>' +
+                        '会場：社会福祉法人福田会 さくらホール （東京都）</br>' +
+                    '</div>' +
+                    '出演者：細川奈津子 （ヴァイオリン） 中ノ森めぐみ（ピアノ）' +
+                '</span>' +
+            '</div>',
+        infoWindow:
+            '<div data-translatable>' +
+                '<span>' +
+                    'Tickets: 1,000yen</br>' +
+                '</span>' +
+                '<span>' +
+                    'Biglietti: 1,000yen</br>' +
+                '</span>' +
+                '<span>' +
+                    'チケット：1,000円</br>' +
+                '</span>' +
+            '</div>',
+        buyTicketURL: 'http://1m-cl.com'
+    },
+    {   // concerto emiliano 03/Set/2017
+        year: 2017,
+        month: 9,
+        day: 3,
+        weekDay: 7,
+        hour: 15,
+        minute: '00',
+        latitude: 35.708488,
+        longitude: 139.716609,
+        location:
+        '<div data-translatable>' +
+            '<span>' +
+                '<div style="margin-bottom: 10px">' +
+                    '<p style="font-size: 17px">' +
+                        '<b>Italian opera concert</b>' +
+                    '</p>' +
+                    'at Waseda Hoshien Scotto hall(Tokyo)</br>' +
+                '</div>' +
+                'Performers: <i>Emiliano Blasi (Bariton)</i>, <i>Naoko Togawa (Soprano)</i>, <i>Megumi Nakanomori (Piano)</i>' +
+            '</span>' +
+            '<span>' +
+                '<div style="margin-bottom: 10px">' +
+                    '<p style="font-size: 17px">' +
+                        '<b>Concerto di Opera Italiana</b>' +
+                    '</p>' +
+                    'presso Waseda Hoshien Scotto hall (Tokyo )</br>' +
+                '</div>' +
+                'Musicisti: <i>Emiliano Blasi (Baritono)</i>, <i>Naoko Togawa (Soprano)</i>, <i>Megumi Nakanomori (Piano)</i>' +
+            '</span>' +
+            '<span>' +
+                '<div style="margin-bottom: 10px">' +
+                    '<p style="font-size: 17px">' +
+                        '<b>イタリア オペラ コンサート</b>' +
+                    '</p>' +
+                    '会場：早稲田 奉仕園 スコットホール（東京都）</br>' +
+                '</div>' +
+                '出演者：エミリアーノ ブラーズィ（バリトン） 登川直穂子(ソプラノ)  中ノ森めぐみ（ピアノ）' +
+            '</span>' +
+        '</div>',
+        infoWindow:
+        '<div data-translatable>' +
+            '<span>' +
+                'Tickets: 5,000yen(presale 4,500yen)</br>' +
+            '</span>' +
+            '<span>' +
+                'Biglietti: 5,000yen(prevendita 4,500yen)</br>' +
+            '</span>' +
+            '<span>' +
+                'チケット：5,000円(前売り4,500円)</br>' +
+            '</span>' +
+        '</div>',
+        buyTicketURL: 'http://fides-japan.com/イベント・コンサート情報/'
     }
 ];
