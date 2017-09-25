@@ -305,6 +305,9 @@ var orderedNews,
         txt:[
             {
                 img:"img/news/20170701/pamphlet_back.jpg"
+            },
+            {
+                img:"img/news/20170701/program.jpg"
             }
         ]
     },
@@ -324,7 +327,49 @@ var orderedNews,
                 "イタリアオペラコンサート",
         imgSmall: "img/news/20170809/pamphlet_square.jpg",
         imgMedium: "img/news/20170809/pamphlet_square.jpg",
-        imgLarge: "img/news/20170809/pamphlet.jpg"
+        imgLarge: "img/news/20170809/pamphlet.jpg",
+        txt:[
+            {
+                img:"img/news/20170809/photo.jpg"
+            }
+        ]
+    },
+    {
+        orderedDate: 20170925,
+        title: "Christmas dinner concert *" +
+                "Concerto di Natale *" +
+                "クリスマスディナーコンサート",
+        imgSmall: "img/news/20170925/pamphlet_square.jpg",
+        imgMedium: "img/news/20170925/pamphlet_square.jpg",
+        imgLarge: "img/news/20170925/pamphlet.jpg",
+        txt:[
+            {
+                img:"img/news/20170925/pamphlet_back.jpg"
+            }
+        ]
+    },
+    {
+        orderedDate: 20170924,
+        title: "Duo concert *" +
+                "Concerto duo *" +
+                "デュオコンサート",
+        imgSmall: "img/news/20170924/pamphlet_square.jpg",
+        imgMedium: "img/news/20170924/pamphlet_square.jpg",
+        imgLarge: "img/news/20170924/pamphlet.png"
+    },
+    {
+        orderedDate: 20170923,
+        title: "New year concert *" +
+                "Concerto del nuovo anno *" +
+                "ニューイヤーコンサート",
+        imgSmall: "img/news/20170923/pamphlet_square.jpg",
+        imgMedium: "img/news/20170923/pamphlet_square.jpg",
+        imgLarge: "img/news/20170923/pamphlet.JPG",
+        txt:[
+            {
+                img:"img/news/20170923/pamphlet_back.JPG"
+            }
+        ]
     }
 ];
 
