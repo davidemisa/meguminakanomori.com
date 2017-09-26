@@ -1336,13 +1336,13 @@ var myEvents = [
         infoWindow:
             '<div data-translatable>' +
                 '<span>' +
-                    'details to be defined' +
+                    'Tickets: 18,000yen</br>' +
                 '</span>' +
                 '<span>' +
-                    'dettagli da definire' +
+                    'Biglietti: 18,000yen</br>' +
                 '</span>' +
                 '<span>' +
-                    '詳細未定' +
+                    'チケット：18,000円</br>' +
                 '</span>' +
             '</div>',
         buyTicketURL: '#events'
@@ -1505,5 +1505,99 @@ var myEvents = [
             '</span>' +
         '</div>',
         buyTicketURL: 'http://fides-japan.com/イベント・コンサート情報/'
+    },
+    {   // concerto tempio 19/Ott/2017
+        year: 2017,
+        month: 10,
+        day: 19,
+        weekDay: 4,
+        hour: 19,
+        minute: '00',
+        latitude: 35.650054,
+        longitude: 139.743815,
+        location:
+            '<div data-translatable>' +
+                '<span>' +
+                    '<div style="margin-bottom: 10px">' +
+                        '<p style="font-size: 17px">' +
+                            '<b>Duo concert</b>' +
+                        '</p>' +
+                        'at Temple Ryushoin (Tokyo)</br>' +
+                    '</div>' +
+                    'Performers: <i>Natsuko Hosokawa (Violin)</i>, <i>Megumi Nakanomori (Piano)</i>' +
+                '</span>' +
+                '<span>' +
+                    '<div style="margin-bottom: 10px">' +
+                        '<p style="font-size: 17px">' +
+                            '<b>Concerto duo</b>' +
+                        '</p>' +
+                        'presso Tempio Ryushoin (Tokyo)</br>' +
+                    '</div>' +
+                    'Musicisti: <i>Natsuko Hosokawa (Violino)</i>, <i>Megumi Nakanomori (Piano)</i>' +
+                '</span>' +
+                '<span>' +
+                    '<div style="margin-bottom: 10px">' +
+                        '<p style="font-size: 17px">' +
+                            '<b>デュオコンサート</b>' +
+                        '</p>' +
+                        '会場：三田高野山弘法寺 龍生院 （東京都）</br>' +
+                    '</div>' +
+                    '出演者：細川奈津子 （ヴァイオリン） 中ノ森めぐみ（ピアノ）' +
+                '</span>' +
+            '</div>',
+        infoWindow:
+            '<div data-translatable>' +
+                '<span>' +
+                    'Tickets: free entrance</br>' +
+                '</span>' +
+                '<span>' +
+                    'Biglietti: entrata libera</br>' +
+                '</span>' +
+                '<span>' +
+                    'チケット：入場無料</br>' +
+                '</span>' +
+            '</div>',
+        buyTicketURL: 'http://1m-cl.com/'
+    },
+    {   // new year concerto 9/Gen/2018
+        year: 2017,
+        month: 9,
+        day: 26,
+        weekDay: 2,
+        hour: 19,
+        minute: 15,
+        latitude: 35.750232,
+        longitude: 139.585754,
+        location:
+            '<div data-translatable>' +
+                '<span>' +
+                    '<div style="margin-bottom: 10px">' +
+                        '<p style="font-size: 17px"><b>New Year Concert</b></p>' +
+                        'at Oizumi gakuen yumeria hall (Tokyo)</br>' +
+                    '</div>' +
+                    'Performers: <i>Mai Nishida (Sop.)</i>, <i>Paolo Andrea Di Pietro (Bas.)</i>, <i>Megumi Nakanomori (Piano)</i>' +
+                '</span>' +
+                '<span>' +
+                    '<div style="margin-bottom: 10px">' +
+                        '<p style="font-size: 17px"><b>New Year Concert</b></p>' +
+                        'presso Oizumi Gakuen Yumeria hall (Tokyo)</br>' +
+                    '</div>' +
+                    'Musicisti: <i>Mai Nishida (Sop.)</i>, <i>Paolo Andrea Di Pietro (Bas.)</i>, <i>Megumi Nakanomori (Piano)</i>' +
+                '</span>' +
+                '<span>' +
+                    '<div style="margin-bottom: 10px">' +
+                        '<p style="font-size: 17px"><b>ニューイヤーコンサート</b></p>' +
+                        '会場：大泉学園ゆめりあホール （東京都）</br>' +
+                    '</div>' +
+                    '出演者：西田真以(ソプラノ)パオロアンドレア・ディ・ピエトロ(バス) 中ノ森めぐみ（ピアノ）' +
+                '</span>' +
+            '</div>',
+        infoWindow:
+            '<div data-translatable>' +
+                '<span>Tickets: 3,000yen</br></span>' +
+                '<span>Biglietti: 3,000yen</br></span>' +
+                '<span>チケット：3,000円</br></span>' +
+            '</div>',
+        buyTicketURL: 'https://www.facebook.com/operavera/'
     }
 ];

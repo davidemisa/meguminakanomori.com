@@ -650,14 +650,17 @@ var Beat = {
 			var infowindow = new google.maps.InfoWindow({
 				content: '<div class="infoWindow">' + info + '</div>'
 			});
-			
+
+			const past = Date.parse(obj.month + '/' + day + '/' + year) < Date.now();
+			const markerClass = "marker" + (past ? " past" : " future");
+
 			var marker = new RichMarker({
 				position: new google.maps.LatLng(lat, lng),
 				map: $tis.map,
 				anchorPoint: new google.maps.Point(29,-68),
 				shadow: 'none',
 				content: 
-                '<div class="marker" data-translatable>' +
+                '<div class="' + markerClass + '" data-translatable>' +
                     '<span>' +
                         '<div class="day">' + day +' </div>' +
                         '<div class="month">' + $tis.enMonths[obj.month - 1].slice(0,3) +' </div>' +
