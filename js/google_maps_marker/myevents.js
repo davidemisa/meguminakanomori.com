@@ -1560,9 +1560,9 @@ var myEvents = [
         buyTicketURL: 'http://1m-cl.com/'
     },
     {   // new year concerto 9/Gen/2018
-        year: 2017,
-        month: 9,
-        day: 26,
+        year: 2018,
+        month: 1,
+        day: 9,
         weekDay: 2,
         hour: 19,
         minute: 15,
