@@ -1797,13 +1797,20 @@ fieldset[disabled] .btn-dark2.active {
 	max-width:none;
 }
 
-.marker{
+.marker {
 	width:58px;
 	height:69px;
-	background-image: url('../img/marker.png');
 	cursor:pointer;
 	text-align:center;
 	color:#fff;
+}
+
+.marker.future {
+	background-image: url('../img/marker.png');
+}
+
+.marker.past {
+	background-image: url('../img/marker_past.png');
 }
 
 .marker > div{
