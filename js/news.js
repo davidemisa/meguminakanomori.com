@@ -370,6 +370,15 @@ var orderedNews,
                 img:"img/news/20170923/pamphlet_back.JPG"
             }
         ]
+    },
+    {
+        orderedDate: 20171207,
+        title: "Opera recital *" +
+                "Opera recital *" +
+                "バリトンリサイタル",
+        imgSmall: "img/news/20171207/pamphlet_square.jpg",
+        imgMedium: "img/news/20171207/pamphlet_square.jpg",
+        imgLarge: "img/news/20171207/pamphlet.jpg"
     }
 ];
 
