@@ -1,6 +1,32 @@
 var orderedNews,
     news = [
     {
+        orderedDate: 20120930,
+        title: "Saname hall",
+        imgSmall: "img/news/20120930/pamphlet_square.jpg",
+        imgMedium: "img/news/20120930/pamphlet_square.jpg",
+        imgLarge: "img/news/20120930/pamphlet.jpg"
+    },
+    {
+        orderedDate: 20130505,
+        title: "Il piccolo spazzacamino",
+        imgSmall: "img/news/20130505/pamphlet_square.jpg",
+        imgMedium: "img/news/20130505/pamphlet_square.jpg",
+        imgLarge: "img/news/20130505/pamphlet.jpg"
+    },
+    {
+        orderedDate: 20130818,
+        title: "Duo Vagues in Cowbell",
+        imgSmall: "img/news/20130818/pamphlet_square.jpg",
+        imgMedium: "img/news/20130818/pamphlet_square.jpg",
+        imgLarge: "img/news/20130818/pamphlet.jpg",
+        txt:[
+            {
+                img:"img/news/20130818/pamphlet_back.jpg"
+            }
+        ]
+    },
+    {
         orderedDate: 20150918,
         title: "Recording in Pescara *" +
                  "Incisione a Pescara *" +

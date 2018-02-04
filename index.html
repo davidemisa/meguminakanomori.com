@@ -130,8 +130,6 @@
                     <div id="home-stream">
                         <ul id="home-stream-items">
 
-                            <!--TODO news are always the same component-->
-
                             <li class="featured">
                                 <div class="icon color"><i class="icon-music"></i></div>
                                 <div class="title">
@@ -150,104 +148,25 @@
                                 </div>
                             </li>
 
-                            <!-- NEWS -->
-                            <li class="news-item">
-                                <div class="icon color"><i class="icon-file-text-alt"></i></div>
-                                <a href="" class="open-overlay news-img" data-overlay-id="news-overlay"></a>
-                                <div class="news">
-                                    <button class="btn btn-dark btn-only-icon open-overlay" data-overlay-id="news-overlay"><i class="icon-chevron-right"></i></button>
-                                    <a href="" class="open-overlay news-title" data-overlay-id="news-overlay" data-translatable></a>
-                                    <div class="time news-date" data-translatable></div>
-                                </div>
-                            </li>
+                            <!-- NEWS: to add or remove news number change the for statement -->
+                            <script>
+                                const innerHtmlString =
+                                    '<div class="icon color"><i class="icon-file-text-alt"></i></div>' +
+                                    '<a href="" class="open-overlay news-img" data-overlay-id="news-overlay"></a>' +
+                                    '<div class="news">' +
+                                        '<button class="btn btn-dark btn-only-icon open-overlay" data-overlay-id="news-overlay"><i class="icon-chevron-right"></i></button>' +
+                                        '<a href="" class="open-overlay news-title" data-overlay-id="news-overlay" data-translatable></a>' +
+                                        '<div class="time news-date" data-translatable></div>' +
+                                    '</div>';
+                                for (var i=0; i < 23; i++) {
+                                    var ul = document.getElementById("home-stream-items");
+                                    var li = document.createElement("li");
+                                    li.classList.add("news-item");
+                                    li.innerHTML = innerHtmlString.trim();
+                                    ul.appendChild(li);
+                                }
+                            </script>
 
-                            <!-- NEWS -->
-                            <li class="news-item">
-                                <div class="icon color"><i class="icon-file-text-alt"></i></div>
-                                <a href="" class="open-overlay news-img" data-overlay-id="news-overlay"></a>
-                                <div class="news">
-                                    <button class="btn btn-dark btn-only-icon open-overlay" data-overlay-id="news-overlay"><i class="icon-chevron-right"></i></button>
-                                    <a href="" class="open-overlay news-title" data-overlay-id="news-overlay" data-translatable></a>
-                                    <div class="time news-date" data-translatable></div>
-                                </div>
-                            </li>
-
-                            <!-- NEWS -->
-                            <li class="news-item">
-                                <div class="icon color"><i class="icon-file-text-alt"></i></div>
-                                <a href="" class="open-overlay news-img" data-overlay-id="news-overlay"></a>
-                                <div class="news">
-                                    <button class="btn btn-dark btn-only-icon open-overlay" data-overlay-id="news-overlay"><i class="icon-chevron-right"></i></button>
-                                    <a href="" class="open-overlay news-title" data-overlay-id="news-overlay" data-translatable></a>
-                                    <div class="time news-date" data-translatable></div>
-                                </div>
-                            </li>
-
-                            <!-- NEWS -->
-                            <li class="news-item">
-                                <div class="icon color"><i class="icon-file-text-alt"></i></div>
-                                <a href="" class="open-overlay news-img" data-overlay-id="news-overlay"></a>
-                                <div class="news">
-                                    <button class="btn btn-dark btn-only-icon open-overlay" data-overlay-id="news-overlay"><i class="icon-chevron-right"></i></button>
-                                    <a href="" class="open-overlay news-title" data-overlay-id="news-overlay" data-translatable></a>
-                                    <div class="time news-date" data-translatable></div>
-                                </div>
-                            </li>
-
-                            <!-- NEWS -->
-                            <li class="news-item">
-                                <div class="icon color"><i class="icon-file-text-alt"></i></div>
-                                <a href="" class="open-overlay news-img" data-overlay-id="news-overlay"></a>
-                                <div class="news">
-                                    <button class="btn btn-dark btn-only-icon open-overlay" data-overlay-id="news-overlay"><i class="icon-chevron-right"></i></button>
-                                    <a href="" class="open-overlay news-title" data-overlay-id="news-overlay" data-translatable></a>
-                                    <div class="time news-date" data-translatable></div>
-                                </div>
-                            </li>
-
-                            <!-- NEWS -->
-                            <li class="news-item">
-                                <div class="icon color"><i class="icon-file-text-alt"></i></div>
-                                <a href="" class="open-overlay news-img" data-overlay-id="news-overlay"></a>
-                                <div class="news">
-                                    <button class="btn btn-dark btn-only-icon open-overlay" data-overlay-id="news-overlay"><i class="icon-chevron-right"></i></button>
-                                    <a href="" class="open-overlay news-title" data-overlay-id="news-overlay" data-translatable></a>
-                                    <div class="time news-date" data-translatable></div>
-                                </div>
-                            </li>
-
-                            <!-- NEWS -->
-                            <li class="news-item">
-                                <div class="icon color"><i class="icon-file-text-alt"></i></div>
-                                <a href="" class="open-overlay news-img" data-overlay-id="news-overlay"></a>
-                                <div class="news">
-                                    <button class="btn btn-dark btn-only-icon open-overlay" data-overlay-id="news-overlay"><i class="icon-chevron-right"></i></button>
-                                    <a href="" class="open-overlay news-title" data-overlay-id="news-overlay" data-translatable></a>
-                                    <div class="time news-date" data-translatable></div>
-                                </div>
-                            </li>
-
-                            <!-- NEWS -->
-                            <li class="news-item">
-                                <div class="icon color"><i class="icon-file-text-alt"></i></div>
-                                <a href="" class="open-overlay news-img" data-overlay-id="news-overlay"></a>
-                                <div class="news">
-                                    <button class="btn btn-dark btn-only-icon open-overlay" data-overlay-id="news-overlay"><i class="icon-chevron-right"></i></button>
-                                    <a href="" class="open-overlay news-title" data-overlay-id="news-overlay" data-translatable></a>
-                                    <div class="time news-date" data-translatable></div>
-                                </div>
-                            </li>
-
-                            <!-- NEWS -->
-                            <li class="news-item">
-                                <div class="icon color"><i class="icon-file-text-alt"></i></div>
-                                <a href="" class="open-overlay news-img" data-overlay-id="news-overlay"></a>
-                                <div class="news">
-                                    <button class="btn btn-dark btn-only-icon open-overlay" data-overlay-id="news-overlay"><i class="icon-chevron-right"></i></button>
-                                    <a href="" class="open-overlay news-title" data-overlay-id="news-overlay" data-translatable></a>
-                                    <div class="time news-date" data-translatable></div>
-                                </div>
-                            </li>
                         </ul>
                     </div>
                 </div>
@@ -563,20 +482,12 @@
                     <img src="img/gallery/megumi_profile_1_thumb.jpg" alt="" />
                 </li>
                 <li>
-                    <a href="img/gallery/duo_vagues_cowbell_1.jpg" data-gal="prettyPhoto[gallery]" title="Duo Vagues in Tottori (Japan)"><span></span><i class="hover-icon"></i></a>
-                    <img src="img/gallery/duo_vagues_cowbell_1_thumb.jpg" alt="" />
-                </li>
-                <li>
                     <a href="img/gallery/duo_vagues_home_3.jpg" data-gal="prettyPhoto[gallery]" title="Duo Vagues"><span></span><i class="hover-icon"></i></a>
                     <img src="img/gallery/duo_vagues_home_3_thumb.jpg" alt="" />
                 </li>
                 <li>
                     <a href="img/gallery/megumi_home_3.jpg" data-gal="prettyPhoto[gallery]" title="Megumi Nakanomori"><span></span><i class="hover-icon"></i></a>
                     <img src="img/gallery/megumi_home_3_thumb.jpg" alt="" />
-                </li>
-                <li>
-                    <a href="img/gallery/concert_yonago_1.jpg" data-gal="prettyPhoto[gallery]" title="Pianoforte Cube in Yonago (Japan)"><span></span><i class="hover-icon"></i></a>
-                    <img src="img/gallery/concert_yonago_1_thumb.jpg" alt="" />
                 </li>
             </ul>
             <ul>
@@ -587,14 +498,6 @@
                 <li>
                     <a href="img/gallery/megumi_hands.jpg" data-gal="prettyPhoto[gallery]" title="Megumi Nakanomori"><span></span><i class="hover-icon"></i></a>
                     <img src="img/gallery/megumi_hands_thumb.jpg" alt="" />
-                </li>
-                <li>
-                    <a href="img/gallery/scala_concert_1.jpg" data-gal="prettyPhoto[gallery]" title="Opera at La Scala in Milan (Italy)"><span></span><i class="hover-icon"></i></a>
-                    <img src="img/gallery/scala_concert_1_thumb.jpg" alt="" />
-                </li>
-                <li>
-                    <a href="img/gallery/duo_vagues_cowbell_2.jpg" data-gal="prettyPhoto[gallery]" title="Duo Vagues in Tottori (Japan)"><span></span><i class="hover-icon"></i></a>
-                    <img src="img/gallery/duo_vagues_cowbell_2_thumb.jpg" alt="" />
                 </li>
                 <li>
                     <a href="img/gallery/duo_vagues_home_2.jpg" data-gal="prettyPhoto[gallery]" title="Duo Vagues"><span></span><i class="hover-icon"></i></a>
