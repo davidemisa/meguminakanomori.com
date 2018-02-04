@@ -11,8 +11,8 @@ var Beat = {
 
 	initialized: false,
 	mobMenuFlag: false,
-	wookHandler: null,
-	wookOptions: null,
+	wookHandler: {},
+	wookOptions: {},
 	scrollPos: 0,
 	sendingMail: false,
 	myLatlng: null,
@@ -102,10 +102,11 @@ var Beat = {
 		$tis.createMobileMenu();
 		
 		/**
-		 * Social stream items navigation
+		 * Box stream items navigation
 		 */
-		$tis.socialStream();
-		
+		$tis.boxStream("home-stream");
+		$tis.boxStream("video-stream");
+
 		/**
 		 * Create Mp3 Player
 		 */
@@ -330,27 +331,28 @@ var Beat = {
 		}
 	},
 	
-	socialStream: function() {
+	boxStream: function(boxStreamName) {
 		"use strict";
 		var $tis = this;
 		
 		var initialItems = 6,
-			items = $('#social-stream-items li'),
+			items = $('#' + boxStreamName + '-items li'),
 			numItems = items.length,
-			numPages = Math.ceil(numItems/initialItems);
-		
+			numPages = Math.ceil(numItems/initialItems),
+			pageName = "page";
+
 		//Create navigation bullets
 		var nav = document.createElement('ol');
 			
-		nav.setAttribute('id', 'social-stream-nav');
+		nav.setAttribute('id', boxStreamName + '-nav');
 		
 		for(var i=0; i<numPages; i++){
 			var elem = document.createElement('li');
-			elem.setAttribute('data-filter', 'page'+(i+1) );
+			elem.setAttribute('data-filter', pageName+(i+1) );
 			nav.appendChild(elem);
 		}
 		
-		$('#social-stream').after(nav);
+		$('#' + boxStreamName + '').after(nav);
 		
 		
 		//Add data-filter-class to each social stream item
@@ -360,45 +362,44 @@ var Beat = {
 				page++;
 			}
 			
-			this.setAttribute('data-filter-class', '["page' + page + '"]');
+			this.setAttribute('data-filter-class', '["' + pageName + page + '"]');
 		});
-		
-		
+
 		//Items show animation
 		var itemsAnim = function(activeFilter){
-				$('#social-stream').addClass('hideShadow');
-				
-				items.filter(function() { 
-					return $(this).data('filter-class').toString() === activeFilter.toString();
-				}).each(function(i){
-					var $this = $(this);
-					if ( i<initialItems ){					
-						setTimeout(function() {
-							$this.addClass("enabled");
-						}, 200*i);
-					}
-				});
-				
-				setTimeout(function() {
-					$('#social-stream').removeClass('hideShadow');
-				}, 200*(initialItems-1));
-			};
+			$('#' + boxStreamName).addClass('hideShadow');
+
+			items.filter(function() {
+				return $(this).data('filter-class').toString() === activeFilter.toString();
+			}).each(function(i){
+				var $this = $(this);
+				if ( i < initialItems ){
+					setTimeout(function() {
+						$this.addClass("enabled");
+					}, 200*i);
+				}
+			});
+
+			setTimeout(function() {
+				$('#' + boxStreamName).removeClass('hideShadow');
+			}, 200*(initialItems-1));
+		};
 		
 	
 		// Prepare layout options.
-		$tis.wookOptions = {
+		$tis.wookOptions[boxStreamName] = {
 			autoResize: true, // This will auto-update the layout when the browser window is resized.
-			container: $('#social-stream'), // Optional, used for some extra CSS styling
+			container: $('#' + boxStreamName), // Optional, used for some extra CSS styling
 			offset: 1, // Optional, the distance between grid items
 			itemWidth: 350 // Optional, the width of a grid item
 		};
 
 		// Get a reference to your grid items.
-		$tis.wookHandler = $('#social-stream-items li');
-		var filters = $('#social-stream-nav li');
+		$tis.wookHandler[boxStreamName] = $('#' + boxStreamName + '-items li');
+		var filters = $('#' + boxStreamName + '-nav li');
 
 		// Call the layout function.
-		$tis.wookHandler.wookmark($tis.wookOptions);
+		$tis.wookHandler[boxStreamName].wookmark($tis.wookOptions[boxStreamName]);
 
 		/**
 		 * When a filter is clicked, toggle it's active state and refresh.
@@ -407,9 +408,9 @@ var Beat = {
 		var onClickFilter = function(event) {
 			var item = $(event.currentTarget),
 				activeFilters = [];
-			
+
 			itemFilter = item.data('filter');
-			
+
 			if (!item.hasClass('active')) {
 				filters.removeClass('active');
 			} else {
@@ -419,23 +420,23 @@ var Beat = {
 
 			// Filter by the currently selected filter
 			if (item.hasClass('active')) {
-				
-				items.filter(function() { 
+				items.filter(function() {
 					return $(this).data('filter-class').toString() !== itemFilter.toString();
 				}).removeClass("enabled");
 				
 				activeFilters.push(itemFilter);
 			}
 
-			$tis.wookHandler.wookmarkInstance.filter(activeFilters);
+			$tis.wookHandler[boxStreamName].wookmarkInstance.filter(activeFilters);
 			itemsAnim(itemFilter);
 			$.waypoints('refresh');
 		};
 
 		// Capture filter click events.
 		filters.click(onClickFilter);
-	
-		$("#social-stream-nav li").eq(0).click();
+
+		// Show first page
+		filters.eq(0).click();
 	},
 	
 	createMp3Player: function() {
@@ -922,7 +923,7 @@ var Beat = {
 			}
 		}
 		
-		$('#social-stream .facebook').html('<div class="spinner"><div class="rect1"></div><div class="rect2"></div><div class="rect3"></div><div class="rect4"></div><div class="rect5"></div></div>');
+		$('#home-stream .facebook').html('<div class="spinner"><div class="rect1"></div><div class="rect2"></div><div class="rect3"></div><div class="rect4"></div><div class="rect5"></div></div>');
 		
 		var xhr = $.ajax({
 			type: 'post',
@@ -957,7 +958,7 @@ var Beat = {
 									message = message.slice(0,300) + "...";
 								}
 								
-								$("#social-stream .facebook").eq(index).html('<a href="' + getLinkUrl(feed.data[i].id, feed.data[i].link) + '" target="_blank">' + getPictureUrl(feed.data[i].object_id, feed.data[i].picture) + '</a><div class="text"><h3>' + feed.data[i].from.name + ' &nbsp;<span>' + timeDifference(time, feed.data[i].created_time*1000) + '</span></h3>' + message + '</div>');
+								$("#home-stream .facebook").eq(index).html('<a href="' + getLinkUrl(feed.data[i].id, feed.data[i].link) + '" target="_blank">' + getPictureUrl(feed.data[i].object_id, feed.data[i].picture) + '</a><div class="text"><h3>' + feed.data[i].from.name + ' &nbsp;<span>' + timeDifference(time, feed.data[i].created_time*1000) + '</span></h3>' + message + '</div>');
 								index++;
 							}
 						} else {

@@ -52,16 +52,16 @@ input[type="color"]:focus,
 #nav ul > li > a{	color:#a6a6a6;}
 #bottom-home{ background-color:#f5f5f5;}
 #bottom-home:before{ background-image: url('../img/bottom_home_white.png');}
-#social-stream:after { box-shadow: 0 40px 50px rgba(0,0,0,0.35);}
-#social-stream-items > li{ background:rgba(245,245,245, 0.9);}
-#social-stream-items > li .icon{ background-color:#fff;}
-#social-stream-items > li .icon:after{ border-color: #ffffff transparent transparent transparent;}
-#social-stream-items > li > .title{ background-color:#fff;}
-#social-stream-items > li .tweet h3 .time{ color:#979797;}
-#social-stream-items > li .news{	background-color:rgba(255,255,255,0.9);}
-#social-stream-items > li .news a{ color:#424242;}
-#social-stream-items > li .news .time{ color:#979797;}
-#social-stream-nav li{ background-color:#fff;}
+#home-stream:after, #video-stream:after { box-shadow: 0 40px 50px rgba(0,0,0,0.35);}
+#home-stream-items > li, #video-stream-items > li { background:rgba(245,245,245, 0.9);}
+#home-stream-items > li .icon, #video-stream-items > li .icon { background-color:#fff;}
+#home-stream-items > li .icon:after, #video-stream-items > li .icon:after { border-color: #ffffff transparent transparent transparent;}
+#home-stream-items > li > .title, #video-stream-items > li > .title { background-color:#fff;}
+#home-stream-items > li .tweet h3 .time { color:#979797;}
+#home-stream-items > li .news {	background-color:rgba(255,255,255,0.9);}
+#home-stream-items > li .news a { color:#424242;}
+#home-stream-items > li .news .time { color:#979797;}
+#home-stream-nav li, #video-stream-nav li { background-color:#fff;}
 .ttw-music-player .album-cover { -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, .4); -moz-box-shadow: 2px 2px 2px rgba(0, 0, 0, .4); box-shadow: 2px 2px 2px rgba(0, 0, 0, .4);}
 .ttw-music-player .player .title { color: #424242;}
 .ttw-music-player .rating-star {	color:#afafaf;}
@@ -104,9 +104,9 @@ div.pp_overlay{background:#fff;}
 
 
 /* Update v1.0.3 */
-#social-stream-items > li .facebook .text { background-color: rgba(255, 255, 255, 0.9); }
-#social-stream-items > li .facebook h3 { color:#696E72 }
-#social-stream-items > li .facebook h3 span { color:#979797 }
+#home-stream-items > li .facebook .text { background-color: rgba(255, 255, 255, 0.9); }
+#home-stream-items > li .facebook h3 { color:#696E72 }
+#home-stream-items > li .facebook h3 span { color:#979797 }
 
 @media (-webkit-min-device-pixel-ratio: 1.5), 
 (min-resolution: 144dpi){ 
