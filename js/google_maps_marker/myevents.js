@@ -1599,5 +1599,100 @@ var myEvents = [
                 '<span>チケット：3,000円</br></span>' +
             '</div>',
         buyTicketURL: 'https://www.facebook.com/operavera/'
+    },
+    {   // Rikkyo University 15/jan/2018
+        year: 2018,
+        month: 1,
+        day: 15,
+        weekDay: 1,
+        hour: 10,
+        minute: 40,
+        latitude: 35.730767,
+        longitude: 139.703273,
+        location:
+            '<div data-translatable>' +
+                '<span>' +
+                    '<div style="margin-bottom: 10px">' +
+                        '<p style="font-size: 17px">' +
+                            '<b>Special Concert</b>' +
+                        '</p>' +
+                        'at Rikkyo University (Tokyo)</br>' +
+                    '</div>' +
+                    'Performers: <i>Takahiro Akiba(Piano)</i>, <i>Megumi Nakanomori (Piano) etc. </i>' +
+                '</span>' +
+                '<span>' +
+                    '<div style="margin-bottom: 10px">' +
+                        '<p style="font-size: 17px">' +
+                            '<b>Concerto Speciale</b>' +
+                        '</p>' +
+                        'presso Università Rikkyo (Tokyo)</br>' +
+                    '</div>' +
+                    'Musicisti: <i>Takahiro Akiba(Piano)</i>, <i>Megumi Nakanomori (Piano) ecc.</i>' +
+                '</span>' +
+                '<span>' +
+                    '<div style="margin-bottom: 10px">' +
+                        '<p style="font-size: 17px">' +
+                            '<b>19世紀ドイツにおける音楽文化の諸相〜特別演奏会〜</b>' +
+                        '</p>' +
+                        '会場：立教大学（東京）</br>' +
+                    '</div>' +
+                    '出演者：秋場敬浩（ピアノ） 中ノ森めぐみ（ピアノ） 他'+
+                '</span>' +
+            '</div>',
+        infoWindow: 'Closed event',
+        buyTicketURL: '#events'
+    },
+    {   // foreign correspondent’s club 27/jan/2018
+        year: 2018,
+        month: 1,
+        day: 27,
+        weekDay: 6,
+        hour: 18,
+        minute: 30,
+        latitude: 35.674559,
+        longitude: 139.761506,
+        location:
+            '<div data-translatable>' +
+                '<span>' +
+                    '<div style="margin-bottom: 10px">' +
+                        '<p style="font-size: 17px">' +
+                            '<b>Saturday Nite Live!!</b>' +
+                        '</p>' +
+                        'at Foreign Correspondent’s Club (Tokyo)</br>' +
+                    '</div>' +
+                    'Performers: <i>Emiliano Blasi(Bariton)</i>, <i>Megumi Nakanomori (Piano)</i>' +
+                '</span>' +
+                '<span>' +
+                    '<div style="margin-bottom: 10px">' +
+                        '<p style="font-size: 17px">' +
+                            '<b>Saturday Nite Live!!</b>' +
+                        '</p>' +
+                        'presso Foreign Correspondent’s Club (Tokyo)</br>' +
+                    '</div>' +
+                    'Musicisti: <i>Emiliano Blasi (Baritono)</i>, <i>Megumi Nakanomori (Piano)</i>' +
+                '</span>' +
+                '<span>' +
+                    '<div style="margin-bottom: 10px">' +
+                        '<p style="font-size: 17px">' +
+                            '<b>Saturday Nite Live!!</b>' +
+                        '</p>' +
+                        '会場：外国人特派員協会（東京）</br>' +
+                    '</div>' +
+                    '出演者：エミリアーノ・ブラーズィ（バリトン） 中ノ森めぐみ（ピアノ）' +
+                '</span>' +
+            '</div>',
+        infoWindow:
+        '<div data-translatable>' +
+            '<span>' +
+                'Tickets: free entrance</br>' +
+            '</span>' +
+            '<span>' +
+                'Biglietti: entrata libera</br>' +
+            '</span>' +
+            '<span>' +
+                'チケット：入場無料</br>' +
+            '</span>' +
+        '</div>',
+        buyTicketURL: '#events'
     }
 ];
