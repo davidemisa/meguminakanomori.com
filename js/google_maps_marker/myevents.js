@@ -1694,5 +1694,46 @@ var myEvents = [
             '</span>' +
         '</div>',
         buyTicketURL: '#events'
+    },
+    {   // IBLA grand prize concert 28/Mar/2018
+        year: 2018,
+        month: 3,
+        day: 28,
+        weekDay: 5,
+        hour: 18,
+        minute: '00',
+        latitude: 35.682080,
+        longitude: 139.732541,
+        location:
+            '<div data-translatable>' +
+                '<span>' +
+                    '<div style="margin-bottom: 10px">' +
+                        '<p style="font-size: 17px"><b>IBLA GRAND PRIZE CONCERT Concert</b></p>' +
+                        'at Kioi hall (Tokyo)</br>' +
+                    '</div>' +
+                    'Performers: <i>Mai Nishida (Sop.)</i>, <i>Paolo Andrea Di Pietro (Bas.)</i>, <i>Roberto Di Candido (Ten.)</i>, <i>Megumi Nakanomori (Piano)etc.</i>' +
+                '</span>' +
+                '<span>' +
+                    '<div style="margin-bottom: 10px">' +
+                        '<p style="font-size: 17px"><b>IBLA GRAND PRIZE CONCERT</b></p>' +
+                        'presso Kioi hall (Tokyo)</br>' +
+                    '</div>' +
+                    'Musicisti: <i>Mai Nishida (Sop.)</i>, <i>Paolo Andrea Di Pietro (Bas.)</i>,<i> Roberto Di Candido</i>, <i>Megumi Nakanomori (Piano)ecc.</i>' +
+                '</span>' +
+                '<span>' +
+                    '<div style="margin-bottom: 10px">' +
+                        '<p style="font-size: 17px"><b>IBLA GRAND PRIZE CONCERT</b></p>' +
+                        '会場：紀尾井小ホール（東京都）</br>' +
+                    '</div>' +
+                    '出演者：西田真以(ソプラノ)パオロアンドレア・ディ・ピエトロ(バス)ロベルト・ディ・カンディド（バス） 中ノ森めぐみ（ピアノ）他'  +
+                '</span>' +
+            '</div>',
+        infoWindow:
+        '<div data-translatable>' +
+            '<span>Tickets: 27,000yen</br>Devina society 03-3460-1000</span>' +
+            '<span>Biglietti: 27,000yen</br>Devina society 03-3460-1000</span>' +
+            '<span>チケット：27,000円</br>デヴィーナソサエティ 03-3460-1000</span>' +
+        '</div>',
+        buyTicketURL: "http://www.kioi-hall.or.jp/category/concert/s_kioihall?ky=2018&km=3"
     }
 ];
