@@ -1729,11 +1729,64 @@ var myEvents = [
                 '</span>' +
             '</div>',
         infoWindow:
-        '<div data-translatable>' +
-            '<span>Tickets: 27,000yen</br>Devina society 03-3460-1000</span>' +
-            '<span>Biglietti: 27,000yen</br>Devina society 03-3460-1000</span>' +
-            '<span>チケット：27,000円</br>デヴィーナソサエティ 03-3460-1000</span>' +
-        '</div>',
+            '<div data-translatable>' +
+                '<span>Tickets: 27,000yen</br>Devina society 03-3460-1000</span>' +
+                '<span>Biglietti: 27,000yen</br>Devina society 03-3460-1000</span>' +
+                '<span>チケット：27,000円</br>デヴィーナソサエティ 03-3460-1000</span>' +
+            '</div>',
         buyTicketURL: "http://www.kioi-hall.or.jp/category/concert/s_kioihall?ky=2018&km=3"
+    },
+    {   // Ashikaga hall 17/mar/2018
+        year: 2018,
+        month: 3,
+        day: 17,
+        weekDay: 6,
+        hour: 11,
+        minute: 15,
+        latitude: 36.343928,
+        longitude: 139.458684,
+        location:
+            '<div data-translatable>' +
+                '<span>' +
+                    '<div style="margin-bottom: 10px">' +
+                        '<p style="font-size: 17px">' +
+                            '<b>Kairin Unesco association opening ceremony</b>' +
+                        '</p>' +
+                        'at Ashikaga hall (Tochigi)</br>' +
+                    '</div>' +
+                    'Performers: <i>Natsuko Hosokawa (Violin)</i>, <i>Megumi Nakanomori (Piano)</i>' +
+                '</span>' +
+                '<span>' +
+                    '<div style="margin-bottom: 10px">' +
+                        '<p style="font-size: 17px">' +
+                            '<b>Kairin Unesco association opening ceremony</b>' +
+                        '</p>' +
+                        'presso Ashikaga hall (Tochigi)</br>' +
+                    '</div>' +
+                    'Musicisti: <i>Natsuko Hosokawa (Violino)</i>, <i>Megumi Nakanomori (Piano)</i>' +
+                '</span>' +
+                '<span>' +
+                    '<div style="margin-bottom: 10px">' +
+                        '<p style="font-size: 17px">' +
+                            '<b>開倫ユネスコ協会 オープニングセレモニー</b>' +
+                        '</p>' +
+                        '会場：足利市民会館 （栃木県）</br>' +
+                    '</div>' +
+                    '出演者：細川奈津子 （ヴァイオリン） 中ノ森めぐみ（ピアノ）' +
+                '</span>' +
+            '</div>',
+        infoWindow:
+            '<div data-translatable>' +
+                '<span>' +
+                    'Tickets: 1,000yen</br>' +
+                '</span>' +
+                '<span>' +
+                    'Biglietti: 1,000yen</br>' +
+                '</span>' +
+                '<span>' +
+                    'チケット：1,000円</br>' +
+                '</span>' +
+            '</div>',
+        buyTicketURL: 'https://1m-cl.com/concert/data/2018/0000000997/'
     }
 ];
