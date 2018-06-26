@@ -9,6 +9,7 @@
 
 var Beat = {
 
+	contentfulClient: null,
 	initialized: false,
 	mobMenuFlag: false,
 	wookHandler: {},
@@ -74,17 +75,31 @@ var Beat = {
 
 	init: function() {
 		"use strict";
-		
 		var $tis = this;
-		
 		if ($tis.initialized){
 			return;
 		}
-		
 		$tis.initialized = true;
+		$tis.contentfulClient = contentful.createClient({
+            space: "wr8629yp3zb0",
+            accessToken: "cde53ff29fff23df31182e60cbb27d54d9431fa781d7dd2194c54167b70c41e7"
+        });
+        $tis.initNews();
 		$tis.construct();
 		$tis.events();
 	},
+
+    initNews: function() {
+        "use strict";
+        var $tis = this;
+        $tis.contentfulClient.getEntries({content_type: "news"})
+            .then(response => {
+                orderedNews = sortAndNormalizeNews(response.items);
+                $(".news-item").each(fillNews);
+                resetLanguage();
+            })
+            .catch(console.error)
+    },
 
 	construct: function() {
 		"use strict";

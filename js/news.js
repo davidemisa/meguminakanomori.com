@@ -467,13 +467,16 @@ function fillNews(index, element) {
     $(element).children(".news").children(".news-date").html(news.homeDate);
 }
 
-$(function() {
-    orderedNews = sortAndNormalizeNews();
-    $(".news-item").each(fillNews);
-});
-
-function sortAndNormalizeNews() {
-    return news.sort(compareDates).map(function (news) { return normalizeInfo(news) });
+function sortAndNormalizeNews(contentfulNews) {
+    var normalizedContentfulNews = contentfulNews.map(news => ({
+        orderedDate: parseInt(news.fields.orderedDate.replace(/-/g, "")),
+        title: news.fields.title,
+        imgSmall: news.fields.imgSquare.fields.file.url,
+        imgMedium: news.fields.imgSquare.fields.file.url,
+        imgLarge: news.fields.imgLarge.fields.file.url,
+        txt: (news.fields.images && news.fields.images.map(img => ({img: img.fields.file.url}))) || []
+    }))
+    return news.concat(normalizedContentfulNews).sort(compareDates).map(news => normalizeInfo(news));
 }
 
 function compareDates(a, b) {
