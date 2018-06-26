@@ -101,6 +101,14 @@ var Beat = {
             .catch(console.error)
     },
 
+    initEvents: function() {
+        "use strict";
+        var $tis = this;
+        $tis.contentfulClient.getEntries({content_type: "event"})
+            .then(response => $tis.googleMap(aggregateEvents(response.items)))
+            .catch(console.error)
+    },
+
 	construct: function() {
 		"use strict";
 		
@@ -135,8 +143,8 @@ var Beat = {
 		/**
 		 * Initialize Google Maps and populate with concerts locations
 		 */
-		$tis.googleMap();
-		
+		$tis.initEvents();
+
 		/**
 		 * Start FlexSlider
 		 */
@@ -483,7 +491,7 @@ var Beat = {
         return result;
     },
     
-	googleMap: function() {
+	googleMap: function(myEvents) {
 		"use strict";
 		
 		if ( typeof myEvents === 'undefined' || myEvents.length === 0){

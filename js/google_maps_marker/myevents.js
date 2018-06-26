@@ -1790,3 +1790,23 @@ var myEvents = [
         buyTicketURL: 'https://1m-cl.com/concert/data/2018/0000000997/'
     }
 ];
+
+function aggregateEvents(contentfulEvents) {
+    var normalizedContentfulEvents = contentfulEvents.map(event => {
+        var eventDate = new Date(event.fields.eventDate)
+        return {
+            year: eventDate.getFullYear(),
+            month: eventDate.getMonth() + 1,
+            day: eventDate.getDate(),
+            weekDay: eventDate.getDay(),
+            hour: eventDate.getHours(),
+            minute: eventDate.getMinutes() === 0 ? "00" : eventDate.getMinutes(),
+            latitude: event.fields.location.lat,
+            longitude: event.fields.location.lon,
+            location: event.fields.description,
+            infoWindow: event.fields.infoWindow,
+            buyTicketURL: event.fields.buyTicketURL
+        };
+    })
+    return myEvents.concat(normalizedContentfulEvents);
+}
