@@ -5,7 +5,8 @@
 var i18n;
 
 $(function() {
-    var lang = retrieveLanguage();
+    // var lang = retrieveLanguage();
+    var lang = 'jpn';
     initI18n(lang);
     translateLang(lang);
 });
