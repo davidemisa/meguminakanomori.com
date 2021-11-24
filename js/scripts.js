@@ -5,7 +5,7 @@
 * Version: 1.0.5
 */
 
-/* global Modernizr:true, google:true, myEvents:true, myPlaylist:true, RichMarker:true */
+/* global Modernizr:true, google:true, myEvents:true, RichMarker:true */
 
 var Beat = {
 
@@ -129,11 +129,6 @@ var Beat = {
 		 */
 		$tis.boxStream("home-stream");
 		$tis.boxStream("video-stream");
-
-		/**
-		 * Create Mp3 Player
-		 */
-		$tis.createMp3Player();
 		
 		/**
 		 * Activate placeholder in older browsers
@@ -358,7 +353,7 @@ var Beat = {
 		"use strict";
 		var $tis = this;
 		
-		var initialItems = 6,
+		var initialItems = $(window).width() <= 414 ? 2 : 6,
 			items = $('#' + boxStreamName + '-items li'),
 			numItems = items.length,
 			numPages = Math.ceil(numItems/initialItems),
@@ -460,25 +455,6 @@ var Beat = {
 
 		// Show first page
 		filters.eq(0).click();
-	},
-	
-	createMp3Player: function() {
-		"use strict";
-		
-		$(document).ready(function(){
-			$('#music-player').ttwMusicPlayer(myPlaylist, {
-				autoPlay:true,
-				currencySymbol:'',
-				buyText:'',
-				tracksToShow:1000,
-				/*ratingCallback:function(index, playlistItem, rating){
-					//some logic to process the rating, perhaps through an ajax call
-				},*/
-				jPlayer:{
-					swfPath:'js/jplayer'
-				}
-			});
-		});
 	},
 	
 	getEventDate: function(event) {
