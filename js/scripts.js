@@ -215,7 +215,7 @@ var Beat = {
 	navigation: function() {
 		"use strict";
 		
-		$('#nav li a, .nav-logo').bind('click',function(event){
+		$('#nav li a, .nav-logo, .section-scroller').bind('click',function(event){
 			var navActive = $(this);
 			var scroll = 0;
 			
@@ -231,7 +231,7 @@ var Beat = {
 			
 			event.preventDefault();
 		});
-		
+
 		$('.nav-section').waypoint('sticky', {
 			handler: function(dir) {
 				if(dir === "down"){
@@ -999,10 +999,7 @@ var Beat = {
 		"use strict";
 		var $tis = this;
 
-		console.log("apply overlay buttons click");
-		
 		$(".open-overlay").click(function(e){
-			console.log("open overlay");
 			e.preventDefault();
 			
 			var newsDetails = $(this).parent().data('news-details') || $(this).next().data('news-details');
