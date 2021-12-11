@@ -98,7 +98,7 @@ var Beat = {
                 $(".news-item").each(fillNews);
                 resetLanguage();
             })
-            .catch(console.error)
+            .catch(console.error);
     },
 
     initEvents: function() {
@@ -106,7 +106,7 @@ var Beat = {
         var $tis = this;
         $tis.contentfulClient.getEntries({content_type: "event"})
             .then(response => $tis.googleMap(aggregateEvents(response.items)))
-            .catch(console.error)
+            .catch(console.error);
     },
 
 	construct: function() {
@@ -138,12 +138,12 @@ var Beat = {
 		/**
 		 * Initialize Google Maps and populate with concerts locations
 		 */
-		$tis.initEvents();
+		// $tis.initEvents();
 
 		/**
 		 * Start FlexSlider
 		 */
-		$tis.startFlexSlider();
+		// $tis.startFlexSlider();
 		
 		/**
 		 * Start NiceScroll
@@ -153,7 +153,7 @@ var Beat = {
 		/**
 		 * Get latest tweets
 		 */
-		$tis.getLatestTweets();
+		// $tis.getLatestTweets();
 		
 		/**
 		 * Get Instagram feed
@@ -168,7 +168,7 @@ var Beat = {
 		/**
 		 * Get Facebook feed
 		 */
-		$tis.getFacebook();
+		// $tis.getFacebook();
 	},
 
 	events: function() {
@@ -705,21 +705,21 @@ var Beat = {
 		}
 	},
 	
-	startFlexSlider:function() {
-		"use strict";
+	// startFlexSlider:function() {
+	// 	"use strict";
 		
-		$('.flexslider').flexslider({
-			animation: "slide",
-			maxItems: 1,
-			prevText: "",
-			nextText: "",
-			controlNav: false,
-			before: function(slider) {
-						slider.slides.eq(slider.currentSlide).animate({opacity:0},200);
-						slider.slides.eq(slider.animatingTo).css({opacity:0}).animate({opacity:1},800);
-					}
-		});
-	},
+	// 	$('.flexslider').flexslider({
+	// 		animation: "slide",
+	// 		maxItems: 1,
+	// 		prevText: "",
+	// 		nextText: "",
+	// 		controlNav: false,
+	// 		before: function(slider) {
+	// 					slider.slides.eq(slider.currentSlide).animate({opacity:0},200);
+	// 					slider.slides.eq(slider.animatingTo).css({opacity:0}).animate({opacity:1},800);
+	// 				}
+	// 	});
+	// },
 	
 	startNiceScroll:function() {
 		"use strict";
@@ -998,8 +998,11 @@ var Beat = {
 	overlayButtons:function() {
 		"use strict";
 		var $tis = this;
+
+		console.log("apply overlay buttons click");
 		
 		$(".open-overlay").click(function(e){
+			console.log("open overlay");
 			e.preventDefault();
 			
 			var newsDetails = $(this).parent().data('news-details') || $(this).next().data('news-details');
