@@ -143,7 +143,7 @@ var Beat = {
 		/**
 		 * Start FlexSlider
 		 */
-		// $tis.startFlexSlider();
+		$tis.startFlexSlider();
 		
 		/**
 		 * Start NiceScroll
@@ -705,21 +705,21 @@ var Beat = {
 		}
 	},
 	
-	// startFlexSlider:function() {
-	// 	"use strict";
+	startFlexSlider:function() {
+		"use strict";
 		
-	// 	$('.flexslider').flexslider({
-	// 		animation: "slide",
-	// 		maxItems: 1,
-	// 		prevText: "",
-	// 		nextText: "",
-	// 		controlNav: false,
-	// 		before: function(slider) {
-	// 					slider.slides.eq(slider.currentSlide).animate({opacity:0},200);
-	// 					slider.slides.eq(slider.animatingTo).css({opacity:0}).animate({opacity:1},800);
-	// 				}
-	// 	});
-	// },
+		$('.flexslider').flexslider({
+			animation: "slide",
+			maxItems: 1,
+			prevText: "",
+			nextText: "",
+			controlNav: false,
+			before: function(slider) {
+				slider.slides.eq(slider.currentSlide).animate({opacity:0},200);
+				slider.slides.eq(slider.animatingTo).css({opacity:0}).animate({opacity:1},800);
+			}
+		});
+	},
 	
 	startNiceScroll:function() {
 		"use strict";
