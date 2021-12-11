@@ -5,7 +5,7 @@
 * Version: 1.0.5
 */
 
-/* global Modernizr:true, google:true, myEvents:true, myPlaylist:true, RichMarker:true */
+/* global Modernizr:true, google:true, myEvents:true, RichMarker:true */
 
 var Beat = {
 
@@ -98,7 +98,7 @@ var Beat = {
                 $(".news-item").each(fillNews);
                 resetLanguage();
             })
-            .catch(console.error)
+            .catch(console.error);
     },
 
     initEvents: function() {
@@ -106,7 +106,7 @@ var Beat = {
         var $tis = this;
         $tis.contentfulClient.getEntries({content_type: "event"})
             .then(response => $tis.googleMap(aggregateEvents(response.items)))
-            .catch(console.error)
+            .catch(console.error);
     },
 
 	construct: function() {
@@ -129,11 +129,6 @@ var Beat = {
 		 */
 		$tis.boxStream("home-stream");
 		$tis.boxStream("video-stream");
-
-		/**
-		 * Create Mp3 Player
-		 */
-		$tis.createMp3Player();
 		
 		/**
 		 * Activate placeholder in older browsers
@@ -143,7 +138,7 @@ var Beat = {
 		/**
 		 * Initialize Google Maps and populate with concerts locations
 		 */
-		$tis.initEvents();
+		// $tis.initEvents();
 
 		/**
 		 * Start FlexSlider
@@ -158,7 +153,7 @@ var Beat = {
 		/**
 		 * Get latest tweets
 		 */
-		$tis.getLatestTweets();
+		// $tis.getLatestTweets();
 		
 		/**
 		 * Get Instagram feed
@@ -173,7 +168,7 @@ var Beat = {
 		/**
 		 * Get Facebook feed
 		 */
-		$tis.getFacebook();
+		// $tis.getFacebook();
 	},
 
 	events: function() {
@@ -220,7 +215,7 @@ var Beat = {
 	navigation: function() {
 		"use strict";
 		
-		$('#nav li a, .nav-logo').bind('click',function(event){
+		$('#nav li a, .nav-logo, .section-scroller').bind('click',function(event){
 			var navActive = $(this);
 			var scroll = 0;
 			
@@ -236,7 +231,7 @@ var Beat = {
 			
 			event.preventDefault();
 		});
-		
+
 		$('.nav-section').waypoint('sticky', {
 			handler: function(dir) {
 				if(dir === "down"){
@@ -358,7 +353,7 @@ var Beat = {
 		"use strict";
 		var $tis = this;
 		
-		var initialItems = 6,
+		var initialItems = $(window).width() <= 414 ? 2 : 6,
 			items = $('#' + boxStreamName + '-items li'),
 			numItems = items.length,
 			numPages = Math.ceil(numItems/initialItems),
@@ -460,25 +455,6 @@ var Beat = {
 
 		// Show first page
 		filters.eq(0).click();
-	},
-	
-	createMp3Player: function() {
-		"use strict";
-		
-		$(document).ready(function(){
-			$('#music-player').ttwMusicPlayer(myPlaylist, {
-				autoPlay:true,
-				currencySymbol:'',
-				buyText:'',
-				tracksToShow:1000,
-				/*ratingCallback:function(index, playlistItem, rating){
-					//some logic to process the rating, perhaps through an ajax call
-				},*/
-				jPlayer:{
-					swfPath:'js/jplayer'
-				}
-			});
-		});
 	},
 	
 	getEventDate: function(event) {
@@ -739,9 +715,9 @@ var Beat = {
 			nextText: "",
 			controlNav: false,
 			before: function(slider) {
-						slider.slides.eq(slider.currentSlide).animate({opacity:0},200);
-						slider.slides.eq(slider.animatingTo).css({opacity:0}).animate({opacity:1},800);
-					}
+				slider.slides.eq(slider.currentSlide).animate({opacity:0},200);
+				slider.slides.eq(slider.animatingTo).css({opacity:0}).animate({opacity:1},800);
+			}
 		});
 	},
 	
@@ -1022,7 +998,7 @@ var Beat = {
 	overlayButtons:function() {
 		"use strict";
 		var $tis = this;
-		
+
 		$(".open-overlay").click(function(e){
 			e.preventDefault();
 			
